@@ -1,6 +1,6 @@
 <?php
-require_once "./HttpMethod.php";
-require_once "./HttpNotFoundException.php";
+namespace Baubyte;
+
 class Router{
     protected array $routes = [];
 

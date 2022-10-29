@@ -1,5 +1,10 @@
 <?php
-require_once "./Router.php";
+
+require_once "../vendor/autoload.php";
+
+use Baubyte\HttpNotFoundException;
+use Baubyte\Router;
+
 $router = new Router();
 
 $router->get('/test', function(){
