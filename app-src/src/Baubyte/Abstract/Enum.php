@@ -65,7 +65,7 @@ abstract class Enum implements JsonSerializable, Stringable
     {
         if ($value instanceof static) {
            /** @psalm-var T */
-            $value = $value->getValue();
+            $value = $value->value();
         }
 
         /** @psalm-suppress ImplicitToStringCast assertValidValueReturningKey returns always a string but psalm has currently an issue here */
@@ -107,7 +107,7 @@ abstract class Enum implements JsonSerializable, Stringable
      * @return mixed
      * @psalm-return T
      */
-    public function getValue()
+    public function value()
     {
         return $this->value;
     }
@@ -146,7 +146,7 @@ abstract class Enum implements JsonSerializable, Stringable
     final public function equals($variable = null): bool
     {
         return $variable instanceof self
-            && $this->getValue() === $variable->getValue()
+            && $this->value() === $variable->value()
             && static::class === \get_class($variable);
     }
 
@@ -312,6 +312,6 @@ abstract class Enum implements JsonSerializable, Stringable
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-        return $this->getValue();
+        return $this->value();
     }
 }
