@@ -1,6 +1,8 @@
 <?php
 
-namespace Baubyte;
+namespace Baubyte\Server;
+
+use Baubyte\Http\HttpMethod;
 
 interface Server
 {

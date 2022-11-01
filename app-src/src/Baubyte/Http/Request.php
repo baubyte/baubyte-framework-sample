@@ -1,6 +1,8 @@
 <?php
 
-namespace Baubyte;
+namespace Baubyte\Http;
+
+use Baubyte\Server\Server;
 
 class Request
 {

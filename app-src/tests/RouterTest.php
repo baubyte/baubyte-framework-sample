@@ -1,11 +1,10 @@
 <?php
 namespace Baubyte\Tests;
 
-use Baubyte\HttpMethod;
-use Baubyte\Request;
-use Baubyte\Router;
-use Baubyte\Server;
-
+use Baubyte\Http\HttpMethod;
+use Baubyte\Http\Request;
+use Baubyte\Routing\Router;
+use Baubyte\Server\Server;
 use PHPUnit\Framework\TestCase;
 
 class RouterTest extends TestCase{

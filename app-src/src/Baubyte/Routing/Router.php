@@ -1,6 +1,11 @@
 <?php
-namespace Baubyte;
+namespace Baubyte\Routing;
+
 use Closure;
+use Baubyte\Http\HttpMethod;
+use Baubyte\Http\HttpNotFoundException;
+use Baubyte\Http\Request;
+
 class Router{
     protected array $routes = [];
 

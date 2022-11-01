@@ -1,5 +1,5 @@
 <?php
-namespace Baubyte;
+namespace Baubyte\Routing;
 use Closure;
 
 class Route {

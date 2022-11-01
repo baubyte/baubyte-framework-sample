@@ -2,10 +2,10 @@
 
 namespace Baubyte\Tests;
 
-use Baubyte\HttpMethod;
-use Baubyte\Server;
+use Baubyte\Http\HttpMethod;
+use Baubyte\Server\Server as ServerServer;
 
-class MockServer implements Server
+class MockServer implements ServerServer
 {
     public function __construct(
         public string $uri, 

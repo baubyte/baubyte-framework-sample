@@ -2,7 +2,7 @@
 
 namespace Baubyte\Tests;
 
-use Baubyte\Route;
+use Baubyte\Routing\Route;
 use PHPUnit\Framework\TestCase;
 
 class RouteTest extends TestCase

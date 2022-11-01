@@ -1,5 +1,5 @@
 <?php
-namespace Baubyte;
+namespace Baubyte\Http;
 
 use Baubyte\Abstract\Enum;
 /* 
