@@ -6,7 +6,7 @@ class Router{
 
     public function __construct(){
         foreach (HttpMethod::values() as $method) {
-            $this->routes[$method->getValue()] = [];
+            $this->routes[$method->value()] = [];
         }
     }
 
@@ -21,7 +21,7 @@ class Router{
     }
 
     protected function registerRoute(HttpMethod $method, string $uri, Closure $action) {
-        $this->routes[$method->getValue()][] = new Route($uri, $action);
+        $this->routes[$method->value()][] = new Route($uri, $action);
     }
 
     public function get(string $uri, Closure $action){
