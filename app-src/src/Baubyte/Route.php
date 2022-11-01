@@ -57,7 +57,7 @@ class Route {
 
     public function matches(string $uri): bool
     {
-        return preg_match("#^$this->regex$#", $uri);
+        return preg_match("#^$this->regex/?$#", $uri);
     }
 
     public function hasParameters(): bool {
@@ -66,7 +66,6 @@ class Route {
 
     public function parseParameters(string $uri): array {
         preg_match("#^$this->regex$#", $uri, $arguments);
-        
         return array_combine($this->parameters, array_slice($arguments, 1));
     }
 }
