@@ -3,6 +3,7 @@
 namespace Baubyte\Server;
 
 use Baubyte\Http\HttpMethod;
+use Baubyte\Http\Response;
 
 interface Server
 {
@@ -10,4 +11,5 @@ interface Server
     public function requestMethod(): HttpMethod;
     public function postData(): array;
     public function queryParams(): array;
+    public function sendResponse(Response $response);
 }
