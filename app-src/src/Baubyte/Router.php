@@ -5,7 +5,7 @@ class Router{
     protected array $routes = [];
 
     public function __construct(){
-        foreach (HttpMethod::values() as $method) {
+        foreach (HttpMethod::cases() as $method) {
             $this->routes[$method->value()] = [];
         }
     }
