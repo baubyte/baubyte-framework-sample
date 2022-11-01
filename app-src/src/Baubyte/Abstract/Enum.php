@@ -169,7 +169,7 @@ abstract class Enum implements JsonSerializable, Stringable
      * @psalm-return array<string, static>
      * @return static[] Constant name in key, Enum instance in value
      */
-    public static function values()
+    public static function cases()
     {
         $values = array();
 
