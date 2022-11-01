@@ -3,9 +3,9 @@
 require_once "../vendor/autoload.php";
 
 use Baubyte\HttpNotFoundException;
+use Baubyte\PhpNativeServer;
 use Baubyte\Request;
 use Baubyte\Router;
-use Baubyte\Server;
 
 $router = new Router();
 
@@ -17,7 +17,7 @@ $router->post('/test', function(){
 });
 
 try {
-    $route = $router->resolve(new Request(new Server()));
+    $route = $router->resolve(new Request(new PhpNativeServer()));
     $action = $route->action();
     print($action());
 } catch (HttpNotFoundException $th) {
