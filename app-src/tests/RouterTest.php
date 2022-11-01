@@ -4,17 +4,26 @@ namespace Baubyte\Tests;
 use Baubyte\HttpMethod;
 use Baubyte\Request;
 use Baubyte\Router;
+use Baubyte\Server;
 
 use PHPUnit\Framework\TestCase;
 
 class RouterTest extends TestCase{
+    
+    private function createMockRequest(string $uri, HttpMethod $method): Request
+    {
+        $mockServer = $this->getMockBuilder(Server::class)->getMock();
+        $mockServer->method('requestUri')->willReturn($uri);
+        $mockServer->method('requestMethod')->willReturn($method);
+        return new Request($mockServer);
+    }
     public function test_resolve_basic_route_with_callback_action()
     {
         $uri = '/test';
         $action = fn () => "test";
         $router = new Router();
         $router->get($uri, $action);
-        $route = $router->resolve(new Request(new MockServer($uri, HttpMethod::GET())));
+        $route = $router->resolve($this->createMockRequest($uri, HttpMethod::GET()));
         $this->assertEquals($uri, $route->uri());
         $this->assertEquals($action, $route->action());
     }
@@ -32,7 +41,7 @@ class RouterTest extends TestCase{
             $router->get($uri, $action);
         }
         foreach ($routes as $uri => $action) {
-            $route = $router->resolve(new Request(new MockServer($uri, HttpMethod::GET())));
+            $route = $router->resolve($this->createMockRequest($uri, HttpMethod::GET()));
             $this->assertEquals($uri, $route->uri());
             $this->assertEquals($action, $route->action());
         }
@@ -61,7 +70,7 @@ class RouterTest extends TestCase{
             $router->{strtolower($method->value())}($uri, $action);
         }
         foreach ($routes as [$method, $uri, $action]) {
-            $route = $router->resolve(new Request(new MockServer($uri, $method)));
+            $route = $router->resolve($this->createMockRequest($uri, $method));
             $this->assertEquals($uri, $route->uri());
             $this->assertEquals($action, $route->action());
         }
