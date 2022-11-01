@@ -1,6 +1,6 @@
 <?php
 namespace Baubyte;
-
+use Closure;
 class Router{
     protected array $routes = [];
 
@@ -12,30 +12,35 @@ class Router{
 
     public function resolve(string $uri, string $method)
     {
-        $action = $this->routes[$method][$uri] ?? null;
-        if (is_null($action)) {
-            throw new HttpNotFoundException();
+        foreach ($this->routes[$method] as $route) {
+            if ($route->matches($uri)) {
+              return $route;
+            }
         }
-        return $action;
+        throw new HttpNotFoundException();
     }
 
-    public function get(string $uri, callable $action){
-        $this->routes[HttpMethod::GET()->getValue()][$uri] = $action;
+    protected function registerRoute(HttpMethod $method, string $uri, Closure $action) {
+        $this->routes[$method->getValue()][] = new Route($uri, $action);
     }
 
-    public function post(string $uri, callable $action){
-        $this->routes[HttpMethod::POST()->getValue()][$uri] = $action;
+    public function get(string $uri, Closure $action){
+       $this->registerRoute(HttpMethod::GET(), $uri, $action);
     }
 
-    public function put(string $uri, callable $action){
-        $this->routes[HttpMethod::PUT()->getValue()][$uri] = $action;
+    public function post(string $uri, Closure $action){
+       $this->registerRoute(HttpMethod::POST(), $uri, $action);
     }
 
-    public function patch(string $uri, callable $action){
-        $this->routes[HttpMethod::PATCH()->getValue()][$uri] = $action;
+    public function put(string $uri, Closure $action){
+       $this->registerRoute(HttpMethod::PUT(), $uri, $action);
     }
 
-    public function delete(string $uri, callable $action){
-        $this->routes[HttpMethod::DELETE()->getValue()][$uri] = $action;
+    public function patch(string $uri, Closure $action){
+       $this->registerRoute(HttpMethod::PATCH(), $uri, $action);
+    }
+
+    public function delete(string $uri, Closure $action){
+       $this->registerRoute(HttpMethod::DELETE(), $uri, $action);
     }
 }
