@@ -10,10 +10,8 @@ class Router{
         }
     }
 
-    public function resolve()
+    public function resolve(string $uri, string $method)
     {
-        $method = $_SERVER['REQUEST_METHOD'];
-        $uri = $_SERVER['REQUEST_URI'];
         $action = $this->routes[$method][$uri] ?? null;
         if (is_null($action)) {
             throw new HttpNotFoundException();

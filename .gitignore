@@ -1,3 +1,4 @@
 app-src/.vscode
 app-src/vendor
 mysql-data
+composer.lock

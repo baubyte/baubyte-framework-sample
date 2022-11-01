@@ -15,7 +15,7 @@ $router->post('/test', function(){
 });
 
 try {
-    $action = $router->resolve();
+    $action = $router->resolve($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
     print($action());
 } catch (HttpNotFoundException $th) {
     print("Not Found");

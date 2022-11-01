@@ -8,11 +8,21 @@
             "Baubyte\\": "src/Baubyte"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Baubyte\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --color=always --testdox -v tests/"
+    },
     "authors": [
         {
             "name": "BauByte",
             "email": "paredbaez.martin@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
 }
