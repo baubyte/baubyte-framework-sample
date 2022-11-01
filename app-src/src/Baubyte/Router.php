@@ -5,8 +5,8 @@ class Router{
     protected array $routes = [];
 
     public function __construct(){
-        foreach (HttpMethod::cases() as $method) {
-            $this->routes[$method->value] = [];
+        foreach (HttpMethod::values() as $method) {
+            $this->routes[$method->getValue()] = [];
         }
     }
 
@@ -22,22 +22,22 @@ class Router{
     }
 
     public function get(string $uri, callable $action){
-        $this->routes[HttpMethod::GET->value][$uri] = $action;
+        $this->routes[HttpMethod::GET()->getValue()][$uri] = $action;
     }
 
     public function post(string $uri, callable $action){
-        $this->routes[HttpMethod::POST->value][$uri] = $action;
+        $this->routes[HttpMethod::POST()->getValue()][$uri] = $action;
     }
 
     public function put(string $uri, callable $action){
-        $this->routes[HttpMethod::PUT->value][$uri] = $action;
+        $this->routes[HttpMethod::PUT()->getValue()][$uri] = $action;
     }
 
     public function patch(string $uri, callable $action){
-        $this->routes[HttpMethod::PATCH->value][$uri] = $action;
+        $this->routes[HttpMethod::PATCH()->getValue()][$uri] = $action;
     }
 
     public function delete(string $uri, callable $action){
-        $this->routes[HttpMethod::DELETE->value][$uri] = $action;
+        $this->routes[HttpMethod::DELETE()->getValue()][$uri] = $action;
     }
 }
