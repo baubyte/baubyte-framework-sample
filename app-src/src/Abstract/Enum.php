@@ -3,7 +3,6 @@
  * @link    http://github.com/myclabs/php-enum
  * @license http://www.opensource.org/licenses/mit-license.php MIT (see the LICENSE file)
  */
-
 namespace Baubyte\Abstract;
 
 use JsonSerializable;

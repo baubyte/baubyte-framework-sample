@@ -2,23 +2,29 @@
 namespace Baubyte\Http;
 
 use Baubyte\Abstract\Enum;
-/* 
-PHP 8.1
-enum HttpMethod: string {
-    case GET = "GET";
-    case POST = "POST";
-    case PUT = "PUT";
-    case PATCH = "PATCH";
-    case DELETE = "DELETE";
-}
- */
+
 /**
- * Compatibility for PHP 7
+ * HTTP verb.
  */
 final class HttpMethod extends Enum{
+    /**
+     * Verb GET.
+     */
     private const GET = "GET";
+    /**
+     * Verb POST.
+     */
     private const POST = "POST";
-    private const PUT = "PUT";
+    /**
+     * Verb PATCH.
+     */
+    private const PUT = "PATCH";
+    /**
+     * Verb PATCH.
+     */
     private const PATCH = "PATCH";
+    /**
+     * Verb DELETE.
+     */
     private const DELETE = "DELETE";
 }

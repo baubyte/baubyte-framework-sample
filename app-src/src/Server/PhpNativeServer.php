@@ -5,29 +5,47 @@ namespace Baubyte\Server;
 use Baubyte\Http\HttpMethod;
 use Baubyte\Http\Response;
 
+/**
+ * PHP native server that uses `$_SERVER` global.
+ */
 class PhpNativeServer implements Server
 {
+
+    /**
+     * @inheritDoc
+     */
     public function requestUri(): string
     {
         return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     }
 
+    /**
+     * @inheritDoc
+     */
     public function requestMethod(): HttpMethod
     {
         return HttpMethod::from($_SERVER['REQUEST_METHOD']);
     }
 
+    /**
+     * @inheritDoc
+     */
     public function postData(): array
     {
         return $_POST;
     }
     
+    /**
+     * @inheritDoc
+     */
     public function queryParams(): array
     {
         return $_GET;
     }
 
-
+    /**
+     * @inheritDoc
+     */
     public function sendResponse(Response $response) {
         /**
          * PHP envía el encabezado Content-Type de forma predeterminada, pero debe eliminarse si

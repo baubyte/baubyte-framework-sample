@@ -1,34 +1,47 @@
 <?php
+
 namespace Baubyte\Routing;
+
 use Closure;
 
-class Route {
+/**
+ * This class stores the URI regex and action.
+ */
+class Route
+{
     /**
-     * Undocumented variable
+     * URI defined in the format `"/route/{param}"`.
      *
      * @var string
      */
     protected string $uri;
     /**
-     * Undocumented variable
+     * Action associated to this URI.
      *
      * @var Closure
      */
     protected Closure $action;
     /**
-     * Undocumented variable
+     * Regular expression used to match incoming requests URIs.
      *
      * @var string
      */
     protected string $regex;
     /**
-     * Undocumented variable
+     * Route parameter names.
      *
      * @var array
      */
     protected array $parameters;
 
-    public function __construct(string $uri, Closure $action) {
+    /**
+     * Create a new route with the given URI and action.
+     *
+     * @param string $uri
+     * @param Closure $action
+     */
+    public function __construct(string $uri, Closure $action)
+    {
         $this->uri = $uri;
         $this->action = $action;
         $this->regex = preg_replace('/\{([a-zA-Z]+)\}/', '([a-zA-Z0-9]+)', $uri);
@@ -37,34 +50,54 @@ class Route {
     }
 
     /**
-     * Undocumented function
+     * Get the URI definition for this route.
      *
-     * @return void
+     * @return string
      */
-    public function uri()
+    public function uri(): string
     {
         return $this->uri;
     }
+
     /**
-     * Undocumented function
+     * Action that handles requests to this route URI.
      *
-     * @return void
+     * @return Closure
      */
-    public function action()
+    public function action(): Closure
     {
         return $this->action;
     }
 
+    /**
+     * Check if the given `$uri` matches the regex of this route.
+     *
+     * @param string $uri
+     * @return boolean
+     */
     public function matches(string $uri): bool
     {
         return preg_match("#^$this->regex/?$#", $uri);
     }
 
-    public function hasParameters(): bool {
+    /**
+     * Check if this route has variable parameters in its definition.
+     *
+     * @return boolean
+     */
+    public function hasParameters(): bool
+    {
         return count($this->parameters) > 0;
     }
 
-    public function parseParameters(string $uri): array {
+    /**
+     * Get the key-value pairs from the `$uri` as defined by this route.
+     *
+     * @param string $uri
+     * @return array
+     */
+    public function parseParameters(string $uri): array
+    {
         preg_match("#^$this->regex$#", $uri, $arguments);
         return array_combine($this->parameters, array_slice($arguments, 1));
     }
