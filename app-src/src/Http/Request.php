@@ -54,8 +54,7 @@ class Request {
      * @param string $uri
      * @return self
      */
-    public function setUri(string $uri): self
-    {
+    public function setUri(string $uri): self {
         $this->uri = $uri;
         return $this;
     }
@@ -65,8 +64,7 @@ class Request {
      *
      * @return Route
      */
-    public function route(): Route
-    {
+    public function route(): Route {
         return $this->route;
     }
 
@@ -76,8 +74,7 @@ class Request {
      * @param Route $route
      * @return self
      */
-    public function setRoute(Route $route): self
-    {
+    public function setRoute(Route $route): self {
         $this->route = $route;
         return $this;
     }
@@ -95,8 +92,7 @@ class Request {
      * @param HttpMethod $method
      * @return self
      */
-    public function setMethod(HttpMethod $method): self
-    {
+    public function setMethod(HttpMethod $method): self {
         $this->method = $method;
         return $this;
     }
@@ -116,8 +112,7 @@ class Request {
      * @param array $data
      * @return self
      */
-    public function setPostData(array $data): self
-    {
+    public function setPostData(array $data): self {
         $this->data = $data;
         return $this;
     }
@@ -137,8 +132,7 @@ class Request {
      * @param array $query
      * @return self
      */
-    public function setQueryParameters(array $query): self
-    {
+    public function setQueryParameters(array $query): self {
         $this->query = $query;
         return $this;
     }
