@@ -79,7 +79,11 @@ RUN docker-php-ext-install \
 # Obtener la ultima version de Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Agregamos Node 14 LTS
+# Obtener la ultima version de phpDocumentor
+RUN curl -sL http://phpdoc.org/phpDocumentor.phar -o /usr/local/bin/phpdoc
+RUN chmod +x /usr/local/bin/phpdoc
+
+# Agregamos Node 18 LTS
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -- \
     && apt-get install -y nodejs \
     && apt-get autoremove -y
