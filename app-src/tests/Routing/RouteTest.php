@@ -1,6 +1,6 @@
 <?php
 
-namespace Baubyte\Tests;
+namespace Baubyte\Tests\Routing;
 
 use Baubyte\Routing\Route;
 use PHPUnit\Framework\TestCase;

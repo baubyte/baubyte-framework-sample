@@ -1,5 +1,5 @@
 <?php
-namespace Baubyte\Tests;
+namespace Baubyte\Tests\Routing;
 
 use Baubyte\Http\HttpMethod;
 use Baubyte\Http\Request;
