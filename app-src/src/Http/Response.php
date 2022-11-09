@@ -1,11 +1,11 @@
 <?php
 
 namespace Baubyte\Http;
+
 /**
  * HTTP response that will be sent to the client.
  */
-class Response
-{
+class Response {
     /**
      * Response HTTP status code.
      *
@@ -30,9 +30,8 @@ class Response
      *
      * @return integer
      */
-    public function status(): int
-    {
-       return $this->status;
+    public function status(): int {
+        return $this->status;
     }
 
     /**
@@ -41,10 +40,9 @@ class Response
      * @param integer $status
      * @return self
      */
-    public function setStatus(int $status): self
-    {
-       $this->status = $status;
-       return $this;
+    public function setStatus(int $status): self {
+        $this->status = $status;
+        return $this;
     }
 
     /**
@@ -52,9 +50,8 @@ class Response
      *
      * @return array<string, string>
      */
-    public function headers(): array
-    {
-       return $this->headers;
+    public function headers(): array {
+        return $this->headers;
     }
 
     /**
@@ -64,10 +61,9 @@ class Response
      * @param string $value
      * @return self
      */
-    public function setHeader(string $header, string $value): self
-    {
-       $this->headers[strtolower($header)] = $value;
-       return $this;
+    public function setHeader(string $header, string $value): self {
+        $this->headers[strtolower($header)] = $value;
+        return $this;
     }
 
     /**
@@ -76,9 +72,8 @@ class Response
      * @param string $header
      * @return void
      */
-    public function removeHeader(string $header): void
-    {
-       unset($this->headers[strtolower($header)]);
+    public function removeHeader(string $header): void {
+        unset($this->headers[strtolower($header)]);
     }
 
     /**
@@ -87,8 +82,7 @@ class Response
      * @param string $value
      * @return self
      */
-    public function setContentType(string $value): self
-    {
+    public function setContentType(string $value): self {
         $this->setHeader("Content-Type", $value);
         return $this;
     }
@@ -98,8 +92,7 @@ class Response
      *
      * @return string|null
      */
-    public function content(): ?string
-    {
+    public function content(): ?string {
         return $this->content;
     }
 
@@ -109,8 +102,7 @@ class Response
      * @param string $content
      * @return self
      */
-    public function setContent(string $content): self
-    {
+    public function setContent(string $content): self {
         $this->content = $content;
         return $this;
     }
@@ -135,8 +127,7 @@ class Response
      * @param array $data
      * @return self
      */
-    public static function json(array $data): self
-    {
+    public static function json(array $data): self {
         return (new self())
         ->setContentType("application/json")
         ->setContent(json_encode($data));
@@ -148,8 +139,7 @@ class Response
      * @param string $text
      * @return self
      */
-    public static function text(string $text): self
-    {
+    public static function text(string $text): self {
         return (new self())
         ->setContentType("text/plain")
         ->setContent($text);
@@ -161,10 +151,9 @@ class Response
      * @param string $uri
      * @return self
      */
-    public static function redirect(string $uri): self
-    {
-       return (new self())
-       ->setStatus(302)//302 Redirect
-       ->setHeader("Location", $uri);
+    public static function redirect(string $uri): self {
+        return (new self())
+        ->setStatus(302)//302 Redirect
+        ->setHeader("Location", $uri);
     }
 }

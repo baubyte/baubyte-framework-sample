@@ -1,4 +1,5 @@
 <?php
+
 namespace Baubyte\Http;
 
 use Baubyte\Abstract\Enum;
@@ -6,7 +7,7 @@ use Baubyte\Abstract\Enum;
 /**
  * HTTP verb.
  */
-final class HttpMethod extends Enum{
+final class HttpMethod extends Enum {
     /**
      * Verb GET.
      */
