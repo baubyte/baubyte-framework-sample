@@ -23,7 +23,7 @@ $router->get('/redirect', function (Request $request) {
 
 $server = new PhpNativeServer();
 try {
-    $request = new Request($server);
+    $request = $server->getRequest();
     $route = $router->resolve($request);
     $action = $route->action();
     $response = $action($request);
