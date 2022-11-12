@@ -5,15 +5,13 @@ namespace Baubyte\Tests\Routing;
 use Baubyte\Http\HttpMethod;
 use Baubyte\Http\Request;
 use Baubyte\Routing\Router;
-use Baubyte\Server\Server;
 use PHPUnit\Framework\TestCase;
 
 class RouterTest extends TestCase {
     private function createMockRequest(string $uri, HttpMethod $method): Request {
-        $mockServer = $this->getMockBuilder(Server::class)->getMock();
-        $mockServer->method('requestUri')->willReturn($uri);
-        $mockServer->method('requestMethod')->willReturn($method);
-        return new Request($mockServer);
+        return (new Request())
+        ->setUri($uri)
+        ->setMethod($method);
     }
     public function test_resolve_basic_route_with_callback_action() {
         $uri = '/test';
