@@ -64,6 +64,10 @@
                 
             </li>
                     <li>
+                <a href="namespaces/baubyte-container.html" class="">Container</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/baubyte-http.html" class="">Http</a>
                 
             </li>
@@ -119,7 +123,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Server/Server.php"><a href="files/src-server-server.html"><abbr title="src/Server/Server.php">Server.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 
     </aside>
 
@@ -141,32 +145,11 @@ global variables, useful for testing.</p>
 
 <dl class="phpdocumentor-table-of-contents">
                         <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-Server-Server.html#method_postData">postData()</a>
+    <a href="classes/Baubyte-Server-Server.html#method_getRequest">getRequest()</a>
     <span>
-                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: <a href="classes/Baubyte-Http-Request.html"><abbr title="\Baubyte\Http\Request">Request</abbr></a>    </span>
 </dt>
-<dd>Get request POST data.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-Server-Server.html#method_queryParams">queryParams()</a>
-    <span>
-                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
-</dt>
-<dd>Get request query parameters.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-Server-Server.html#method_requestMethod">requestMethod()</a>
-    <span>
-                                &nbsp;: <a href="classes/Baubyte-Http-HttpMethod.html"><abbr title="\Baubyte\Http\HttpMethod">HttpMethod</abbr></a>    </span>
-</dt>
-<dd>Get request HTTP method.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-Server-Server.html#method_requestUri">requestUri()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
-<dd>Get request URI.</dd>
+<dd>Get request sent by the client.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Baubyte-Server-Server.html#method_sendResponse">sendResponse()</a>
@@ -192,128 +175,29 @@ global variables, useful for testing.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_postData">
-        postData()
-        <a href="classes/Baubyte-Server-Server.html#method_postData" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getRequest">
+        getRequest()
+        <a href="classes/Baubyte-Server-Server.html#method_getRequest" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Server/Server.php"><a href="files/src-server-server.html"><abbr title="src/Server/Server.php">Server.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">19</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Get request POST data.</p>
+        <p class="phpdocumentor-summary">Get request sent by the client.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">postData</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">getRequest</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Http-Request.html"><abbr title="\Baubyte\Http\Request">Request</abbr></a></span></code>
 
     
     
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_queryParams">
-        queryParams()
-        <a href="classes/Baubyte-Server-Server.html#method_queryParams" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Server/Server.php"><a href="files/src-server-server.html"><abbr title="src/Server/Server.php">Server.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">39</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Get request query parameters.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">queryParams</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_requestMethod">
-        requestMethod()
-        <a href="classes/Baubyte-Server-Server.html#method_requestMethod" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Server/Server.php"><a href="files/src-server-server.html"><abbr title="src/Server/Server.php">Server.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">25</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Get request HTTP method.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">requestMethod</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Http-HttpMethod.html"><abbr title="\Baubyte\Http\HttpMethod">HttpMethod</abbr></a></span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Http-HttpMethod.html"><abbr title="\Baubyte\Http\HttpMethod">HttpMethod</abbr></a></span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_requestUri">
-        requestUri()
-        <a href="classes/Baubyte-Server-Server.html#method_requestUri" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Server/Server.php"><a href="files/src-server-server.html"><abbr title="src/Server/Server.php">Server.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">18</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Get request URI.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">requestUri</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Http-Request.html"><abbr title="\Baubyte\Http\Request">Request</abbr></a></span>
             &mdash;
         
     
@@ -331,7 +215,7 @@ global variables, useful for testing.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Server/Server.php"><a href="files/src-server-server.html"><abbr title="src/Server/Server.php">Server.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">47</span>
+    <span class="phpdocumentor-element-found-in__line">27</span>
 
     </aside>
 

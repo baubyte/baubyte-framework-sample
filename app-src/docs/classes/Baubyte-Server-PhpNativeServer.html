@@ -64,6 +64,10 @@
                 
             </li>
                     <li>
+                <a href="namespaces/baubyte-container.html" class="">Container</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/baubyte-http.html" class="">Http</a>
                 
             </li>
@@ -126,7 +130,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Server/PhpNativeServer.php"><a href="files/src-server-phpnativeserver.html"><abbr title="src/Server/PhpNativeServer.php">PhpNativeServer.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
@@ -160,32 +164,11 @@ global variables, useful for testing.</dd>
 
 <dl class="phpdocumentor-table-of-contents">
                         <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-Server-PhpNativeServer.html#method_postData">postData()</a>
+    <a href="classes/Baubyte-Server-PhpNativeServer.html#method_getRequest">getRequest()</a>
     <span>
-                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: <a href="classes/Baubyte-Http-Request.html"><abbr title="\Baubyte\Http\Request">Request</abbr></a>    </span>
 </dt>
-<dd>Get request POST data.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-Server-PhpNativeServer.html#method_queryParams">queryParams()</a>
-    <span>
-                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
-</dt>
-<dd>Get request query parameters.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-Server-PhpNativeServer.html#method_requestMethod">requestMethod()</a>
-    <span>
-                                &nbsp;: <a href="classes/Baubyte-Http-HttpMethod.html"><abbr title="\Baubyte\Http\HttpMethod">HttpMethod</abbr></a>    </span>
-</dt>
-<dd>Get request HTTP method.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-Server-PhpNativeServer.html#method_requestUri">requestUri()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
-<dd>Get request URI.</dd>
+<dd>Get request sent by the client.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Baubyte-Server-PhpNativeServer.html#method_sendResponse">sendResponse()</a>
@@ -213,147 +196,9 @@ global variables, useful for testing.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_postData">
-        postData()
-        <a href="classes/Baubyte-Server-PhpNativeServer.html#method_postData" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Server/PhpNativeServer.php"><a href="files/src-server-phpnativeserver.html"><abbr title="src/Server/PhpNativeServer.php">PhpNativeServer.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">33</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Get request POST data.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">postData</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
-
-    
-    
-    
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">inheritDoc</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                             
-                                    </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_queryParams">
-        queryParams()
-        <a href="classes/Baubyte-Server-PhpNativeServer.html#method_queryParams" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Server/PhpNativeServer.php"><a href="files/src-server-phpnativeserver.html"><abbr title="src/Server/PhpNativeServer.php">PhpNativeServer.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">41</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Get request query parameters.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">queryParams</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
-
-    
-    
-    
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">inheritDoc</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                             
-                                    </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_requestMethod">
-        requestMethod()
-        <a href="classes/Baubyte-Server-PhpNativeServer.html#method_requestMethod" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Server/PhpNativeServer.php"><a href="files/src-server-phpnativeserver.html"><abbr title="src/Server/PhpNativeServer.php">PhpNativeServer.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">25</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Get request HTTP method.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">requestMethod</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Http-HttpMethod.html"><abbr title="\Baubyte\Http\HttpMethod">HttpMethod</abbr></a></span></code>
-
-    
-    
-    
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">inheritDoc</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                             
-                                    </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Http-HttpMethod.html"><abbr title="\Baubyte\Http\HttpMethod">HttpMethod</abbr></a></span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_requestUri">
-        requestUri()
-        <a href="classes/Baubyte-Server-PhpNativeServer.html#method_requestUri" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getRequest">
+        getRequest()
+        <a href="classes/Baubyte-Server-PhpNativeServer.html#method_getRequest" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Server/PhpNativeServer.php"><a href="files/src-server-phpnativeserver.html"><abbr title="src/Server/PhpNativeServer.php">PhpNativeServer.php</abbr></a></abbr>
@@ -362,11 +207,11 @@ global variables, useful for testing.</dd>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Get request URI.</p>
+        <p class="phpdocumentor-summary">Get request sent by the client.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">requestUri</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">getRequest</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Http-Request.html"><abbr title="\Baubyte\Http\Request">Request</abbr></a></span></code>
 
     
     
@@ -386,7 +231,7 @@ global variables, useful for testing.</dd>
                         </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Http-Request.html"><abbr title="\Baubyte\Http\Request">Request</abbr></a></span>
             &mdash;
         
     
@@ -404,7 +249,7 @@ global variables, useful for testing.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Server/PhpNativeServer.php"><a href="files/src-server-phpnativeserver.html"><abbr title="src/Server/PhpNativeServer.php">PhpNativeServer.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">49</span>
+    <span class="phpdocumentor-element-found-in__line">27</span>
 
     </aside>
 

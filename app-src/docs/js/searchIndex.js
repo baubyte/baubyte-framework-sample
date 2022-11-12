@@ -146,30 +146,60 @@ Search.appendIndex(
             "summary": "HTTP\u0020request.",
             "url": "classes/Baubyte-Http-Request.html"
         },                {
-            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "Create\u0020a\u0020new\u0020request\u0020from\u0020the\u0020given\u0020\u0060\u0024server\u0060.",
-            "url": "classes/Baubyte-Http-Request.html#method___construct"
-        },                {
             "fqsen": "\\Baubyte\\Http\\Request\u003A\u003A\u0024uri",
             "name": "uri",
             "summary": "URI\u0020requested\u0020by\u0020the\u0020client.",
             "url": "classes/Baubyte-Http-Request.html#property_uri"
+        },                {
+            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003AsetUri\u0028\u0029",
+            "name": "setUri",
+            "summary": "Set\u0020request\u0020URI.",
+            "url": "classes/Baubyte-Http-Request.html#method_setUri"
+        },                {
+            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003A\u0024route",
+            "name": "route",
+            "summary": "Route\u0020match\u0020by\u0020URI.",
+            "url": "classes/Baubyte-Http-Request.html#property_route"
+        },                {
+            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003AsetRoute\u0028\u0029",
+            "name": "setRoute",
+            "summary": "Set\u0020route\u0020for\u0020this\u0020request.",
+            "url": "classes/Baubyte-Http-Request.html#method_setRoute"
         },                {
             "fqsen": "\\Baubyte\\Http\\Request\u003A\u003A\u0024method",
             "name": "method",
             "summary": "HTTP\u0020method\u0020used\u0020for\u0020this\u0020request.",
             "url": "classes/Baubyte-Http-Request.html#property_method"
         },                {
+            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003AsetMethod\u0028\u0029",
+            "name": "setMethod",
+            "summary": "Set\u0020HTTP\u0020Method",
+            "url": "classes/Baubyte-Http-Request.html#method_setMethod"
+        },                {
             "fqsen": "\\Baubyte\\Http\\Request\u003A\u003A\u0024data",
             "name": "data",
             "summary": "POST\u0020data.",
             "url": "classes/Baubyte-Http-Request.html#property_data"
         },                {
+            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003AsetPostData\u0028\u0029",
+            "name": "setPostData",
+            "summary": "Set\u0020POST\u0020data.",
+            "url": "classes/Baubyte-Http-Request.html#method_setPostData"
+        },                {
             "fqsen": "\\Baubyte\\Http\\Request\u003A\u003A\u0024query",
             "name": "query",
             "summary": "Query\u0020parameters.",
             "url": "classes/Baubyte-Http-Request.html#property_query"
+        },                {
+            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003AsetQueryParameters\u0028\u0029",
+            "name": "setQueryParameters",
+            "summary": "Set\u0020query\u0020parameters.",
+            "url": "classes/Baubyte-Http-Request.html#method_setQueryParameters"
+        },                {
+            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003ArouteParameters\u0028\u0029",
+            "name": "routeParameters",
+            "summary": "Get\u0020all\u0020route\u0020params\u0020as\u0020key\u002Dvalue\u0020or\u0020get\u0020only\u0020specific\u0020value\u0020by\u0020providing\na\u0020\u0060\u0024key\u0060.",
+            "url": "classes/Baubyte-Http-Request.html#method_routeParameters"
         },                {
             "fqsen": "\\Baubyte\\Http\\Response",
             "name": "Response",
@@ -336,25 +366,10 @@ Search.appendIndex(
             "summary": "PHP\u0020native\u0020server\u0020that\u0020uses\u0020\u0060\u0024_SERVER\u0060\u0020global.",
             "url": "classes/Baubyte-Server-PhpNativeServer.html"
         },                {
-            "fqsen": "\\Baubyte\\Server\\PhpNativeServer\u003A\u003ArequestUri\u0028\u0029",
-            "name": "requestUri",
-            "summary": "Get\u0020request\u0020URI.",
-            "url": "classes/Baubyte-Server-PhpNativeServer.html#method_requestUri"
-        },                {
-            "fqsen": "\\Baubyte\\Server\\PhpNativeServer\u003A\u003ArequestMethod\u0028\u0029",
-            "name": "requestMethod",
-            "summary": "Get\u0020request\u0020HTTP\u0020method.",
-            "url": "classes/Baubyte-Server-PhpNativeServer.html#method_requestMethod"
-        },                {
-            "fqsen": "\\Baubyte\\Server\\PhpNativeServer\u003A\u003ApostData\u0028\u0029",
-            "name": "postData",
-            "summary": "Get\u0020request\u0020POST\u0020data.",
-            "url": "classes/Baubyte-Server-PhpNativeServer.html#method_postData"
-        },                {
-            "fqsen": "\\Baubyte\\Server\\PhpNativeServer\u003A\u003AqueryParams\u0028\u0029",
-            "name": "queryParams",
-            "summary": "Get\u0020request\u0020query\u0020parameters.",
-            "url": "classes/Baubyte-Server-PhpNativeServer.html#method_queryParams"
+            "fqsen": "\\Baubyte\\Server\\PhpNativeServer\u003A\u003AgetRequest\u0028\u0029",
+            "name": "getRequest",
+            "summary": "Get\u0020request\u0020sent\u0020by\u0020the\u0020client.",
+            "url": "classes/Baubyte-Server-PhpNativeServer.html#method_getRequest"
         },                {
             "fqsen": "\\Baubyte\\Server\\PhpNativeServer\u003A\u003AsendResponse\u0028\u0029",
             "name": "sendResponse",
@@ -366,30 +381,65 @@ Search.appendIndex(
             "summary": "Similar\u0020to\u0020PHP\u0020\u0060\u0024_SERVER\u0060\u0020but\u0020having\u0020an\u0020interface\u0020allows\u0020us\u0020to\u0020mockup\u0020these\nglobal\u0020variables,\u0020useful\u0020for\u0020testing.",
             "url": "classes/Baubyte-Server-Server.html"
         },                {
-            "fqsen": "\\Baubyte\\Server\\Server\u003A\u003ArequestUri\u0028\u0029",
-            "name": "requestUri",
-            "summary": "Get\u0020request\u0020URI.",
-            "url": "classes/Baubyte-Server-Server.html#method_requestUri"
-        },                {
-            "fqsen": "\\Baubyte\\Server\\Server\u003A\u003ArequestMethod\u0028\u0029",
-            "name": "requestMethod",
-            "summary": "Get\u0020request\u0020HTTP\u0020method.",
-            "url": "classes/Baubyte-Server-Server.html#method_requestMethod"
-        },                {
-            "fqsen": "\\Baubyte\\Server\\Server\u003A\u003ApostData\u0028\u0029",
-            "name": "postData",
-            "summary": "Get\u0020request\u0020POST\u0020data.",
-            "url": "classes/Baubyte-Server-Server.html#method_postData"
-        },                {
-            "fqsen": "\\Baubyte\\Server\\Server\u003A\u003AqueryParams\u0028\u0029",
-            "name": "queryParams",
-            "summary": "Get\u0020request\u0020query\u0020parameters.",
-            "url": "classes/Baubyte-Server-Server.html#method_queryParams"
+            "fqsen": "\\Baubyte\\Server\\Server\u003A\u003AgetRequest\u0028\u0029",
+            "name": "getRequest",
+            "summary": "Get\u0020request\u0020sent\u0020by\u0020the\u0020client.",
+            "url": "classes/Baubyte-Server-Server.html#method_getRequest"
         },                {
             "fqsen": "\\Baubyte\\Server\\Server\u003A\u003AsendResponse\u0028\u0029",
             "name": "sendResponse",
             "summary": "Send\u0020the\u0020response\u0020to\u0020the\u0020client.",
             "url": "classes/Baubyte-Server-Server.html#method_sendResponse"
+        },                {
+            "fqsen": "\\Baubyte\\App",
+            "name": "App",
+            "summary": "App\u0020runtime.",
+            "url": "classes/Baubyte-App.html"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003Abootstrap\u0028\u0029",
+            "name": "bootstrap",
+            "summary": "Create\u0020a\u0020new\u0020app\u0020instance.",
+            "url": "classes/Baubyte-App.html#method_bootstrap"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003Arun\u0028\u0029",
+            "name": "run",
+            "summary": "Handle\u0020request\u0020and\u0020send\u0020response.",
+            "url": "classes/Baubyte-App.html#method_run"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003A\u0024router",
+            "name": "router",
+            "summary": "Router\u0020instance.",
+            "url": "classes/Baubyte-App.html#property_router"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003A\u0024request",
+            "name": "request",
+            "summary": "Current\u0020HTTP\u0020request.",
+            "url": "classes/Baubyte-App.html#property_request"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003A\u0024server",
+            "name": "server",
+            "summary": "Server\u0020Instance",
+            "url": "classes/Baubyte-App.html#property_server"
+        },                {
+            "fqsen": "\\Baubyte\\Container\\Container",
+            "name": "Container",
+            "summary": "Service\u0020container.",
+            "url": "classes/Baubyte-Container-Container.html"
+        },                {
+            "fqsen": "\\Baubyte\\Container\\Container\u003A\u003Asingleton\u0028\u0029",
+            "name": "singleton",
+            "summary": "Register\u0020a\u0020class\u0020to\u0020be\u0020stored\u0020as\u0020a\u0020singleton.",
+            "url": "classes/Baubyte-Container-Container.html#method_singleton"
+        },                {
+            "fqsen": "\\Baubyte\\Container\\Container\u003A\u003Aresolve\u0028\u0029",
+            "name": "resolve",
+            "summary": "Get\u0020the\u0020singleton\u0020instance\u0020of\u0020the\u0020given\u0020class.",
+            "url": "classes/Baubyte-Container-Container.html#method_resolve"
+        },                {
+            "fqsen": "\\Baubyte\\Container\\Container\u003A\u003A\u0024instances",
+            "name": "instances",
+            "summary": "Unique\u0020instances\u0020of\u0020each\u0020registered\u0020class.",
+            "url": "classes/Baubyte-Container-Container.html#property_instances"
         },                {
             "fqsen": "\\",
             "name": "\\",
@@ -405,6 +455,11 @@ Search.appendIndex(
             "name": "Baubyte",
             "summary": "",
             "url": "namespaces/baubyte.html"
+        },                {
+            "fqsen": "\\Baubyte\\Container",
+            "name": "Container",
+            "summary": "",
+            "url": "namespaces/baubyte-container.html"
         },                {
             "fqsen": "\\Baubyte\\Http",
             "name": "Http",
