@@ -40,6 +40,13 @@ class Request {
     protected array $query;
 
     /**
+     * Headers HTTP request
+     *
+     * @var array
+     */
+    protected array $headers = [];
+
+    /**
      * Get the request URI.
      *
      * @return string
@@ -97,6 +104,27 @@ class Request {
         return $this;
     }
 
+    /**
+     * Get all Headers data as key-value or get only specific value by providing
+     * a `$key`.
+     *
+     * @param string|null $key
+     * @return array|string|null Null if the key doesn't exist, the value of
+     * the key if it is present or all the data if no key was provided.
+     */
+    public function headers(?string $key = null): array|string|null {
+        if (is_null($key)) {
+            return $this->headers;
+        }
+        return $this->headers[strtolower($key)] ?? null;
+    }
+
+    public function setHeaders(array $headers): self {
+        foreach ($headers as $header => $value) {
+            $this->headers[strtolower($header)] = $value;
+        }
+        return $this;
+    }
      /**
      * Get all POST data as key-value or get only specific value by providing
      * a `$key`.

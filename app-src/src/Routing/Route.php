@@ -2,6 +2,8 @@
 
 namespace Baubyte\Routing;
 
+use Baubyte\App;
+use Baubyte\Container\Container;
 use Closure;
 
 /**
@@ -32,6 +34,12 @@ class Route {
      * @var array
      */
     protected array $parameters;
+    /**
+     * HTTP middlewares
+     *
+     * @var Baubyte\Http\Middleware[]
+     */
+    protected array $middlewares = [];
 
     /**
      * Create a new route with the given URI and action.
@@ -66,6 +74,34 @@ class Route {
     }
 
     /**
+     * Get all HTTP middlewares for this route.
+     *
+     * @return Baubyte\Http\Middleware[]
+     */
+    public function middlewares(): array {
+        return $this->middlewares;
+    }
+
+    /**
+     * Set HTTP middlewares for this route.
+     *
+     * @param array $middlewares
+     * @return self
+     */
+    public function setMiddlewares(array $middlewares): self {
+        $this->middlewares = array_map(fn ($middleware) => new $middleware(), $middlewares);
+        return $this;
+    }
+
+    /**
+     * Verify this has middlewares
+     *
+     * @return boolean
+     */
+    public function hasMiddlewares(): bool {
+        return count($this->middlewares) > 0;
+    }
+    /**
      * Check if the given `$uri` matches the regex of this route.
      *
      * @param string $uri
@@ -93,5 +129,9 @@ class Route {
     public function parseParameters(string $uri): array {
         preg_match("#^$this->regex$#", $uri, $arguments);
         return array_combine($this->parameters, array_slice($arguments, 1));
+    }
+
+    public static function get(string $uri, Closure $action): Route {
+        return Container::resolve(App::class)->router->get($uri, $action);
     }
 }

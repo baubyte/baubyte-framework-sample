@@ -3,9 +3,10 @@
 namespace Baubyte\Routing;
 
 use Closure;
+use Baubyte\Http\Request;
 use Baubyte\Http\HttpMethod;
 use Baubyte\Http\HttpNotFoundException;
-use Baubyte\Http\Request;
+use Baubyte\Http\Response;
 
 /**
  * HTTP router.
@@ -34,13 +35,28 @@ class Router {
      * @return Route
      * @throws HttpNotFoundException when route is not found
      */
-    public function resolve(Request $request): Route {
+    public function resolveRoute(Request $request): Route {
         foreach ($this->routes[$request->method()->value()] as $route) {
             if ($route->matches($request->uri())) {
                 return $route;
             }
         }
         throw new HttpNotFoundException();
+    }
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return Response
+     */
+    public function resolve(Request $request): Response {
+        $route = $this->resolveRoute($request);
+        $request->setRoute($route);
+        $action = $route->action();
+        if ($route->hasMiddlewares()) {
+            # code...
+        }
+        return $action($request);
     }
 
     /**
@@ -49,10 +65,11 @@ class Router {
      * @param HttpMethod $method
      * @param string $uri
      * @param Closure $action
-     * @return void
+     * @return Route
      */
-    protected function registerRoute(HttpMethod $method, string $uri, Closure $action) {
-        $this->routes[$method->value()][] = new Route($uri, $action);
+    protected function registerRoute(HttpMethod $method, string $uri, Closure $action): Route {
+        $route = new Route($uri, $action);
+        return $this->routes[$method->value()][] = $route;
     }
 
     /**
@@ -60,10 +77,10 @@ class Router {
      *
      * @param string $uri
      * @param Closure $action
-     * @return void
+     * @return Route
      */
-    public function get(string $uri, Closure $action) {
-        $this->registerRoute(HttpMethod::GET(), $uri, $action);
+    public function get(string $uri, Closure $action): Route {
+        return $this->registerRoute(HttpMethod::GET(), $uri, $action);
     }
 
     /**
@@ -71,10 +88,10 @@ class Router {
      *
      * @param string $uri
      * @param Closure $action
-     * @return void
+     * @return Route
      */
-    public function post(string $uri, Closure $action) {
-        $this->registerRoute(HttpMethod::POST(), $uri, $action);
+    public function post(string $uri, Closure $action): Route {
+        return $this->registerRoute(HttpMethod::POST(), $uri, $action);
     }
 
     /**
@@ -82,10 +99,10 @@ class Router {
      *
      * @param string $uri
      * @param Closure $action
-     * @return void
+     * @return Route
      */
-    public function put(string $uri, Closure $action) {
-        $this->registerRoute(HttpMethod::PUT(), $uri, $action);
+    public function put(string $uri, Closure $action): Route {
+        return $this->registerRoute(HttpMethod::PUT(), $uri, $action);
     }
 
     /**
@@ -93,10 +110,10 @@ class Router {
      *
      * @param string $uri
      * @param Closure $action
-     * @return void
+     * @return Route
      */
-    public function patch(string $uri, Closure $action) {
-        $this->registerRoute(HttpMethod::PATCH(), $uri, $action);
+    public function patch(string $uri, Closure $action): Route {
+        return $this->registerRoute(HttpMethod::PATCH(), $uri, $action);
     }
 
     /**
@@ -104,9 +121,9 @@ class Router {
      *
      * @param string $uri
      * @param Closure $action
-     * @return void
+     * @return Route
      */
-    public function delete(string $uri, Closure $action) {
-        $this->registerRoute(HttpMethod::DELETE(), $uri, $action);
+    public function delete(string $uri, Closure $action): Route {
+        return $this->registerRoute(HttpMethod::DELETE(), $uri, $action);
     }
 }
