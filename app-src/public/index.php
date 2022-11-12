@@ -25,8 +25,19 @@ class AuthMiddleware implements Middleware
         if ($request->headers('Authorization') != 'test') {
             return Response::json(["message" => "Not authenticated"])->setStatus(401);
         }
-        return $next($request);
+        $response = $next($request);
+        $response->setHeader('X-Test-Custom-Header', 'Hello');
+        return $response;
     }
 }
-Route::get('/middleware', fn (Request $request) => Response::json(["message" => "ok"]))->setMiddlewares([AuthMiddleware::class]);
+class TestMiddleware implements Middleware
+{
+    public function handle(Request $request, Closure $next): Response
+    {
+        $response = $next($request);
+        $response->setHeader('X-Test-Custom-Two', 'Baubyte');
+        return $response;
+    }
+}
+Route::get('/middleware', fn (Request $request) => Response::json(["message" => "ok"]))->setMiddlewares([AuthMiddleware::class, TestMiddleware::class]);
 $app->run();

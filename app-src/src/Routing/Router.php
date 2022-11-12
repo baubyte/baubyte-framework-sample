@@ -44,21 +44,38 @@ class Router {
         throw new HttpNotFoundException();
     }
     /**
-     * Undocumented function
+     * Resolves the requested route.
      *
-     * @param Request $request
-     * @return Response
+     * @param \Baubyte\Http\Request $request
+     * @return \Baubyte\Http\Response
      */
     public function resolve(Request $request): Response {
         $route = $this->resolveRoute($request);
         $request->setRoute($route);
         $action = $route->action();
         if ($route->hasMiddlewares()) {
-            # code...
+            return $this->runMiddlewars($request, $route->middlewares(), $action);
         }
         return $action($request);
     }
 
+    /**
+     * Run middleware stack and return final response.
+     *
+     * @param \Baubyte\Http\Request $request
+     * @param array $middlewares
+     * @param callable $target
+     * @return \Baubyte\Http\Response
+     */
+    protected function runMiddlewars(Request $request, array $middlewares, callable $target): Response {
+        if (count($middlewares) === 0) {
+            return $target($request);
+        }
+        return $middlewares[0]->handle(
+            $request,
+            fn ($request) => $this->runMiddlewars($request, array_slice($middlewares, 1), $target)
+        );
+    }
     /**
      * Register a new route with the given `$method` and `$uri`.
      *
