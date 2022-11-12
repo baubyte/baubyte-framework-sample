@@ -24,7 +24,7 @@ class RequestTest extends TestCase {
         $this->assertEquals($postData, $request->data());
         $this->assertEquals(HttpMethod::POST(), $request->method());
     }
-    
+
     public function test_data_returns_value_if_key_is_given() {
         $data = ['test' => 5, 'bar' => 50, 'foo' => 30];
         $request = (new Request())->setPostData($data);
