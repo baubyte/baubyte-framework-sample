@@ -4,7 +4,9 @@ namespace Baubyte\Tests\Routing;
 
 use Baubyte\Http\HttpMethod;
 use Baubyte\Http\Request;
+use Baubyte\Http\Response;
 use Baubyte\Routing\Router;
+use Closure;
 use PHPUnit\Framework\TestCase;
 
 class RouterTest extends TestCase {
@@ -67,5 +69,30 @@ class RouterTest extends TestCase {
             $this->assertEquals($uri, $route->uri());
             $this->assertEquals($action, $route->action());
         }
+    }
+
+    public function test_run_middlewares() {
+        $middleware1 = new class () {
+            public function handle(Request $request, Closure $next): Response {
+                $response = $next($request);
+                $response->setHeader('X-Test-One', 'One');
+                return $response;
+            }
+        };
+        $middleware2 = new class () {
+            public function handle(Request $request, Closure $next): Response {
+                $response = $next($request);
+                $response->setHeader('X-Test-Two', 'Two');
+                return $response;
+            }
+        };
+        $router = new Router();
+        $uri = '/test';
+        $expectedResponse = Response::text('test');
+        $router->get($uri, fn () => $expectedResponse)->setMiddlewares([$middleware1, $middleware2]);
+        $response = $router->resolve($this->createMockRequest($uri, HttpMethod::GET()));
+        $this->assertEquals($expectedResponse, $response);
+        $this->assertEquals($response->headers('X-Test-One'), 'One');
+        $this->assertEquals($response->headers('X-Test-Two'), 'Two');
     }
 }
