@@ -40,4 +40,6 @@ class TestMiddleware implements Middleware
     }
 }
 Route::get('/middleware', fn (Request $request) => Response::json(["message" => "ok"]))->setMiddlewares([AuthMiddleware::class, TestMiddleware::class]);
+
+Route::get('/html', fn (Request $request) => Response::view('home'));
 $app->run();

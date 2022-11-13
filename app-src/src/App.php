@@ -9,6 +9,8 @@ use Baubyte\Http\Response;
 use Baubyte\Routing\Router;
 use Baubyte\Server\PhpNativeServer;
 use Baubyte\Server\Server;
+use Baubyte\View\BaubyteEngine;
+use Baubyte\View\View;
 
 /**
  * App runtime.
@@ -34,6 +36,13 @@ class App {
     public Server $server;
 
     /**
+     * Undocumented variable
+     *
+     * @var \Baubyte\View\View
+     */
+    public View $view;
+
+    /**
      * Create a new app instance.
      *
      * @return self
@@ -43,6 +52,7 @@ class App {
         $app->router = new Router();
         $app->server = new PhpNativeServer();
         $app->request = $app->server->getRequest();
+        $app->view = new BaubyteEngine(__DIR__.'/../views');
         return $app;
     }
     /**

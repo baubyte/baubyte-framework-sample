@@ -2,6 +2,9 @@
 
 namespace Baubyte\Http;
 
+use Baubyte\App;
+use Baubyte\Container\Container;
+
 /**
  * HTTP response that will be sent to the client.
  */
@@ -160,5 +163,12 @@ class Response {
         return (new self())
         ->setStatus(302)//302 Redirect
         ->setHeader("Location", $uri);
+    }
+
+    public static function view(string $viewName): self {
+        $content = Container::resolve(App::class)->view->render($viewName);
+        return (new self())
+        ->setContentType("text/html")
+        ->setContent($content);
     }
 }
