@@ -1,4 +1,5 @@
 app-src/.vscode
+app-src/.phpdoc
 app-src/vendor
 mysql-data
 composer.lock
