@@ -1,6 +1,6 @@
 {
     "name": "baubyte/baubyte-framework",
-    "description": "Simple Framework Inspirado en Laravel",
+    "description": "Simple Framework PHP",
     "type": "library",
     "license": "MIT",
     "autoload": {
