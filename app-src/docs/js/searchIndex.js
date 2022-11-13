@@ -176,6 +176,16 @@ Search.appendIndex(
             "summary": "Set\u0020HTTP\u0020Method",
             "url": "classes/Baubyte-Http-Request.html#method_setMethod"
         },                {
+            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003A\u0024headers",
+            "name": "headers",
+            "summary": "Headers\u0020HTTP\u0020request",
+            "url": "classes/Baubyte-Http-Request.html#property_headers"
+        },                {
+            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003AsetHeaders\u0028\u0029",
+            "name": "setHeaders",
+            "summary": "",
+            "url": "classes/Baubyte-Http-Request.html#method_setHeaders"
+        },                {
             "fqsen": "\\Baubyte\\Http\\Request\u003A\u003A\u0024data",
             "name": "data",
             "summary": "POST\u0020data.",
@@ -286,6 +296,21 @@ Search.appendIndex(
             "summary": "Action\u0020associated\u0020to\u0020this\u0020URI.",
             "url": "classes/Baubyte-Routing-Route.html#property_action"
         },                {
+            "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003A\u0024middlewares",
+            "name": "middlewares",
+            "summary": "HTTP\u0020middlewares",
+            "url": "classes/Baubyte-Routing-Route.html#property_middlewares"
+        },                {
+            "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003AsetMiddlewares\u0028\u0029",
+            "name": "setMiddlewares",
+            "summary": "Set\u0020HTTP\u0020middlewares\u0020for\u0020this\u0020route.",
+            "url": "classes/Baubyte-Routing-Route.html#method_setMiddlewares"
+        },                {
+            "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003AhasMiddlewares\u0028\u0029",
+            "name": "hasMiddlewares",
+            "summary": "Verify\u0020this\u0020has\u0020middlewares",
+            "url": "classes/Baubyte-Routing-Route.html#method_hasMiddlewares"
+        },                {
             "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003Amatches\u0028\u0029",
             "name": "matches",
             "summary": "Check\u0020if\u0020the\u0020given\u0020\u0060\u0024uri\u0060\u0020matches\u0020the\u0020regex\u0020of\u0020this\u0020route.",
@@ -300,6 +325,11 @@ Search.appendIndex(
             "name": "parseParameters",
             "summary": "Get\u0020the\u0020key\u002Dvalue\u0020pairs\u0020from\u0020the\u0020\u0060\u0024uri\u0060\u0020as\u0020defined\u0020by\u0020this\u0020route.",
             "url": "classes/Baubyte-Routing-Route.html#method_parseParameters"
+        },                {
+            "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "",
+            "url": "classes/Baubyte-Routing-Route.html#method_get"
         },                {
             "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003A\u0024regex",
             "name": "regex",
@@ -321,10 +351,20 @@ Search.appendIndex(
             "summary": "Create\u0020a\u0020new\u0020router.",
             "url": "classes/Baubyte-Routing-Router.html#method___construct"
         },                {
+            "fqsen": "\\Baubyte\\Routing\\Router\u003A\u003AresolveRoute\u0028\u0029",
+            "name": "resolveRoute",
+            "summary": "Resolve\u0020the\u0020route\u0020of\u0020the\u0020\u0060\u0024request\u0060.",
+            "url": "classes/Baubyte-Routing-Router.html#method_resolveRoute"
+        },                {
             "fqsen": "\\Baubyte\\Routing\\Router\u003A\u003Aresolve\u0028\u0029",
             "name": "resolve",
-            "summary": "Resolve\u0020the\u0020route\u0020of\u0020the\u0020\u0060\u0024request\u0060.",
+            "summary": "Resolves\u0020the\u0020requested\u0020route.",
             "url": "classes/Baubyte-Routing-Router.html#method_resolve"
+        },                {
+            "fqsen": "\\Baubyte\\Routing\\Router\u003A\u003ArunMiddlewars\u0028\u0029",
+            "name": "runMiddlewars",
+            "summary": "Run\u0020middleware\u0020stack\u0020and\u0020return\u0020final\u0020response.",
+            "url": "classes/Baubyte-Routing-Router.html#method_runMiddlewars"
         },                {
             "fqsen": "\\Baubyte\\Routing\\Router\u003A\u003AregisterRoute\u0028\u0029",
             "name": "registerRoute",
@@ -440,6 +480,16 @@ Search.appendIndex(
             "name": "instances",
             "summary": "Unique\u0020instances\u0020of\u0020each\u0020registered\u0020class.",
             "url": "classes/Baubyte-Container-Container.html#property_instances"
+        },                {
+            "fqsen": "\\Baubyte\\Http\\Middleware",
+            "name": "Middleware",
+            "summary": "",
+            "url": "classes/Baubyte-Http-Middleware.html"
+        },                {
+            "fqsen": "\\Baubyte\\Http\\Middleware\u003A\u003Ahandle\u0028\u0029",
+            "name": "handle",
+            "summary": "Handle\u0020the\u0020request\u0020and\u0020return\u0020a\u0020response,\u0020or\u0020call\u0020the\u0020next\u0020middleware.",
+            "url": "classes/Baubyte-Http-Middleware.html#method_handle"
         },                {
             "fqsen": "\\",
             "name": "\\",

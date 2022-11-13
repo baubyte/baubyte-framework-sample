@@ -106,55 +106,35 @@
             <div class="phpdocumentor-column -eight phpdocumentor-content">
                     <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/baubyte.html">Baubyte</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/baubyte-server.html">Server</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/baubyte-http.html">Http</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -class">
+    <article class="phpdocumentor-element -interface">
         <h2 class="phpdocumentor-content__title">
-    PhpNativeServer
-
-    
-            <div class="phpdocumentor-element__package">
-            in package
+    Middleware
+                <div class="phpdocumentor-element__package">
+            in
             <ul class="phpdocumentor-breadcrumbs">
-                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                                    <li><a href="packages/Application.html">Application</a></li>
                             </ul>
         </div>
-    
-            <span class="phpdocumentor-element__implements">
-            implements
-                            <a href="classes/Baubyte-Server-Server.html"><abbr title="\Baubyte\Server\Server">Server</abbr></a>                    </span>
-    
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Server/PhpNativeServer.php"><a href="files/src-server-phpnativeserver.html"><abbr title="src/Server/PhpNativeServer.php">PhpNativeServer.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Middleware.php"><a href="files/src-http-middleware.html"><abbr title="src/Http/Middleware.php">Middleware.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">7</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">PHP native server that uses `$_SERVER` global.</p>
+        
+    <section class="phpdocumentor-description"></section>
 
 
 
 
 
 
-
-<h3 id="interfaces_class_traits">
-    Interfaces, Classes, Traits and Enums
-    <a href="#interfaces_class_traits" class="headerlink"><i class="fas fa-link"></i></a>
-</h3>
-
-<dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/Baubyte-Server-Server.html"><abbr title="\Baubyte\Server\Server">Server</abbr></a></dt>
-        <dd>Similar to PHP `$_SERVER` but having an interface allows us to mockup these
-global variables, useful for testing.</dd>
-    
-    
-    
-    </dl>
 
 
 <h3 id="toc">
@@ -164,18 +144,11 @@ global variables, useful for testing.</dd>
 
 <dl class="phpdocumentor-table-of-contents">
                         <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-Server-PhpNativeServer.html#method_getRequest">getRequest()</a>
+    <a href="classes/Baubyte-Http-Middleware.html#method_handle">handle()</a>
     <span>
-                                &nbsp;: <a href="classes/Baubyte-Http-Request.html"><abbr title="\Baubyte\Http\Request">Request</abbr></a>    </span>
+                                &nbsp;: <a href="classes/Baubyte-Http-Response.html"><abbr title="\Baubyte\Http\Response">Response</abbr></a>    </span>
 </dt>
-<dd>Get request sent by the client.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-Server-PhpNativeServer.html#method_sendResponse">sendResponse()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-<dd>Send the response to the client.</dd>
+<dd>Handle the request and return a response, or call the next middleware.</dd>
 
         </dl>
 
@@ -183,12 +156,10 @@ global variables, useful for testing.</dd>
 
         
 
-        
-
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Baubyte-Server-PhpNativeServer.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Baubyte-Http-Middleware.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -196,75 +167,36 @@ global variables, useful for testing.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getRequest">
-        getRequest()
-        <a href="classes/Baubyte-Server-PhpNativeServer.html#method_getRequest" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_handle">
+        handle()
+        <a href="classes/Baubyte-Http-Middleware.html#method_handle" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Server/PhpNativeServer.php"><a href="files/src-server-phpnativeserver.html"><abbr title="src/Server/PhpNativeServer.php">PhpNativeServer.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Middleware.php"><a href="files/src-http-middleware.html"><abbr title="src/Http/Middleware.php">Middleware.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Get request sent by the client.</p>
+        <p class="phpdocumentor-summary">Handle the request and return a response, or call the next middleware.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getRequest</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Http-Request.html"><abbr title="\Baubyte\Http\Request">Request</abbr></a></span></code>
-
-    
-    
-    
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">inheritDoc</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                             
-                                    </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Http-Request.html"><abbr title="\Baubyte\Http\Request">Request</abbr></a></span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_sendResponse">
-        sendResponse()
-        <a href="classes/Baubyte-Server-PhpNativeServer.html#method_sendResponse" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Server/PhpNativeServer.php"><a href="files/src-server-phpnativeserver.html"><abbr title="src/Server/PhpNativeServer.php">PhpNativeServer.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">28</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Send the response to the client.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">sendResponse</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Baubyte-Http-Response.html"><abbr title="\Baubyte\Http\Response">Response</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$response</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">handle</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Baubyte-Http-Request.html"><abbr title="\Baubyte\Http\Request">Request</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Closure">Closure</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$next</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Http-Response.html"><abbr title="\Baubyte\Http\Response">Response</abbr></a></span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$response</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Baubyte-Http-Response.html"><abbr title="\Baubyte\Http\Response">Response</abbr></a></span>
+                <span class="phpdocumentor-signature__argument__name">$request</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Baubyte-Http-Request.html"><abbr title="\Baubyte\Http\Request">Request</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$next</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Closure">Closure</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -272,22 +204,9 @@ global variables, useful for testing.</dd>
             </dl>
 
     
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">inheritDoc</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                             
-                                    </dd>
-                        </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Http-Response.html"><abbr title="\Baubyte\Http\Response">Response</abbr></a></span>
             &mdash;
         
     
@@ -370,7 +289,7 @@ global variables, useful for testing.</dd>
 </section>
             </div>
         </div>
-        <a href="classes/Baubyte-Server-PhpNativeServer.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Baubyte-Http-Middleware.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 
