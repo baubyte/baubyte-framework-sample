@@ -46,12 +46,17 @@ class Response {
     }
 
     /**
-     * Get response HTTP headers.
+     * Get response HTTP headers as key-value or get only specific value by providing
+     * a `$key`.
      *
-     * @return array<string, string>
+     * @return array|string|null Null if the key doesn't exist, the value of
+     * the key if it is present or all the data if no key was provided.
      */
-    public function headers(): array {
-        return $this->headers;
+    public function headers(?string $key = null): array|string|null {
+        if (is_null($key)) {
+            return $this->headers;
+        }
+        return $this->headers[strtolower($key)] ?? null;
     }
 
     /**
