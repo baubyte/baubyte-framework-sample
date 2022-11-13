@@ -4,3 +4,4 @@ app-src/vendor
 mysql-data
 composer.lock
 .php-cs-fixer.cache
+
