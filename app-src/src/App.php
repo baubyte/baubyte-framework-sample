@@ -17,19 +17,19 @@ class App {
     /**
      * Router instance.
      *
-     * @var Router
+     * @var \Baubyte\Routing\Router
      */
     public Router $router;
     /**
      * Current HTTP request.
      *
-     * @var Request
+     * @var \Baubyte\Http\Request
      */
     public Request $request;
     /**
      * Server Instance
      *
-     * @var Server
+     * @var \Baubyte\Server\Server
      */
     public Server $server;
 

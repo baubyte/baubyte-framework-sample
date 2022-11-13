@@ -95,7 +95,7 @@ class RouterTest extends TestCase {
         $this->assertEquals($response->headers('X-Test-One'), 'One');
         $this->assertEquals($response->headers('X-Test-Two'), 'Two');
     }
-    
+
     public function test_middleware_stack_can_be_stopped() {
         $stopMiddleware = new class () {
             public function handle(Request $request, Closure $next): Response {

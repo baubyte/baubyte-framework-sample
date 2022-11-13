@@ -131,7 +131,58 @@ class Route {
         return array_combine($this->parameters, array_slice($arguments, 1));
     }
 
+    /**
+     * Register action for HTTP GET method.
+     *
+     * @param string $uri
+     * @param Closure $action
+     * @return Route
+     */
     public static function get(string $uri, Closure $action): Route {
         return Container::resolve(App::class)->router->get($uri, $action);
+    }
+
+    /**
+     * Register action for HTTP POST method.
+     *
+     * @param string $uri
+     * @param Closure $action
+     * @return Route
+     */
+    public static function post(string $uri, Closure $action): Route {
+        return Container::resolve(App::class)->router->post($uri, $action);
+    }
+
+    /**
+     * Register action for HTTP PUT method.
+     *
+     * @param string $uri
+     * @param Closure $action
+     * @return Route
+     */
+    public static function put(string $uri, Closure $action): Route {
+        return Container::resolve(App::class)->router->put($uri, $action);
+    }
+
+    /**
+     * Register action for HTTP PATCH method.
+     *
+     * @param string $uri
+     * @param Closure $action
+     * @return Route
+     */
+    public static function patch(string $uri, Closure $action): Route {
+        return Container::resolve(App::class)->router->patch($uri, $action);
+    }
+
+    /**
+     * Register action for HTTP DELETE method.
+     *
+     * @param string $uri
+     * @param Closure $action
+     * @return Route
+     */
+    public static function delete(string $uri, Closure $action): Route {
+        return Container::resolve(App::class)->router->delete($uri, $action);
     }
 }
