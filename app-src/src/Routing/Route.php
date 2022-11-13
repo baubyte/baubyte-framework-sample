@@ -37,7 +37,7 @@ class Route {
     /**
      * HTTP middlewares
      *
-     * @var Baubyte\Http\Middleware[]
+     * @var \Baubyte\Http\Middleware[]
      */
     protected array $middlewares = [];
 
@@ -76,7 +76,7 @@ class Route {
     /**
      * Get all HTTP middlewares for this route.
      *
-     * @return Baubyte\Http\Middleware[]
+     * @return \Baubyte\Http\Middleware[]
      */
     public function middlewares(): array {
         return $this->middlewares;

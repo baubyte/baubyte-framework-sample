@@ -63,7 +63,7 @@ class Router {
      * Run middleware stack and return final response.
      *
      * @param \Baubyte\Http\Request $request
-     * @param array $middlewares
+     * @param \Baubyte\Http\Middleware[] $middlewares
      * @param callable $target
      * @return \Baubyte\Http\Response
      */
@@ -73,7 +73,11 @@ class Router {
         }
         return $middlewares[0]->handle(
             $request,
-            fn ($request) => $this->runMiddlewars($request, array_slice($middlewares, 1), $target)
+            fn ($request) => $this->runMiddlewars(
+                $request,
+                array_slice($middlewares, 1),
+                $target
+            )
         );
     }
     /**
