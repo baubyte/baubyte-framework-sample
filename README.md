@@ -45,7 +45,8 @@
             ./phpdoc -d ./src -t ./docs
         ```
 ## Instrucciones
-#### Requisitos tener docker y docker-compose
+#### Requisitos tener docker y docker-compose.
+##### En el aso de no tener docker ni docker-compose, deberías mover el directorio [app-src](./app-src), al ***"htdocs"*** de [XAMPP](https://www.apachefriends.org/es/index.html), o al directorio ***"www"*** en el caso de [Laragon](https://github.com/leokhoa/laragon/releases/tag/6.0.0). De igual manera luego de elegir algunos des los programas mencionados se debe ejecutar un `composer install`.
 #### 1. Clonar repo
 #### 2. Dentro del directorio del repo clonado abrir un Terminal y ejecutar:
     docker-compose up -d
