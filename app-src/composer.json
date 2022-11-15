@@ -6,15 +6,15 @@
     "autoload": {
         "psr-4": {
             "Baubyte\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Baubyte\\Tests\\": "tests"
         },
         "classmap": [
             "src/Contracts/Stubs/Stringable.php"
         ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Baubyte\\Tests\\": "tests"
+        }
     },
     "scripts": {
         "test": "phpunit --color=always --testdox -v tests/",
