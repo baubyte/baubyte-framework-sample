@@ -112,7 +112,7 @@ class Request {
      * @return array|string|null Null if the key doesn't exist, the value of
      * the key if it is present or all the data if no key was provided.
      */
-    public function headers(?string $key = null): array|string|null {
+    public function headers(?string $key = null) {
         if (is_null($key)) {
             return $this->headers;
         }
@@ -132,7 +132,7 @@ class Request {
      * @return array|string|null Null if the key doesn't exist, the value of
      * the key if it is present or all the data if no key was provided.
      */
-    public function data(?string $key = null): array|string|null {
+    public function data(?string $key = null) {
         if (is_null($key)) {
             return $this->data;
         }
@@ -157,7 +157,7 @@ class Request {
      * @return array|string|null Null if the key doesn't exist, the value of
      * the key if it is present or all the query params if no key was provided.
      */
-    public function query(?string $key = null): array|string|null {
+    public function query(?string $key = null) {
         if (is_null($key)) {
             return $this->query;
         }
@@ -182,7 +182,7 @@ class Request {
      * @return array|string|null Null if the key doesn't exist, the value of
      * the key if it is present or all the route params if no key was provided.
      */
-    public function routeParameters(?string $key = null): array|string|null {
+    public function routeParameters(?string $key = null) {
         $parameters = $this->route->parseParameters($this->uri);
         if (is_null($key)) {
             return $parameters;

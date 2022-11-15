@@ -55,7 +55,7 @@ class Response {
      * @return array|string|null Null if the key doesn't exist, the value of
      * the key if it is present or all the data if no key was provided.
      */
-    public function headers(?string $key = null): array|string|null {
+    public function headers(?string $key = null) {
         if (is_null($key)) {
             return $this->headers;
         }

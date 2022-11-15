@@ -1,10 +1,12 @@
 <?php
 /**
  * @link    http://github.com/myclabs/php-enum
+ * @link https://github.com/myclabs/php-enum/blob/43db94c969795278f3a9d2d01e9f509dbf5afa52/LICENSE
  * @license http://www.opensource.org/licenses/mit-license.php MIT (see the LICENSE file)
+ * 
  */
 
-namespace Baubyte\Abstract;
+namespace Baubyte\Contracts;
 
 use JsonSerializable;
 use Stringable;

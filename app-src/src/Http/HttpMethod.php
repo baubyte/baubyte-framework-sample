@@ -2,7 +2,7 @@
 
 namespace Baubyte\Http;
 
-use Baubyte\Abstract\Enum;
+use Baubyte\Contracts\Enum;
 
 /**
  * HTTP verb.
