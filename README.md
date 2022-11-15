@@ -13,12 +13,13 @@
     - [Conexión Base de Datos MySql](./helpers-bash/app-db). 
         ```
             cd helpers-bash
+        ```
+        ```
             ./app-db
         ```
     - [Conexión Servidor Web desde la Terminal Bash](./helpers-bash/app-web). 
         ```
             cd helpers-bash
-            ./app-web
         ```
         ```
             ./app-web
