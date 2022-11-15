@@ -20,15 +20,27 @@
             cd helpers-bash
             ./app-web
         ```
+        ```
+            ./app-web
+        ```
     - [Ejecutar Instrucciones de Composer al Servidor Web](./helpers-bash/composer). 
         ```
             cd helpers-bash
+        ```
+        ```
             ./composer run test
+        ```
+        ```
             ./composer php-cs-fixer
+        ```
+        ```
             ./composer require package
+        ```
     - [Generar Documentación Con phpDocumentor](./helpers-bash/phpdoc). 
         ```
             cd helpers-bash
+        ```
+        ```
             ./phpdoc -d ./src -t ./docs
         ```
 ## Instrucciones
