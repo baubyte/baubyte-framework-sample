@@ -651,6 +651,96 @@ Search.appendIndex(
             "summary": "Convert\u0020string\u0020into\u0020camelCase.",
             "url": "namespaces/default.html#function_camel_case"
         },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule",
+            "name": "Rule",
+            "summary": "",
+            "url": "classes/Baubyte-Validation-Rule.html"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003Aemail\u0028\u0029",
+            "name": "email",
+            "summary": "Undocumented\u0020function",
+            "url": "classes/Baubyte-Validation-Rule.html#method_email"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003Arequired\u0028\u0029",
+            "name": "required",
+            "summary": "",
+            "url": "classes/Baubyte-Validation-Rule.html#method_required"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003ArequiredWith\u0028\u0029",
+            "name": "requiredWith",
+            "summary": "",
+            "url": "classes/Baubyte-Validation-Rule.html#method_requiredWith"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\Email",
+            "name": "Email",
+            "summary": "",
+            "url": "classes/Baubyte-Validation-Rules-Email.html"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\Email\u003A\u003Amessage\u0028\u0029",
+            "name": "message",
+            "summary": "Default\u0020message\u0020to\u0020display\u0020when\u0020validation\u0020fails.",
+            "url": "classes/Baubyte-Validation-Rules-Email.html#method_message"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\Email\u003A\u003AisValid\u0028\u0029",
+            "name": "isValid",
+            "summary": "Check\u0020if\u0020given\u0020data\u0020passes\u0020validation.",
+            "url": "classes/Baubyte-Validation-Rules-Email.html#method_isValid"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\Required",
+            "name": "Required",
+            "summary": "",
+            "url": "classes/Baubyte-Validation-Rules-Required.html"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\Required\u003A\u003Amessage\u0028\u0029",
+            "name": "message",
+            "summary": "Default\u0020message\u0020to\u0020display\u0020when\u0020validation\u0020fails.",
+            "url": "classes/Baubyte-Validation-Rules-Required.html#method_message"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\Required\u003A\u003AisValid\u0028\u0029",
+            "name": "isValid",
+            "summary": "Check\u0020if\u0020given\u0020data\u0020passes\u0020validation.",
+            "url": "classes/Baubyte-Validation-Rules-Required.html#method_isValid"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\RequiredWith",
+            "name": "RequiredWith",
+            "summary": "",
+            "url": "classes/Baubyte-Validation-Rules-RequiredWith.html"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\RequiredWith\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiate\u0020required\u0020with\u0020rule.",
+            "url": "classes/Baubyte-Validation-Rules-RequiredWith.html#method___construct"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\RequiredWith\u003A\u003Amessage\u0028\u0029",
+            "name": "message",
+            "summary": "Default\u0020message\u0020to\u0020display\u0020when\u0020validation\u0020fails.",
+            "url": "classes/Baubyte-Validation-Rules-RequiredWith.html#method_message"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\RequiredWith\u003A\u003AisValid\u0028\u0029",
+            "name": "isValid",
+            "summary": "Check\u0020if\u0020given\u0020data\u0020passes\u0020validation.",
+            "url": "classes/Baubyte-Validation-Rules-RequiredWith.html#method_isValid"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\RequiredWith\u003A\u003A\u0024withField",
+            "name": "withField",
+            "summary": "Field\u0020that\u0020must\u0020be\u0020present\u0020when\u0020field\u0020under\u0020validation\u0020is\u0020present.",
+            "url": "classes/Baubyte-Validation-Rules-RequiredWith.html#property_withField"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\ValidationRule",
+            "name": "ValidationRule",
+            "summary": "",
+            "url": "classes/Baubyte-Validation-Rules-ValidationRule.html"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\ValidationRule\u003A\u003Amessage\u0028\u0029",
+            "name": "message",
+            "summary": "Default\u0020message\u0020to\u0020display\u0020when\u0020validation\u0020fails.",
+            "url": "classes/Baubyte-Validation-Rules-ValidationRule.html#method_message"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules\\ValidationRule\u003A\u003AisValid\u0028\u0029",
+            "name": "isValid",
+            "summary": "Check\u0020if\u0020given\u0020data\u0020passes\u0020validation.",
+            "url": "classes/Baubyte-Validation-Rules-ValidationRule.html#method_isValid"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -685,6 +775,16 @@ Search.appendIndex(
             "name": "Server",
             "summary": "",
             "url": "namespaces/baubyte-server.html"
+        },                {
+            "fqsen": "\\Baubyte\\Validation",
+            "name": "Validation",
+            "summary": "",
+            "url": "namespaces/baubyte-validation.html"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rules",
+            "name": "Rules",
+            "summary": "",
+            "url": "namespaces/baubyte-validation-rules.html"
         },                {
             "fqsen": "\\Baubyte\\View",
             "name": "View",
