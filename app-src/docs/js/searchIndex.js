@@ -586,6 +586,71 @@ Search.appendIndex(
             "summary": "Render\u0020given\u0020view\u0020passing\u0020\u0060\u0024params\u0060\u0020and\u0020using\u0020\u0060\u0024layout\u0060.",
             "url": "classes/Baubyte-View-View.html#method_render"
         },                {
+            "fqsen": "\\app\u0028\u0029",
+            "name": "app",
+            "summary": "Easy\u0020access\u0020to\u0020singletons.",
+            "url": "namespaces/default.html#function_app"
+        },                {
+            "fqsen": "\\singleton\u0028\u0029",
+            "name": "singleton",
+            "summary": "Create\u0020singleton.",
+            "url": "namespaces/default.html#function_singleton"
+        },                {
+            "fqsen": "\\isAssociative\u0028\u0029",
+            "name": "isAssociative",
+            "summary": "Check\u0020if\u0020an\u0020array\u0020is\u0020associative",
+            "url": "namespaces/default.html#function_isAssociative"
+        },                {
+            "fqsen": "\\first\u0028\u0029",
+            "name": "first",
+            "summary": "Retrieve\u0020the\u0020first\u0020element\u0020of\u0020an\u0020array",
+            "url": "namespaces/default.html#function_first"
+        },                {
+            "fqsen": "\\last\u0028\u0029",
+            "name": "last",
+            "summary": "Retrieve\u0020the\u0020last\u0020element\u0020of\u0020an\u0020array",
+            "url": "namespaces/default.html#function_last"
+        },                {
+            "fqsen": "\\filter\u0028\u0029",
+            "name": "filter",
+            "summary": "Retrieve\u0020new\u0020array\u0020using\u0020the\u0020given\u0020callback\u0020as\u0020a\u0020condition",
+            "url": "namespaces/default.html#function_filter"
+        },                {
+            "fqsen": "\\request\u0028\u0029",
+            "name": "request",
+            "summary": "Get\u0020current\u0020request.",
+            "url": "namespaces/default.html#function_request"
+        },                {
+            "fqsen": "\\view\u0028\u0029",
+            "name": "view",
+            "summary": "Create\u0020a\u0020new\u0020view\u0020response.",
+            "url": "namespaces/default.html#function_view"
+        },                {
+            "fqsen": "\\json\u0028\u0029",
+            "name": "json",
+            "summary": "Create\u0020a\u0020new\u0020json\u0020response.",
+            "url": "namespaces/default.html#function_json"
+        },                {
+            "fqsen": "\\text\u0028\u0029",
+            "name": "text",
+            "summary": "Create\u0020a\u0020new\u0020text\u0020response.",
+            "url": "namespaces/default.html#function_text"
+        },                {
+            "fqsen": "\\redirect\u0028\u0029",
+            "name": "redirect",
+            "summary": "Create\u0020a\u0020new\u0020redirect\u0020response.",
+            "url": "namespaces/default.html#function_redirect"
+        },                {
+            "fqsen": "\\snake_case\u0028\u0029",
+            "name": "snake_case",
+            "summary": "Convert\u0020string\u0020into\u0020snake_case.",
+            "url": "namespaces/default.html#function_snake_case"
+        },                {
+            "fqsen": "\\camel_case\u0028\u0029",
+            "name": "camel_case",
+            "summary": "Convert\u0020string\u0020into\u0020camelCase.",
+            "url": "namespaces/default.html#function_camel_case"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
