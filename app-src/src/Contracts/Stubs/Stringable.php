@@ -10,8 +10,7 @@
  * @link https://github.com/symfony/polyfill-php80/blob/7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936/LICENSE
  */
 if (\PHP_VERSION_ID < 80000 && !interface_exists('Stringable')) {
-    interface Stringable
-    {
+    interface Stringable {
         /**
          * @return string
          */

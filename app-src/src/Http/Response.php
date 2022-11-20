@@ -165,8 +165,16 @@ class Response {
         ->setHeader("Location", $uri);
     }
 
-    public static function view(string $viewName): self {
-        $content = Container::resolve(App::class)->view->render($viewName);
+    /**
+     * Create a new response pre-configured to return a rendered template.
+     *
+     * @param string $viewName
+     * @param array $params
+     * @param ?string $layout
+     * @return self
+     */
+    public static function view(string $viewName, array $params = [], string $layout = null): self {
+        $content = Container::resolve(App::class)->view->render($viewName, $params, $layout);
         return (new self())
         ->setContentType("text/html")
         ->setContent($content);

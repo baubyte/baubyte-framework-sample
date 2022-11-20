@@ -1,111 +1,6 @@
 Search.appendIndex(
     [
                 {
-            "fqsen": "\\Baubyte\\Abstract\\Enum",
-            "name": "Enum",
-            "summary": "Base\u0020Enum\u0020class",
-            "url": "classes/Baubyte-Abstract-Enum.html"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "Creates\u0020a\u0020new\u0020value\u0020of\u0020some\u0020type",
-            "url": "classes/Baubyte-Abstract-Enum.html#method___construct"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003A__wakeup\u0028\u0029",
-            "name": "__wakeup",
-            "summary": "This\u0020method\u0020exists\u0020only\u0020for\u0020the\u0020compatibility\u0020reason\u0020when\u0020deserializing\u0020a\u0020previously\u0020serialized\u0020version\nthat\u0020didn\u0027t\u0020had\u0020the\u0020key\u0020property",
-            "url": "classes/Baubyte-Abstract-Enum.html#method___wakeup"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003Afrom\u0028\u0029",
-            "name": "from",
-            "summary": "",
-            "url": "classes/Baubyte-Abstract-Enum.html#method_from"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003A\u0024value",
-            "name": "value",
-            "summary": "Enum\u0020value",
-            "url": "classes/Baubyte-Abstract-Enum.html#property_value"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003AgetKey\u0028\u0029",
-            "name": "getKey",
-            "summary": "Returns\u0020the\u0020enum\u0020key\u0020\u0028i.e.\u0020the\u0020constant\u0020name\u0029.",
-            "url": "classes/Baubyte-Abstract-Enum.html#method_getKey"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003A__toString\u0028\u0029",
-            "name": "__toString",
-            "summary": "",
-            "url": "classes/Baubyte-Abstract-Enum.html#method___toString"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003Aequals\u0028\u0029",
-            "name": "equals",
-            "summary": "Determines\u0020if\u0020Enum\u0020should\u0020be\u0020considered\u0020equal\u0020with\u0020the\u0020variable\u0020passed\u0020as\u0020a\u0020parameter.",
-            "url": "classes/Baubyte-Abstract-Enum.html#method_equals"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003Akeys\u0028\u0029",
-            "name": "keys",
-            "summary": "Returns\u0020the\u0020names\u0020\u0028keys\u0029\u0020of\u0020all\u0020constants\u0020in\u0020the\u0020Enum\u0020class",
-            "url": "classes/Baubyte-Abstract-Enum.html#method_keys"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003Acases\u0028\u0029",
-            "name": "cases",
-            "summary": "Returns\u0020instances\u0020of\u0020the\u0020Enum\u0020class\u0020of\u0020all\u0020Enum\u0020constants",
-            "url": "classes/Baubyte-Abstract-Enum.html#method_cases"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003AtoArray\u0028\u0029",
-            "name": "toArray",
-            "summary": "Returns\u0020all\u0020possible\u0020values\u0020as\u0020an\u0020array",
-            "url": "classes/Baubyte-Abstract-Enum.html#method_toArray"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003AisValid\u0028\u0029",
-            "name": "isValid",
-            "summary": "Check\u0020if\u0020is\u0020valid\u0020enum\u0020value",
-            "url": "classes/Baubyte-Abstract-Enum.html#method_isValid"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003AassertValidValue\u0028\u0029",
-            "name": "assertValidValue",
-            "summary": "Asserts\u0020valid\u0020enum\u0020value",
-            "url": "classes/Baubyte-Abstract-Enum.html#method_assertValidValue"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003AassertValidValueReturningKey\u0028\u0029",
-            "name": "assertValidValueReturningKey",
-            "summary": "Asserts\u0020valid\u0020enum\u0020value",
-            "url": "classes/Baubyte-Abstract-Enum.html#method_assertValidValueReturningKey"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003AisValidKey\u0028\u0029",
-            "name": "isValidKey",
-            "summary": "Check\u0020if\u0020is\u0020valid\u0020enum\u0020key",
-            "url": "classes/Baubyte-Abstract-Enum.html#method_isValidKey"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003Asearch\u0028\u0029",
-            "name": "search",
-            "summary": "Return\u0020key\u0020for\u0020value",
-            "url": "classes/Baubyte-Abstract-Enum.html#method_search"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003A__callStatic\u0028\u0029",
-            "name": "__callStatic",
-            "summary": "Returns\u0020a\u0020value\u0020when\u0020called\u0020statically\u0020like\u0020so\u003A\u0020MyEnum\u003A\u003ASOME_VALUE\u0028\u0029\u0020given\u0020SOME_VALUE\u0020is\u0020a\u0020class\u0020constant",
-            "url": "classes/Baubyte-Abstract-Enum.html#method___callStatic"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003AjsonSerialize\u0028\u0029",
-            "name": "jsonSerialize",
-            "summary": "Specify\u0020data\u0020which\u0020should\u0020be\u0020serialized\u0020to\u0020JSON.\u0020This\u0020method\u0020returns\u0020data\u0020that\u0020can\u0020be\u0020serialized\u0020by\u0020json_encode\u0028\u0029\nnatively.",
-            "url": "classes/Baubyte-Abstract-Enum.html#method_jsonSerialize"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003A\u0024key",
-            "name": "key",
-            "summary": "Enum\u0020key,\u0020the\u0020constant\u0020name",
-            "url": "classes/Baubyte-Abstract-Enum.html#property_key"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003A\u0024cache",
-            "name": "cache",
-            "summary": "Store\u0020existing\u0020constants\u0020in\u0020a\u0020static\u0020cache\u0020per\u0020object.",
-            "url": "classes/Baubyte-Abstract-Enum.html#property_cache"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract\\Enum\u003A\u003A\u0024instances",
-            "name": "instances",
-            "summary": "Cache\u0020of\u0020instances\u0020of\u0020the\u0020Enum\u0020class",
-            "url": "classes/Baubyte-Abstract-Enum.html#property_instances"
-        },                {
             "fqsen": "\\Baubyte\\Http\\HttpMethod",
             "name": "HttpMethod",
             "summary": "HTTP\u0020verb.",
@@ -276,6 +171,11 @@ Search.appendIndex(
             "summary": "Create\u0020a\u0020new\u0020redirect\u0020response.\u0020\u0060\u0022Factory\u0022\u0060",
             "url": "classes/Baubyte-Http-Response.html#method_redirect"
         },                {
+            "fqsen": "\\Baubyte\\Http\\Response\u003A\u003Aview\u0028\u0029",
+            "name": "view",
+            "summary": "Create\u0020a\u0020new\u0020response\u0020pre\u002Dconfigured\u0020to\u0020return\u0020a\u0020rendered\u0020template.",
+            "url": "classes/Baubyte-Http-Response.html#method_view"
+        },                {
             "fqsen": "\\Baubyte\\Routing\\Route",
             "name": "Route",
             "summary": "This\u0020class\u0020stores\u0020the\u0020URI\u0020regex\u0020and\u0020action.",
@@ -328,8 +228,28 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003Aget\u0028\u0029",
             "name": "get",
-            "summary": "",
+            "summary": "Register\u0020action\u0020for\u0020HTTP\u0020GET\u0020method.",
             "url": "classes/Baubyte-Routing-Route.html#method_get"
+        },                {
+            "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003Apost\u0028\u0029",
+            "name": "post",
+            "summary": "Register\u0020action\u0020for\u0020HTTP\u0020POST\u0020method.",
+            "url": "classes/Baubyte-Routing-Route.html#method_post"
+        },                {
+            "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003Aput\u0028\u0029",
+            "name": "put",
+            "summary": "Register\u0020action\u0020for\u0020HTTP\u0020PUT\u0020method.",
+            "url": "classes/Baubyte-Routing-Route.html#method_put"
+        },                {
+            "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003Apatch\u0028\u0029",
+            "name": "patch",
+            "summary": "Register\u0020action\u0020for\u0020HTTP\u0020PATCH\u0020method.",
+            "url": "classes/Baubyte-Routing-Route.html#method_patch"
+        },                {
+            "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003Adelete\u0028\u0029",
+            "name": "delete",
+            "summary": "Register\u0020action\u0020for\u0020HTTP\u0020DELETE\u0020method.",
+            "url": "classes/Baubyte-Routing-Route.html#method_delete"
         },                {
             "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003A\u0024regex",
             "name": "regex",
@@ -461,6 +381,11 @@ Search.appendIndex(
             "summary": "Server\u0020Instance",
             "url": "classes/Baubyte-App.html#property_server"
         },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003A\u0024view",
+            "name": "view",
+            "summary": "Undocumented\u0020variable",
+            "url": "classes/Baubyte-App.html#property_view"
+        },                {
             "fqsen": "\\Baubyte\\Container\\Container",
             "name": "Container",
             "summary": "Service\u0020container.",
@@ -491,15 +416,180 @@ Search.appendIndex(
             "summary": "Handle\u0020the\u0020request\u0020and\u0020return\u0020a\u0020response,\u0020or\u0020call\u0020the\u0020next\u0020middleware.",
             "url": "classes/Baubyte-Http-Middleware.html#method_handle"
         },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum",
+            "name": "Enum",
+            "summary": "Base\u0020Enum\u0020class",
+            "url": "classes/Baubyte-Contracts-Enum.html"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Creates\u0020a\u0020new\u0020value\u0020of\u0020some\u0020type",
+            "url": "classes/Baubyte-Contracts-Enum.html#method___construct"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003A__wakeup\u0028\u0029",
+            "name": "__wakeup",
+            "summary": "This\u0020method\u0020exists\u0020only\u0020for\u0020the\u0020compatibility\u0020reason\u0020when\u0020deserializing\u0020a\u0020previously\u0020serialized\u0020version\nthat\u0020didn\u0027t\u0020had\u0020the\u0020key\u0020property",
+            "url": "classes/Baubyte-Contracts-Enum.html#method___wakeup"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003Afrom\u0028\u0029",
+            "name": "from",
+            "summary": "",
+            "url": "classes/Baubyte-Contracts-Enum.html#method_from"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003A\u0024value",
+            "name": "value",
+            "summary": "Enum\u0020value",
+            "url": "classes/Baubyte-Contracts-Enum.html#property_value"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003AgetKey\u0028\u0029",
+            "name": "getKey",
+            "summary": "Returns\u0020the\u0020enum\u0020key\u0020\u0028i.e.\u0020the\u0020constant\u0020name\u0029.",
+            "url": "classes/Baubyte-Contracts-Enum.html#method_getKey"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003A__toString\u0028\u0029",
+            "name": "__toString",
+            "summary": "",
+            "url": "classes/Baubyte-Contracts-Enum.html#method___toString"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003Aequals\u0028\u0029",
+            "name": "equals",
+            "summary": "Determines\u0020if\u0020Enum\u0020should\u0020be\u0020considered\u0020equal\u0020with\u0020the\u0020variable\u0020passed\u0020as\u0020a\u0020parameter.",
+            "url": "classes/Baubyte-Contracts-Enum.html#method_equals"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003Akeys\u0028\u0029",
+            "name": "keys",
+            "summary": "Returns\u0020the\u0020names\u0020\u0028keys\u0029\u0020of\u0020all\u0020constants\u0020in\u0020the\u0020Enum\u0020class",
+            "url": "classes/Baubyte-Contracts-Enum.html#method_keys"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003Acases\u0028\u0029",
+            "name": "cases",
+            "summary": "Returns\u0020instances\u0020of\u0020the\u0020Enum\u0020class\u0020of\u0020all\u0020Enum\u0020constants",
+            "url": "classes/Baubyte-Contracts-Enum.html#method_cases"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003AtoArray\u0028\u0029",
+            "name": "toArray",
+            "summary": "Returns\u0020all\u0020possible\u0020values\u0020as\u0020an\u0020array",
+            "url": "classes/Baubyte-Contracts-Enum.html#method_toArray"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003AisValid\u0028\u0029",
+            "name": "isValid",
+            "summary": "Check\u0020if\u0020is\u0020valid\u0020enum\u0020value",
+            "url": "classes/Baubyte-Contracts-Enum.html#method_isValid"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003AassertValidValue\u0028\u0029",
+            "name": "assertValidValue",
+            "summary": "Asserts\u0020valid\u0020enum\u0020value",
+            "url": "classes/Baubyte-Contracts-Enum.html#method_assertValidValue"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003AassertValidValueReturningKey\u0028\u0029",
+            "name": "assertValidValueReturningKey",
+            "summary": "Asserts\u0020valid\u0020enum\u0020value",
+            "url": "classes/Baubyte-Contracts-Enum.html#method_assertValidValueReturningKey"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003AisValidKey\u0028\u0029",
+            "name": "isValidKey",
+            "summary": "Check\u0020if\u0020is\u0020valid\u0020enum\u0020key",
+            "url": "classes/Baubyte-Contracts-Enum.html#method_isValidKey"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003Asearch\u0028\u0029",
+            "name": "search",
+            "summary": "Return\u0020key\u0020for\u0020value",
+            "url": "classes/Baubyte-Contracts-Enum.html#method_search"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003A__callStatic\u0028\u0029",
+            "name": "__callStatic",
+            "summary": "Returns\u0020a\u0020value\u0020when\u0020called\u0020statically\u0020like\u0020so\u003A\u0020MyEnum\u003A\u003ASOME_VALUE\u0028\u0029\u0020given\u0020SOME_VALUE\u0020is\u0020a\u0020class\u0020constant",
+            "url": "classes/Baubyte-Contracts-Enum.html#method___callStatic"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "Specify\u0020data\u0020which\u0020should\u0020be\u0020serialized\u0020to\u0020JSON.\u0020This\u0020method\u0020returns\u0020data\u0020that\u0020can\u0020be\u0020serialized\u0020by\u0020json_encode\u0028\u0029\nnatively.",
+            "url": "classes/Baubyte-Contracts-Enum.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003A\u0024key",
+            "name": "key",
+            "summary": "Enum\u0020key,\u0020the\u0020constant\u0020name",
+            "url": "classes/Baubyte-Contracts-Enum.html#property_key"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003A\u0024cache",
+            "name": "cache",
+            "summary": "Store\u0020existing\u0020constants\u0020in\u0020a\u0020static\u0020cache\u0020per\u0020object.",
+            "url": "classes/Baubyte-Contracts-Enum.html#property_cache"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts\\Enum\u003A\u003A\u0024instances",
+            "name": "instances",
+            "summary": "Cache\u0020of\u0020instances\u0020of\u0020the\u0020Enum\u0020class",
+            "url": "classes/Baubyte-Contracts-Enum.html#property_instances"
+        },                {
+            "fqsen": "\\Stringable",
+            "name": "Stringable",
+            "summary": "",
+            "url": "classes/Stringable.html"
+        },                {
+            "fqsen": "\\Stringable\u003A\u003A__toString\u0028\u0029",
+            "name": "__toString",
+            "summary": "",
+            "url": "classes/Stringable.html#method___toString"
+        },                {
+            "fqsen": "\\Baubyte\\View\\BaubyteEngine",
+            "name": "BaubyteEngine",
+            "summary": "Baubyte\u0020template\u0020engine.",
+            "url": "classes/Baubyte-View-BaubyteEngine.html"
+        },                {
+            "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Baubyte-View-BaubyteEngine.html#method___construct"
+        },                {
+            "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003Arender\u0028\u0029",
+            "name": "render",
+            "summary": "Render\u0020given\u0020view\u0020passing\u0020\u0060\u0024params\u0060\u0020and\u0020using\u0020\u0060\u0024layout\u0060.",
+            "url": "classes/Baubyte-View-BaubyteEngine.html#method_render"
+        },                {
+            "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003ArenderView\u0028\u0029",
+            "name": "renderView",
+            "summary": "Render\u0020view\u0020only,\u0020without\u0020replacing\u0020annotations.",
+            "url": "classes/Baubyte-View-BaubyteEngine.html#method_renderView"
+        },                {
+            "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003ArenderLayout\u0028\u0029",
+            "name": "renderLayout",
+            "summary": "Render\u0020layout\u0020only,\u0020without\u0020replacing\u0020annotations.",
+            "url": "classes/Baubyte-View-BaubyteEngine.html#method_renderLayout"
+        },                {
+            "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003AphpFileOutput\u0028\u0029",
+            "name": "phpFileOutput",
+            "summary": "Process\u0020PHP\u0020file\u0020and\u0020get\u0020string\u0020output.",
+            "url": "classes/Baubyte-View-BaubyteEngine.html#method_phpFileOutput"
+        },                {
+            "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003A\u0024viewsDirectory",
+            "name": "viewsDirectory",
+            "summary": "Directory\u0020where\u0020the\u0020views\u0020are\u0020located.",
+            "url": "classes/Baubyte-View-BaubyteEngine.html#property_viewsDirectory"
+        },                {
+            "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003A\u0024defaultLayout",
+            "name": "defaultLayout",
+            "summary": "Layout\u0020to\u0020use\u0020in\u0020case\u0020none\u0020was\u0020given.",
+            "url": "classes/Baubyte-View-BaubyteEngine.html#property_defaultLayout"
+        },                {
+            "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003A\u0024contentAnnotation",
+            "name": "contentAnnotation",
+            "summary": "Annotation\u0020used\u0020in\u0020layouts\u0020to\u0020mark\u0020where\u0020to\u0020put\u0020the\u0020view\u0020content.",
+            "url": "classes/Baubyte-View-BaubyteEngine.html#property_contentAnnotation"
+        },                {
+            "fqsen": "\\Baubyte\\View\\View",
+            "name": "View",
+            "summary": "View\u0020template\u0020render",
+            "url": "classes/Baubyte-View-View.html"
+        },                {
+            "fqsen": "\\Baubyte\\View\\View\u003A\u003Arender\u0028\u0029",
+            "name": "render",
+            "summary": "Render\u0020given\u0020view\u0020passing\u0020\u0060\u0024params\u0060\u0020and\u0020using\u0020\u0060\u0024layout\u0060.",
+            "url": "classes/Baubyte-View-View.html#method_render"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
             "url": "namespaces/default.html"
-        },                {
-            "fqsen": "\\Baubyte\\Abstract",
-            "name": "Abstract",
-            "summary": "",
-            "url": "namespaces/baubyte-abstract.html"
         },                {
             "fqsen": "\\Baubyte",
             "name": "Baubyte",
@@ -510,6 +600,11 @@ Search.appendIndex(
             "name": "Container",
             "summary": "",
             "url": "namespaces/baubyte-container.html"
+        },                {
+            "fqsen": "\\Baubyte\\Contracts",
+            "name": "Contracts",
+            "summary": "",
+            "url": "namespaces/baubyte-contracts.html"
         },                {
             "fqsen": "\\Baubyte\\Http",
             "name": "Http",
@@ -525,5 +620,10 @@ Search.appendIndex(
             "name": "Server",
             "summary": "",
             "url": "namespaces/baubyte-server.html"
+        },                {
+            "fqsen": "\\Baubyte\\View",
+            "name": "View",
+            "summary": "",
+            "url": "namespaces/baubyte-view.html"
         }            ]
 );

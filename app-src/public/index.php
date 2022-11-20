@@ -12,7 +12,7 @@ $app = App::bootstrap();
 $app->router->get('/test/{param}', function (Request $request) {
     return Response::json($request->routeParameters());
 });
-$app->router->post('/test', function(Request $request){
+$app->router->post('/test', function (Request $request) {
     return Response::json($request->data());
 });
 $app->router->get('/redirect', function (Request $request) {
@@ -41,5 +41,6 @@ class TestMiddleware implements Middleware
 }
 Route::get('/middleware', fn (Request $request) => Response::json(["message" => "ok"]))->setMiddlewares([AuthMiddleware::class, TestMiddleware::class]);
 
-Route::get('/html', fn (Request $request) => Response::view('home'));
+Route::get('/html', fn (Request $request) => Response::view('home', [
+    'user' => 'BAUBYTE']));
 $app->run();
