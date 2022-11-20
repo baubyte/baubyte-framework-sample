@@ -2,8 +2,6 @@
 
 namespace Baubyte\Routing;
 
-use Baubyte\App;
-use Baubyte\Container\Container;
 use Closure;
 
 /**
@@ -139,7 +137,7 @@ class Route {
      * @return Route
      */
     public static function get(string $uri, Closure $action): Route {
-        return Container::resolve(App::class)->router->get($uri, $action);
+        return app()->router->get($uri, $action);
     }
 
     /**
@@ -150,7 +148,7 @@ class Route {
      * @return Route
      */
     public static function post(string $uri, Closure $action): Route {
-        return Container::resolve(App::class)->router->post($uri, $action);
+        return app()->router->post($uri, $action);
     }
 
     /**
@@ -161,7 +159,7 @@ class Route {
      * @return Route
      */
     public static function put(string $uri, Closure $action): Route {
-        return Container::resolve(App::class)->router->put($uri, $action);
+        return app()->router->put($uri, $action);
     }
 
     /**
@@ -172,7 +170,7 @@ class Route {
      * @return Route
      */
     public static function patch(string $uri, Closure $action): Route {
-        return Container::resolve(App::class)->router->patch($uri, $action);
+        return app()->router->patch($uri, $action);
     }
 
     /**
@@ -183,6 +181,6 @@ class Route {
      * @return Route
      */
     public static function delete(string $uri, Closure $action): Route {
-        return Container::resolve(App::class)->router->delete($uri, $action);
+        return app()->router->delete($uri, $action);
     }
 }
