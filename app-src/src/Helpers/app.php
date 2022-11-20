@@ -20,3 +20,4 @@ function app(string $class = App::class) {
 function singleton(string $class, callable|string|null $build = null) {
     return Container::singleton($class, $build);
 }
+//TODO: env() config() debug() template()

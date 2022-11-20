@@ -9,7 +9,9 @@
         },
         "files": [
             "src/Helpers/app.php",
-            "src/Helpers/http.php"
+            "src/Helpers/http.php",
+            "src/Helpers/array.php",
+            "src/Helpers/string.php"
         ],
         "classmap": [
             "src/Contracts/Stubs/Stringable.php"

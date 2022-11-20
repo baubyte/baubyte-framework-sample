@@ -52,3 +52,4 @@ function text(string $text): Response {
 function redirect(string $route): Response {
     return Response::redirect($route);
 }
+//TODO: back()
