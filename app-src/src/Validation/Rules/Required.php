@@ -7,7 +7,7 @@ class Required implements ValidationRule {
      * @inheritDoc
      */
     public function message(): string {
-        return "Este Campo es Obligatorio";
+        return "Este Campo es Obligatorio.";
     }
 
     /**

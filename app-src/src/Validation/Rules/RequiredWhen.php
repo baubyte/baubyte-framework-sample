@@ -39,7 +39,7 @@ class RequiredWhen implements ValidationRule
      * @inheritDoc
      */
     public function message(): string {
-        return "Este campo es obligatorio cuando {$this->otherField} {$this->operator} {$this->compareWith}";
+        return "Este campo es obligatorio cuando {$this->otherField} {$this->operator} {$this->compareWith}.";
     }
 
     /**
