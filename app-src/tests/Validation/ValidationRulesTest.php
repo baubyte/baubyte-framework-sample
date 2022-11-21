@@ -3,6 +3,8 @@
 namespace Baubyte\Tests\Validation;
 
 use Baubyte\Validation\Rules\Email;
+use Baubyte\Validation\Rules\LessThan;
+use Baubyte\Validation\Rules\Nullable;
 use Baubyte\Validation\Rules\Number;
 use Baubyte\Validation\Rules\Required;
 use Baubyte\Validation\Rules\RequiredWhen;
@@ -106,5 +108,34 @@ class ValidationRulesTest extends TestCase {
         $rule = new Number();
         $data = ["test" => $number];
         $this->assertEquals($expected, $rule->isValid("test", $data));
+    }
+
+
+    public function dataLessThan() {
+        return [
+            [5, 5, false],
+            [5, 6, false],
+            [5, 3, true],
+            [5, null, false],
+            [5, "", false],
+            [5, "test", false],
+        ];
+    }
+
+    /**
+     * @dataProvider dataLessThan
+     */
+    public function testLessThan($value, $check, $expected) {
+        $rule = new LessThan($value);
+        $data = ["test" => $check];
+        $this->assertEquals($expected, $rule->isValid("test", $data));
+    }
+
+    public function testNullable() {
+        $rule = new Nullable();
+        foreach (["test", "", null] as $check) {
+            $data = ["test" => $check];
+            $this->assertTrue($rule->isValid("test", $data));
+        }
     }
 }
