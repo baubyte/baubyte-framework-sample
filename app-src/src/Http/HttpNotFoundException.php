@@ -2,11 +2,11 @@
 
 namespace Baubyte\Http;
 
-use Exception;
+use Baubyte\Exceptions\BaubyteException;
 
 /**
  * HTTP 404 Not Found.
  */
-class HttpNotFoundException extends Exception {
+class HttpNotFoundException extends BaubyteException {
     //
 }
