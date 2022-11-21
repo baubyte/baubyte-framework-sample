@@ -4,6 +4,7 @@ namespace Baubyte\Tests\Validation;
 
 use Baubyte\Validation\Rules\Email;
 use Baubyte\Validation\Rules\Required;
+use Baubyte\Validation\Rules\RequiredWhen;
 use Baubyte\Validation\Rules\RequiredWith;
 use PHPUnit\Framework\TestCase;
 
@@ -58,4 +59,24 @@ class ValidationRulesTest extends TestCase {
         $data = ["other" => 10];
         $this->assertFalse($rule->isValid('test', $data));
     }
+
+    public function whenData() {
+        return [
+            ["other", "=", "value", ["other" => "value"], "test", false],
+            ["other", "=", "value", ["other" => "value", "test" => 1], "test", true],
+            ["other", "=", "value", ["other" => "not value"], "test", true],
+            ["other", ">", 5, ["other" => 1], "test", true],
+            ["other", ">", 5, ["other" => 6], "test", false],
+            ["other", ">", 5, ["other" => 6, "test" => 1], "test", true],
+        ];
+    }
+
+    /**
+     * @dataProvider whenData
+     */
+    public function test_required_when($other, $operator, $compareWith, $data, $field, $expected) {
+        $rule = new RequiredWhen($other, $operator, $compareWith);
+        $this->assertEquals($expected, $rule->isValid($field, $data));
+    }
+
 }
