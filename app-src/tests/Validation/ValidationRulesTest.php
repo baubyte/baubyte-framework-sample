@@ -3,6 +3,7 @@
 namespace Baubyte\Tests\Validation;
 
 use Baubyte\Validation\Rules\Email;
+use Baubyte\Validation\Rules\Number;
 use Baubyte\Validation\Rules\Required;
 use Baubyte\Validation\Rules\RequiredWhen;
 use Baubyte\Validation\Rules\RequiredWith;
@@ -79,4 +80,31 @@ class ValidationRulesTest extends TestCase {
         $this->assertEquals($expected, $rule->isValid($field, $data));
     }
 
+    public function numbers() {
+        return [
+            [0, true],
+            [1, true],
+            [1.5, true],
+            [-1, true],
+            [-1.5, true],
+            ["0", true],
+            ["1", true],
+            ["1.5", true],
+            ["-1", true],
+            ["-1.5", true],
+            ["test", false],
+            ["1test", false],
+            ["-5test", false],
+            ["", false],
+            [null, false],
+        ];
+    }
+    /**
+     * @dataProvider numbers
+     */
+    public function test_number($number, $expected) {
+        $rule = new Number();
+        $data = ["test" => $number];
+        $this->assertEquals($expected, $rule->isValid("test", $data));
+    }
 }
