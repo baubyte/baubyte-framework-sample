@@ -2,8 +2,7 @@
 
 namespace Baubyte\Validation\Rules;
 
-class RequiredWhen implements ValidationRule
-{
+class RequiredWhen implements ValidationRule {
     /**
      * Field used for comparators.
      *
@@ -30,7 +29,7 @@ class RequiredWhen implements ValidationRule
      * @param string $operator
      * @param string $compareWith
      */
-    public function __construct(string $otherField,string $operator,string $compareWith) {
+    public function __construct(string $otherField, string $operator, string $compareWith) {
         $this->otherField = $otherField;
         $this->operator = $operator;
         $this->compareWith = $compareWith;
