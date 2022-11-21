@@ -106,6 +106,11 @@ Search.appendIndex(
             "summary": "Get\u0020all\u0020route\u0020params\u0020as\u0020key\u002Dvalue\u0020or\u0020get\u0020only\u0020specific\u0020value\u0020by\u0020providing\na\u0020\u0060\u0024key\u0060.",
             "url": "classes/Baubyte-Http-Request.html#method_routeParameters"
         },                {
+            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003Avalidate\u0028\u0029",
+            "name": "validate",
+            "summary": "Get\u0020validated\u0020data\u0020from\u0020the\u0020request\u0020or\u0020return\u0020back\u0020with\u0020errors\u0020if\u0020not\u0020valid.",
+            "url": "classes/Baubyte-Http-Request.html#method_validate"
+        },                {
             "fqsen": "\\Baubyte\\Http\\Response",
             "name": "Response",
             "summary": "HTTP\u0020response\u0020that\u0020will\u0020be\u0020sent\u0020to\u0020the\u0020client.",
@@ -365,6 +370,11 @@ Search.appendIndex(
             "name": "run",
             "summary": "Handle\u0020request\u0020and\u0020send\u0020response.",
             "url": "classes/Baubyte-App.html#method_run"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003Aabort\u0028\u0029",
+            "name": "abort",
+            "summary": "",
+            "url": "classes/Baubyte-App.html#method_abort"
         },                {
             "fqsen": "\\Baubyte\\App\u003A\u003A\u0024router",
             "name": "router",
@@ -658,18 +668,33 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003Aemail\u0028\u0029",
             "name": "email",
-            "summary": "Undocumented\u0020function",
+            "summary": "Valid\u0020if\u0020field\u0020is\u0020valid\u0020email.",
             "url": "classes/Baubyte-Validation-Rule.html#method_email"
         },                {
             "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003Arequired\u0028\u0029",
             "name": "required",
-            "summary": "",
+            "summary": "Validate\u0020field\u0020required.",
             "url": "classes/Baubyte-Validation-Rule.html#method_required"
         },                {
             "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003ArequiredWith\u0028\u0029",
             "name": "requiredWith",
-            "summary": "",
+            "summary": "Validate\u0020field\u0020to\u0020check\u0020when\u0020validating\u0020actual\u0020field",
             "url": "classes/Baubyte-Validation-Rule.html#method_requiredWith"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003ArequiredWhen\u0028\u0029",
+            "name": "requiredWhen",
+            "summary": "Validates\u0020the\u0020field\u0020when\u0020the\u0020other\u0020field\u0020meets\u0020the\u0020rule.",
+            "url": "classes/Baubyte-Validation-Rule.html#method_requiredWhen"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003Anumber\u0028\u0029",
+            "name": "number",
+            "summary": "Valid\u0020if\u0020the\u0020field\u0020is\u0020a\u0020valid\u0020number.",
+            "url": "classes/Baubyte-Validation-Rule.html#method_number"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003AlessThan\u0028\u0029",
+            "name": "lessThan",
+            "summary": "Valida\u0020que\u0020el\u0020campo\u0020sea\u0020menor\u0020a",
+            "url": "classes/Baubyte-Validation-Rule.html#method_lessThan"
         },                {
             "fqsen": "\\Baubyte\\Validation\\Rules\\Email",
             "name": "Email",
@@ -831,6 +856,46 @@ Search.appendIndex(
             "summary": "value\u0020to\u0020compare\u0020with\u0020using\u0020\u0060\u0024operator\u0060.",
             "url": "classes/Baubyte-Validation-Rules-RequiredWhen.html#property_compareWith"
         },                {
+            "fqsen": "\\Baubyte\\Exceptions\\BaubyteException",
+            "name": "BaubyteException",
+            "summary": "",
+            "url": "classes/Baubyte-Exceptions-BaubyteException.html"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Exceptions\\ValidationException",
+            "name": "ValidationException",
+            "summary": "",
+            "url": "classes/Baubyte-Validation-Exceptions-ValidationException.html"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Exceptions\\ValidationException\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiate\u0020required\u0020Validation\u0020Exception.",
+            "url": "classes/Baubyte-Validation-Exceptions-ValidationException.html#method___construct"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Exceptions\\ValidationException\u003A\u003A\u0024errors",
+            "name": "errors",
+            "summary": "Errors\u0020Validations",
+            "url": "classes/Baubyte-Validation-Exceptions-ValidationException.html#property_errors"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Validator",
+            "name": "Validator",
+            "summary": "",
+            "url": "classes/Baubyte-Validation-Validator.html"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Validator\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiate\u0020required\u0020Validator.",
+            "url": "classes/Baubyte-Validation-Validator.html#method___construct"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Validator\u003A\u003Avalidate\u0028\u0029",
+            "name": "validate",
+            "summary": "Get\u0020validated\u0020data.",
+            "url": "classes/Baubyte-Validation-Validator.html#method_validate"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Validator\u003A\u003A\u0024data",
+            "name": "data",
+            "summary": "Data\u0020to\u0020validate",
+            "url": "classes/Baubyte-Validation-Validator.html#property_data"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -851,6 +916,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/baubyte-contracts.html"
         },                {
+            "fqsen": "\\Baubyte\\Exceptions",
+            "name": "Exceptions",
+            "summary": "",
+            "url": "namespaces/baubyte-exceptions.html"
+        },                {
             "fqsen": "\\Baubyte\\Http",
             "name": "Http",
             "summary": "",
@@ -865,6 +935,11 @@ Search.appendIndex(
             "name": "Server",
             "summary": "",
             "url": "namespaces/baubyte-server.html"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Exceptions",
+            "name": "Exceptions",
+            "summary": "",
+            "url": "namespaces/baubyte-validation-exceptions.html"
         },                {
             "fqsen": "\\Baubyte\\Validation",
             "name": "Validation",
