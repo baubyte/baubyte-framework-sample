@@ -6,6 +6,8 @@ use Baubyte\Http\Middleware;
 use Baubyte\Http\Request;
 use Baubyte\Http\Response;
 use Baubyte\Routing\Route;
+use Baubyte\Validation\Rule;
+use Baubyte\Validation\Rules\Required;
 
 $app = App::bootstrap();
 
@@ -41,6 +43,12 @@ class TestMiddleware implements Middleware
 }
 Route::get('/middleware', fn (Request $request) => json(["message" => "ok"]))->setMiddlewares([AuthMiddleware::class, TestMiddleware::class]);
 
-Route::get('/html', fn (Request $request) => view('home', [
-    'user' => 'BAUBYTE']));
+Route::get('/html', fn (Request $request) => view('home', ['user' => 'BAUBYTE']));
+Route::post('/validate', fn (Request $request) => json($request->validate(
+    [
+        'test' => Rule::required(),
+        'num' => Rule::number(),
+        'email' => [Rule::required(), Rule::email()],
+    ],['email' => [Required::class => 'Falta email']])
+));
 $app->run();

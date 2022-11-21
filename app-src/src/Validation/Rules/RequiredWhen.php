@@ -66,6 +66,12 @@ class RequiredWhen implements ValidationRule {
                 $required = $data[$this->otherField] <= floatval($this->compareWith);
                 break;
         }
+        /**
+         * If required other field is true then this field is required and not null
+         * If required is true, then false so if the field condition is not met,
+         * return false otherwise true.
+         *
+         */
         return !$required || (isset($data[$field]) && $data[$field] != "");
     }
 }

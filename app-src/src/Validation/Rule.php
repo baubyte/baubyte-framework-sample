@@ -16,7 +16,7 @@ class Rule {
      *
      * @return ValidationRule
      */
-    public function email(): ValidationRule {
+    public static function email(): ValidationRule {
         return new Email();
     }
 

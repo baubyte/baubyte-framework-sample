@@ -3,6 +3,7 @@
 namespace Baubyte\Http;
 
 use Baubyte\Routing\Route;
+use Baubyte\Validation\Validator;
 
 /**
  * HTTP request.
@@ -188,5 +189,17 @@ class Request {
             return $parameters;
         }
         return $parameters[$key] ?? null;
+    }
+
+    /**
+     * Get validated data from the request or return back with errors if not valid.
+     *
+     * @param array $rules
+     * @param array $messages
+     * @return array
+     */
+    public function validate(array $rules, array $messages = []): array {
+        $validator = new Validator($this->data);
+        return $validator->validate($rules, $messages);
     }
 }

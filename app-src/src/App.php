@@ -9,8 +9,10 @@ use Baubyte\Http\Response;
 use Baubyte\Routing\Router;
 use Baubyte\Server\PhpNativeServer;
 use Baubyte\Server\Server;
+use Baubyte\Validation\Exceptions\ValidationException;
 use Baubyte\View\BaubyteEngine;
 use Baubyte\View\View;
+use Throwable;
 
 /**
  * App runtime.
@@ -63,8 +65,20 @@ class App {
         try {
             $response = $this->router->resolve($this->request);
             $this->server->sendResponse($response);
-        } catch (HttpNotFoundException $th) {
-            $this->server->sendResponse(Response::text("Not Found")->setStatus(404));
+        } catch (HttpNotFoundException $e) {
+            $this->abort(Response::text("Not Found")->setStatus(404));
+        } catch(ValidationException $e) {
+            $this->abort(json($e->errors())->setStatus(422));
+        } catch(Throwable $th) {
+            $response = json([
+                "message" => $th->getMessage(),
+                "trace" => $th->getTrace()
+            ]);
+            $this->abort($response);
         }
+    }
+
+    public function abort(Response $response) {
+        $this->server->sendResponse($response);
     }
 }
