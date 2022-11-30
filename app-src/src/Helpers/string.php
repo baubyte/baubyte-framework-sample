@@ -5,14 +5,39 @@
  * @param string $str
  * @return string
  */
-function snake_case(string $str) {
-    $str = preg_replace('/\s+|-+|_+/', '_', trim($str));
-    $str = preg_replace('/_+/', '_', trim($str));
-    $str = preg_replace_callback('/_[A-Z]/', fn ($m) => "_" . strtolower($m[0][1]), $str);
-    $str = preg_replace_callback('/[a-z][A-Z]/', fn ($m) => $m[0][0] . "_" . strtolower($m[0][1]), $str);
-    $str[0] = strtolower($str[0]);
-
-    return $str;
+function snake_case(string $string): string
+{
+    $snake_cased = [];
+    $skip = [' ', '-', '_', '/', '\\', '|', ',', '.', ';', ':'];
+    $i = 0;
+    while ($i < strlen($string)) {
+        $last = count($snake_cased) > 0 
+                ? $snake_cased[count($snake_cased) -1]
+                : null;
+        $character = $string[$i++];
+        if (ctype_upper($character)) {
+            if ($last !== '_') {
+                $snake_cased[] = '_';
+            }
+            $snake_cased[] = strtolower($character);
+        }else if (ctype_lower($character)) {
+            $snake_cased[] = $character;
+        }else if(in_array($character, $skip)) {
+            if ($last !== '_') {
+                $snake_cased[] = '_';
+            }
+            while ($i < strlen($string) && in_array($string[$i], $skip)) {
+                $i++;
+            }
+        }
+    }
+    if ($snake_cased[0] === '_') {
+        $snake_cased[0] = '';
+    }
+    if ($snake_cased[count($snake_cased)-1] === '_') {
+        $snake_cased[count($snake_cased)-1] = '';
+    }
+    return implode($snake_cased);
 }
 
 /**
@@ -20,12 +45,11 @@ function snake_case(string $str) {
  * @param string $str
  * @return string
  */
-function camel_case(string $str) {
+function camel_case(string $str):string {
     $str = preg_replace('/[^a-z0-9]+/i', ' ', $str);
     $str = trim($str);
     $str = ucwords($str);
     $str = str_replace(" ", "", $str);
     $str = lcfirst($str);
-
     return $str;
 }
