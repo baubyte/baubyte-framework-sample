@@ -5,13 +5,12 @@
  * @param string $str
  * @return string
  */
-function snake_case(string $string): string
-{
+function snake_case(string $string): string {
     $snake_cased = [];
     $skip = [' ', '-', '_', '/', '\\', '|', ',', '.', ';', ':'];
     $i = 0;
     while ($i < strlen($string)) {
-        $last = count($snake_cased) > 0 
+        $last = count($snake_cased) > 0
                 ? $snake_cased[count($snake_cased) -1]
                 : null;
         $character = $string[$i++];
@@ -20,9 +19,9 @@ function snake_case(string $string): string
                 $snake_cased[] = '_';
             }
             $snake_cased[] = strtolower($character);
-        }else if (ctype_lower($character)) {
+        } elseif (ctype_lower($character)) {
             $snake_cased[] = $character;
-        }else if(in_array($character, $skip)) {
+        } elseif (in_array($character, $skip)) {
             if ($last !== '_') {
                 $snake_cased[] = '_';
             }
@@ -45,7 +44,7 @@ function snake_case(string $string): string
  * @param string $str
  * @return string
  */
-function camel_case(string $str):string {
+function camel_case(string $str): string {
     $str = preg_replace('/[^a-z0-9]+/i', ' ', $str);
     $str = trim($str);
     $str = ucwords($str);

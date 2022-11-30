@@ -48,8 +48,8 @@ class Validator {
                     if (\is_string($rule)) {
                         $rule = Rule::from($rule);
                     }
-                    $message = $messages[$field][$rule::class] ?? $rule->message();
-                    $fieldUnderValidationErrors[$rule::class] = $message;
+                    $message = $messages[$field][Rule::nameOf($rule)] ?? $rule->message();
+                    $fieldUnderValidationErrors[Rule::nameOf($rule)] = $message;
                 }
             }
             //Check if field has errors
