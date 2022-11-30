@@ -139,7 +139,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -159,7 +159,21 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-                        <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Baubyte-Validation-Rule.html#property_defaultRules">$defaultRules</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd>Baubyte validation rules.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Baubyte-Validation-Rule.html#property_rules">$rules</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd>Rule container. Maps rule name to rule class.</dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Baubyte-Validation-Rule.html#method_email">email()</a>
     <span>
                                 &nbsp;: <a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a>    </span>
@@ -167,11 +181,39 @@
 <dd>Valid if field is valid email.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Baubyte-Validation-Rule.html#method_from">from()</a>
+    <span>
+                                &nbsp;: <a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a>    </span>
+</dt>
+<dd>Create a new rule object from string format (example: &quot;requiredWith:name&quot;).</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Baubyte-Validation-Rule.html#method_lessThan">lessThan()</a>
     <span>
                                 &nbsp;: <a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a>    </span>
 </dt>
-<dd>Valida que el campo sea menor a</dd>
+<dd>Valid that the field is less than</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Baubyte-Validation-Rule.html#method_load">load()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Initialize rules.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Baubyte-Validation-Rule.html#method_loadDefaultRules">loadDefaultRules()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Default Lune validation rules.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Baubyte-Validation-Rule.html#method_nameOf">nameOf()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>Resolve name of the rule.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Baubyte-Validation-Rule.html#method_number">number()</a>
@@ -179,6 +221,22 @@
                                 &nbsp;: <a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a>    </span>
 </dt>
 <dd>Valid if the field is a valid number.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Baubyte-Validation-Rule.html#method_parseBasicRule">parseBasicRule()</a>
+    <span>
+                                &nbsp;: <a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a>    </span>
+</dt>
+<dd>Get `\Baubyte\Validation\Rules\ValidationRule` associated to `$ruleName`
+and instantiate it with given `$params`.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Baubyte-Validation-Rule.html#method_parseRuleWithParameters">parseRuleWithParameters()</a>
+    <span>
+                                &nbsp;: <a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a>    </span>
+</dt>
+<dd>Get `\Baubyte\Validation\Rules\ValidationRule` associated to `$ruleName`
+and instantiate it with given `$params`.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Baubyte-Validation-Rule.html#method_required">required()</a>
@@ -208,6 +266,78 @@
         
 
         
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="classes/Baubyte-Validation-Rule.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_defaultRules">
+        $defaultRules
+        <a href="classes/Baubyte-Validation-Rule.html#property_defaultRules" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">30</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Baubyte validation rules.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$defaultRules</span>
+     = <span class="phpdocumentor-signature__default-value">[\Baubyte\Validation\Rules\Required::class, \Baubyte\Validation\Rules\RequiredWith::class, \Baubyte\Validation\Rules\RequiredWhen::class, \Baubyte\Validation\Rules\Nullable::class, \Baubyte\Validation\Rules\Email::class, \Baubyte\Validation\Rules\Number::class, \Baubyte\Validation\Rules\LessThan::class]</span></code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_rules">
+        $rules
+        <a href="classes/Baubyte-Validation-Rule.html#property_rules" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">23</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Rule container. Maps rule name to rule class.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$rules</span>
+     = <span class="phpdocumentor-signature__default-value">[]</span></code>
+
+    
+    
+    
+
+</article>
+            </section>
 
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
@@ -227,7 +357,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">145</span>
 
     </aside>
 
@@ -253,6 +383,63 @@
             -public
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_from">
+        from()
+        <a href="classes/Baubyte-Validation-Rule.html#method_from" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">124</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Create a new rule object from string format (example: &quot;requiredWith:name&quot;).</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">from</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$string</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$string</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="classes/Baubyte-Validation-Exceptions-UnknownRuleException.html"><abbr title="\Baubyte\Validation\Exceptions\UnknownRuleException">UnknownRuleException</abbr></a>|<a href="classes/Baubyte-Validation-Exceptions-RuleParseException.html"><abbr title="\Baubyte\Validation\Exceptions\RuleParseException">RuleParseException</abbr></a></span>
+                                                            
+                                             
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_lessThan">
         lessThan()
         <a href="classes/Baubyte-Validation-Rule.html#method_lessThan" class="headerlink"><i class="fas fa-link"></i></a>
@@ -260,11 +447,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">69</span>
+    <span class="phpdocumentor-element-found-in__line">195</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Valida que el campo sea menor a</p>
+        <p class="phpdocumentor-summary">Valid that the field is less than</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -296,6 +483,126 @@
             -public
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_load">
+        load()
+        <a href="classes/Baubyte-Validation-Rule.html#method_load" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">55</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Initialize rules.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">load</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$rules</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$rules</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_loadDefaultRules">
+        loadDefaultRules()
+        <a href="classes/Baubyte-Validation-Rule.html#method_loadDefaultRules" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">45</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Default Lune validation rules.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">loadDefaultRules</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_nameOf">
+        nameOf()
+        <a href="classes/Baubyte-Validation-Rule.html#method_nameOf" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">68</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Resolve name of the rule.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">nameOf</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$rule</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$rule</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_number">
         number()
         <a href="classes/Baubyte-Validation-Rule.html#method_number" class="headerlink"><i class="fas fa-link"></i></a>
@@ -303,7 +610,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">59</span>
+    <span class="phpdocumentor-element-found-in__line">185</span>
 
     </aside>
 
@@ -329,6 +636,129 @@
             -public
                                     -static                    "
 >
+    <h4 class="phpdocumentor-element__name" id="method_parseBasicRule">
+        parseBasicRule()
+        <a href="classes/Baubyte-Validation-Rule.html#method_parseBasicRule" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">82</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Get `\Baubyte\Validation\Rules\ValidationRule` associated to `$ruleName`
+and instantiate it with given `$params`.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">parseBasicRule</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$ruleName</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$ruleName</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="classes/Baubyte-Validation-Exceptions-RuleParseException.html"><abbr title="\Baubyte\Validation\Exceptions\RuleParseException">RuleParseException</abbr></a></span>
+                                                            
+                                             
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_parseRuleWithParameters">
+        parseRuleWithParameters()
+        <a href="classes/Baubyte-Validation-Rule.html#method_parseRuleWithParameters" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">100</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Get `\Baubyte\Validation\Rules\ValidationRule` associated to `$ruleName`
+and instantiate it with given `$params`.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">parseRuleWithParameters</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$ruleName</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$params</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$ruleName</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$params</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="classes/Baubyte-Validation-Exceptions-RuleParseException.html"><abbr title="\Baubyte\Validation\Exceptions\RuleParseException">RuleParseException</abbr></a></span>
+                                                            
+                                             
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
     <h4 class="phpdocumentor-element__name" id="method_required">
         required()
         <a href="classes/Baubyte-Validation-Rule.html#method_required" class="headerlink"><i class="fas fa-link"></i></a>
@@ -336,7 +766,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">154</span>
 
     </aside>
 
@@ -369,7 +799,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">50</span>
+    <span class="phpdocumentor-element-found-in__line">176</span>
 
     </aside>
 
@@ -426,7 +856,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Validation/Rule.php"><a href="files/src-validation-rule.html"><abbr title="src/Validation/Rule.php">Rule.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">164</span>
 
     </aside>
 

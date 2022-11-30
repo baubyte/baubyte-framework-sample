@@ -666,6 +666,36 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Baubyte-Validation-Rule.html"
         },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003AloadDefaultRules\u0028\u0029",
+            "name": "loadDefaultRules",
+            "summary": "Default\u0020Lune\u0020validation\u0020rules.",
+            "url": "classes/Baubyte-Validation-Rule.html#method_loadDefaultRules"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003Aload\u0028\u0029",
+            "name": "load",
+            "summary": "Initialize\u0020rules.",
+            "url": "classes/Baubyte-Validation-Rule.html#method_load"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003AnameOf\u0028\u0029",
+            "name": "nameOf",
+            "summary": "Resolve\u0020name\u0020of\u0020the\u0020rule.",
+            "url": "classes/Baubyte-Validation-Rule.html#method_nameOf"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003AparseBasicRule\u0028\u0029",
+            "name": "parseBasicRule",
+            "summary": "Get\u0020\u0060\\Baubyte\\Validation\\Rules\\ValidationRule\u0060\u0020associated\u0020to\u0020\u0060\u0024ruleName\u0060\nand\u0020instantiate\u0020it\u0020with\u0020given\u0020\u0060\u0024params\u0060.",
+            "url": "classes/Baubyte-Validation-Rule.html#method_parseBasicRule"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003AparseRuleWithParameters\u0028\u0029",
+            "name": "parseRuleWithParameters",
+            "summary": "Get\u0020\u0060\\Baubyte\\Validation\\Rules\\ValidationRule\u0060\u0020associated\u0020to\u0020\u0060\u0024ruleName\u0060\nand\u0020instantiate\u0020it\u0020with\u0020given\u0020\u0060\u0024params\u0060.",
+            "url": "classes/Baubyte-Validation-Rule.html#method_parseRuleWithParameters"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003Afrom\u0028\u0029",
+            "name": "from",
+            "summary": "Create\u0020a\u0020new\u0020rule\u0020object\u0020from\u0020string\u0020format\u0020\u0028example\u003A\u0020\u0022requiredWith\u003Aname\u0022\u0029.",
+            "url": "classes/Baubyte-Validation-Rule.html#method_from"
+        },                {
             "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003Aemail\u0028\u0029",
             "name": "email",
             "summary": "Valid\u0020if\u0020field\u0020is\u0020valid\u0020email.",
@@ -693,8 +723,18 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003AlessThan\u0028\u0029",
             "name": "lessThan",
-            "summary": "Valida\u0020que\u0020el\u0020campo\u0020sea\u0020menor\u0020a",
+            "summary": "Valid\u0020that\u0020the\u0020field\u0020is\u0020less\u0020than",
             "url": "classes/Baubyte-Validation-Rule.html#method_lessThan"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003A\u0024rules",
+            "name": "rules",
+            "summary": "Rule\u0020container.\u0020Maps\u0020rule\u0020name\u0020to\u0020rule\u0020class.",
+            "url": "classes/Baubyte-Validation-Rule.html#property_rules"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003A\u0024defaultRules",
+            "name": "defaultRules",
+            "summary": "Baubyte\u0020validation\u0020rules.",
+            "url": "classes/Baubyte-Validation-Rule.html#property_defaultRules"
         },                {
             "fqsen": "\\Baubyte\\Validation\\Rules\\Email",
             "name": "Email",
@@ -895,6 +935,16 @@ Search.appendIndex(
             "name": "data",
             "summary": "Data\u0020to\u0020validate",
             "url": "classes/Baubyte-Validation-Validator.html#property_data"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Exceptions\\RuleParseException",
+            "name": "RuleParseException",
+            "summary": "",
+            "url": "classes/Baubyte-Validation-Exceptions-RuleParseException.html"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Exceptions\\UnknownRuleException",
+            "name": "UnknownRuleException",
+            "summary": "",
+            "url": "classes/Baubyte-Validation-Exceptions-UnknownRuleException.html"
         },                {
             "fqsen": "\\",
             "name": "\\",
