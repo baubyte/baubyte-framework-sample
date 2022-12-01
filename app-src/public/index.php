@@ -48,7 +48,7 @@ Route::post('/validate', fn (Request $request) => json($request->validate(
     [
         'test' => 'required',
         'num' => 'number',
-        'email' => ['required_when:num,>,5', 'email'],
+        'email' => 'required_when:num,>,5|email',
     ],['email' => ['required' => 'Falta email']])
 ));
 $app->run();

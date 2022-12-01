@@ -16,6 +16,7 @@ class ValidatorTest extends TestCase {
     protected function setUp(): void {
         Rule::loadDefaultRules();
     }
+
     public function test_basic_validation_passes() {
         $data = [
             "email" => "test@test.com",
@@ -37,15 +38,15 @@ class ValidatorTest extends TestCase {
             "num" => 3,
         ];
 
-        $v = new Validator($data);
+        $validator = new Validator($data);
 
-        $this->assertEquals($expected, $v->validate($rules));
+        $this->assertEquals($expected, $validator->validate($rules));
     }
 
     public function test_throws_validation_exception_on_invalid_data() {
         $this->expectException(ValidationException::class);
-        $v = new Validator(["test" => "test"]);
-        $v->validate(["test" => new Number()]);
+        $validator = new Validator(["test" => "test"]);
+        $validator->validate(["test" => new Number()]);
     }
 
     /**
@@ -105,7 +106,7 @@ class ValidatorTest extends TestCase {
 
         $rules = [
             "email" => "email",
-            "other" => "required",
+            "other" => "required|number",
             "num" => "number",
         ];
 
@@ -120,9 +121,7 @@ class ValidatorTest extends TestCase {
         $this->assertEquals($expected, $validator->validate($rules));
     }
 
-    /**
-     * @depends test_throws_validation_exception_on_invalid_data
-     */
+
     public function test_returns_messages_for_each_rule_that_doesnt_pass() {
         $email = new Email();
         $required = new Required();
@@ -135,7 +134,6 @@ class ValidatorTest extends TestCase {
             "num1" => $number,
             "num2" => [$required, $number],
         ];
-
         $expected = [
             "email" => ["email" => $email->message()],
             "num1" => ["number" => $number->message()],

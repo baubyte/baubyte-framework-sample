@@ -36,7 +36,7 @@ class Validator {
          */
         foreach ($validationRules as $field => $rules) {
             if (!is_array($rules)) {
-                $rules = [$rules];
+                $rules = Rule::splitRules($rules);
             }
             //Field errors under validation
             $fieldUnderValidationErrors = [];

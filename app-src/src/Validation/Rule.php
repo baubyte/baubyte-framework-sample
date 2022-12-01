@@ -138,6 +138,43 @@ class Rule {
     }
 
     /**
+     * Split rules string by pipe operator.
+     *
+     * @param string $rules
+     * @return array
+     */
+    public static function splitRules(mixed $rules): array {
+        
+        if (!is_string($rules)) {
+            return [$rules];
+        }
+        if (strpos($rules, '|') === false) {
+            return [$rules];
+        }
+
+        $string = $rules;
+        $rules  = [];
+        $length = strlen($string);
+        $cursor = 0;
+
+        while ($cursor < $length) {
+            $pos = strpos($string, '|', $cursor);
+
+            if ($pos === false) {
+                // we're in the last rule
+                $pos = $length;
+            }
+
+            $rule = substr($string, $cursor, $pos - $cursor);
+
+            $rules[] = $rule;
+            $cursor += strlen($rule) + 1; // +1 to exclude the pipe
+        }
+
+        return array_unique($rules);
+    }
+
+    /**
      * Valid if field is valid email.
      *
      * @return ValidationRule
