@@ -159,14 +159,14 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
+                    <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/Baubyte-Validation-Rule.html#property_defaultRules">$defaultRules</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 <dd>Baubyte validation rules.</dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/Baubyte-Validation-Rule.html#property_rules">$rules</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
@@ -275,7 +275,7 @@ and instantiate it with given `$params`.</dd>
         class="
             phpdocumentor-element
             -property
-            -private
+            -public
             -static                                            "
 >
     <h4 class="phpdocumentor-element__name" id="property_defaultRules">
@@ -294,7 +294,7 @@ and instantiate it with given `$params`.</dd>
         <p class="phpdocumentor-summary">Baubyte validation rules.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
+    <span class="phpdocumentor-signature__visibility">public</span>
     <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
     <span class="phpdocumentor-signature__name">$defaultRules</span>
      = <span class="phpdocumentor-signature__default-value">[\Baubyte\Validation\Rules\Required::class, \Baubyte\Validation\Rules\RequiredWith::class, \Baubyte\Validation\Rules\RequiredWhen::class, \Baubyte\Validation\Rules\Nullable::class, \Baubyte\Validation\Rules\Email::class, \Baubyte\Validation\Rules\Number::class, \Baubyte\Validation\Rules\LessThan::class]</span></code>
@@ -308,7 +308,7 @@ and instantiate it with given `$params`.</dd>
         class="
             phpdocumentor-element
             -property
-            -private
+            -public
             -static                                            "
 >
     <h4 class="phpdocumentor-element__name" id="property_rules">
@@ -327,7 +327,7 @@ and instantiate it with given `$params`.</dd>
         <p class="phpdocumentor-summary">Rule container. Maps rule name to rule class.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
+    <span class="phpdocumentor-signature__visibility">public</span>
     <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
     <span class="phpdocumentor-signature__name">$rules</span>
      = <span class="phpdocumentor-signature__default-value">[]</span></code>
@@ -692,7 +692,7 @@ and instantiate it with given `$params`.</p>
         class="phpdocumentor-element
             -method
             -public
-                                                        "
+                                    -static                    "
 >
     <h4 class="phpdocumentor-element__name" id="method_parseRuleWithParameters">
         parseRuleWithParameters()
@@ -710,7 +710,7 @@ and instantiate it with given `$params`.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">parseRuleWithParameters</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$ruleName</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$params</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a></span></code>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">parseRuleWithParameters</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$ruleName</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$params</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Validation-Rules-ValidationRule.html"><abbr title="\Baubyte\Validation\Rules\ValidationRule">ValidationRule</abbr></a></span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
