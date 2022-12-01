@@ -46,9 +46,9 @@ Route::get('/middleware', fn (Request $request) => json(["message" => "ok"]))->s
 Route::get('/html', fn (Request $request) => view('home', ['user' => 'BAUBYTE']));
 Route::post('/validate', fn (Request $request) => json($request->validate(
     [
-        'test' => Rule::required(),
-        'num' => Rule::number(),
-        'email' => ['required', 'email'],
-    ],['email' => [Required::class => 'Falta email']])
+        'test' => 'required',
+        'num' => 'number',
+        'email' => ['required_when:num,>,5', 'email'],
+    ],['email' => ['required' => 'Falta email']])
 ));
 $app->run();

@@ -10,6 +10,7 @@ use Baubyte\Routing\Router;
 use Baubyte\Server\PhpNativeServer;
 use Baubyte\Server\Server;
 use Baubyte\Validation\Exceptions\ValidationException;
+use Baubyte\Validation\Rule;
 use Baubyte\View\BaubyteEngine;
 use Baubyte\View\View;
 use Throwable;
@@ -55,6 +56,7 @@ class App {
         $app->server = new PhpNativeServer();
         $app->request = $app->server->getRequest();
         $app->view = new BaubyteEngine(__DIR__.'/../views');
+        Rule::loadDefaultRules();
         return $app;
     }
     /**
@@ -71,10 +73,11 @@ class App {
             $this->abort(json($e->errors())->setStatus(422));
         } catch(Throwable $th) {
             $response = json([
+                "error" => $th::class,
                 "message" => $th->getMessage(),
                 "trace" => $th->getTrace()
             ]);
-            $this->abort($response);
+            $this->abort($response->setStatus(500));
         }
     }
 

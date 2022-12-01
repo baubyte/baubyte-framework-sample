@@ -20,14 +20,14 @@ class Rule {
      *
      * @var array
      */
-    private static array $rules = [];
+    public static array $rules = [];
 
     /**
      * Baubyte validation rules.
      *
      * @var array
      */
-    private static array $defaultRules = [
+    public static array $defaultRules = [
         Required::class,
         RequiredWith::class,
         RequiredWhen::class,
@@ -83,9 +83,9 @@ class Rule {
         $class = new ReflectionClass(self::$rules[$ruleName]);
         $constructorParameters = $class->getConstructor()?->getParameters() ?? [];
         if (count($constructorParameters) > 0) {
-            throw new RuleParseException("La {$ruleName} requiere parámetros.");
+            throw new RuleParseException("La regla {$ruleName} requiere parámetros.");
         }
-        return new $class->newInstance();
+        return $class->newInstance();
     }
 
     /**
@@ -97,21 +97,21 @@ class Rule {
      * @return ValidationRule
      * @throws RuleParseException
      */
-    public function parseRuleWithParameters(string $ruleName, string $params): ValidationRule {
+    public static function parseRuleWithParameters(string $ruleName, string $params): ValidationRule {
         $class = new ReflectionClass(self::$rules[$ruleName]);
         $constructorParameters = $class->getConstructor()?->getParameters() ?? [];
         $givenParameters = array_filter(explode(',', $params), fn ($param) => !empty($param));
 
         if (count($givenParameters) !== count($constructorParameters)) {
             throw new RuleParseException(sprintf(
-                "La %s requiere %d parámetros, pero pasaste %d: %s",
+                "La regla %s requiere %d parámetros, pero pasaste %d: %s",
                 $ruleName,
                 count($constructorParameters),
                 count($givenParameters),
                 $params
             ));
         }
-        return new $class->newInstance(...$givenParameters);
+        return $class->newInstance(...$givenParameters);
     }
 
     /**
@@ -128,7 +128,7 @@ class Rule {
         $ruleParts = explode(":", $string);
 
         if (!array_key_exists($ruleParts[0], self::$rules)) {
-            throw new UnknownRuleException("La {$ruleParts[0]} no se encuentra.");
+            throw new UnknownRuleException("La regla {$ruleParts[0]} no se encuentra.");
         }
         if (count($ruleParts) === 1) {
             return self::parseBasicRule($ruleParts[0]);

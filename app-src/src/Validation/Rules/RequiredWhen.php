@@ -2,6 +2,8 @@
 
 namespace Baubyte\Validation\Rules;
 
+use Baubyte\Validation\Exceptions\RuleParseException;
+
 class RequiredWhen implements ValidationRule {
     /**
      * Field used for comparators.
@@ -64,6 +66,9 @@ class RequiredWhen implements ValidationRule {
                 break;
             case "<=":
                 $required = $data[$this->otherField] <= floatval($this->compareWith);
+                break;
+            default:
+                throw new RuleParseException("El Operador no existe: {$this->operator}");
                 break;
         }
         /**
