@@ -2,6 +2,9 @@
 
 namespace Baubyte\Tests\Validation;
 
+use Baubyte\Validation\Exceptions\RuleParseException;
+use Baubyte\Validation\Exceptions\UnknownRuleException;
+use Baubyte\Validation\Rule;
 use Baubyte\Validation\Rules\Email;
 use Baubyte\Validation\Rules\LessThan;
 use Baubyte\Validation\Rules\Nullable;
@@ -137,5 +140,12 @@ class ValidationRulesTest extends TestCase {
             $data = ["test" => $check];
             $this->assertTrue($rule->isValid("test", $data));
         }
+    }
+
+    public function test_required_when_throws_parse_rule_exception_when_operator_is_invalid() {
+        $rule = new RequiredWhen("other", "|||", "test");
+        $data = ["other" => 5, "test" => 1];
+        $this->expectException(RuleParseException::class);
+        $rule->isValid("test", $data);
     }
 }
