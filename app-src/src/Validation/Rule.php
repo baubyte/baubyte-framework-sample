@@ -140,7 +140,7 @@ class Rule {
     /**
      * Split rules string by pipe operator.
      *
-     * @param string $rules
+     * @param mixed $rules
      * @return array
      */
     public static function splitRules(mixed $rules): array {
