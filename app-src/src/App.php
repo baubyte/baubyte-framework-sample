@@ -9,6 +9,8 @@ use Baubyte\Http\Response;
 use Baubyte\Routing\Router;
 use Baubyte\Server\PhpNativeServer;
 use Baubyte\Server\Server;
+use Baubyte\Session\PhpNativeSessionStorage;
+use Baubyte\Session\Session;
 use Baubyte\Validation\Exceptions\ValidationException;
 use Baubyte\Validation\Rule;
 use Baubyte\View\BaubyteEngine;
@@ -39,12 +41,17 @@ class App {
     public Server $server;
 
     /**
-     * Undocumented variable
+     * View Instance
      *
      * @var \Baubyte\View\View
      */
     public View $view;
-
+    /**
+     * Session Instance
+     *
+     * @var \Baubyte\Session\Session
+     */
+    public Session $session;
     /**
      * Create a new app instance.
      *
@@ -56,6 +63,7 @@ class App {
         $app->server = new PhpNativeServer();
         $app->request = $app->server->getRequest();
         $app->view = new BaubyteEngine(__DIR__.'/../views');
+        $app->session = new Session(new PhpNativeSessionStorage());
         Rule::loadDefaultRules();
         return $app;
     }
