@@ -48,6 +48,12 @@ class PhpNativeSessionStorage implements SessionStorage {
     /**
      * {@inheritdoc}
      */
+    public function save() {
+        session_write_close();
+    }
+    /**
+     * {@inheritdoc}
+     */
     public function remove(string $key) {
         unset($_SESSION[$key]);
     }

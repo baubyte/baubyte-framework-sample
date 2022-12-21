@@ -51,4 +51,9 @@ interface SessionStorage {
      * Destroy session.
      */
     public function destroy();
+
+    /**
+     * Write the session data to make it persistent.
+     */
+    public function save();
 }

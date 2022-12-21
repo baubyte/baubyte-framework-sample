@@ -9,6 +9,10 @@ class Session {
      * @var SessionStorage
      */
     protected SessionStorage $storage;
+    /**
+     * Flash Key
+     */
+    public const FLASH_KEY = '_flash';
 
     /**
      * Constructor
@@ -18,9 +22,44 @@ class Session {
     public function __construct(SessionStorage $storage) {
         $this->storage = $storage;
         $this->storage->start();
+        if (!$this->storage->has(self::FLASH_KEY)) {
+            $this->storage->set(self::FLASH_KEY, ['old' => [], 'new' => []]);
+        }
     }
 
+    /**
+     * Handle flash data before destroying session.
+     */
+    public function __destruct() {
+        foreach ($this->storage->get(self::FLASH_KEY)['old'] as $key) {
+            $this->storage->remove($key);
+        }
+        $this->ageFlashData();
+        $this->storage->save();
+    }
+    /**
+     * Prepare session data to be removed for the next request.
+     */
+    public function ageFlashData() {
+        $flash = $this->storage->get(self::FLASH_KEY);
+        $flash['old'] = $flash['new'];
+        $flash['new'] = [];
+        $this->storage->set(self::FLASH_KEY, $flash);
+    }
+
+    /**
+     * Flash key - value to current session.
+     *
+     * @param string $key
+     * @param mixed $value
+     * @return $this
+     */
     public function flash(string $key, mixed $value) {
+        $this->storage->set($key, $value);
+        $flash = $this->storage->get(self::FLASH_KEY);
+        $flash['new'][] = $key;
+        $this->storage->set(self::FLASH_KEY, $flash);
+        return $this;
     }
 
     /**
