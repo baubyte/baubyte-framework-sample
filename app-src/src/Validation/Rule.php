@@ -144,7 +144,6 @@ class Rule {
      * @return array
      */
     public static function splitRules(mixed $rules): array {
-        
         if (!is_string($rules)) {
             return [$rules];
         }
