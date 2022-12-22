@@ -69,13 +69,25 @@ Route::get('/users', function(Request $request){
     return json(DB::statement("SELECT * FROM users;"));
 });
 class User extends Model {
+    protected array $fillable = ["name", "email"];
     protected $insertTimestamps = false;
 }
 Route::post('/user/model', function(Request $request){
-   $user = new User();
+   /* $user = new User();
    $user->name = $request->data('name');
    $user->email = $request->data('email');
-   $user->save();
-   return json(["message" => "ok"]);
+   $user->save(); */
+   return json(User::create($request->data())->toArray());
 });
+
+Route::get('/user/query', function(Request $request){
+    /* $user = new User();
+    $user->name = $request->data('name');
+    $user->email = $request->data('email');
+    $user->save(); */
+    //return json(User::create($request->data())->toArray());
+    //return json(User::first()->toArray());
+    //return json(User::find(4)->toArray());
+    return json(array_map(fn($model) => $model->toArray(), User::all()));
+ });
 $app->run();

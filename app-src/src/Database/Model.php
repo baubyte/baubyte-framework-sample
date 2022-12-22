@@ -92,7 +92,17 @@ abstract class Model {
     public function __get($name) {
         return $this->attributes[$name] ?? null;
     }
-
+    /**
+     * Return attributes to array
+     *
+     * @return array
+     */
+    public function toArray(): array {
+        return array_filter(
+            $this->attributes,
+            fn ($attr) => !in_array($attr, $this->hidden)
+        );
+    }
     /**
      * Save the current model in the database.
      *
@@ -112,5 +122,189 @@ abstract class Model {
         $this->{$this->primaryKey} = self::$driver->lastInsertId();
 
         return $this;
+    }
+
+    /**
+     * Assign all assignable attributes at once.
+     *
+     * @param array $attributes
+     * @return static
+     */
+    protected function massAssign(array $attributes): static {
+        if (count($this->fillable) == 0) {
+            throw new \BadMethodCallException("Model " . static::class . " no tiene atributos asignables.");
+        }
+
+        foreach ($attributes as $key => $value) {
+            if (in_array($key, $this->fillable)) {
+                $this->__set($key, $value);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * Assign all assignable attributes at once.
+     *
+     * @param array $attributes
+     * @return static
+     */
+    protected function setAttributes(array $attributes): static {
+        foreach ($attributes as $key => $value) {
+            $this->__set($key, $value);
+        }
+
+        return $this;
+    }
+    /**
+     * Store model in the database.
+     *
+     * @param array $attributes
+     * @return static
+     */
+    public static function create(array $attributes): static {
+        return (new static())->massAssign($attributes)->save();
+    }
+
+    /**
+     * Update model in the database.
+     *
+     * @return static
+     */
+    public function update(): static {
+        if ($this->insertTimestamps) {
+            $this->attributes["updated_at"] = date("Y-m-d H:m:s");
+        }
+
+        $databaseColumns = array_keys($this->attributes);
+        $bind = implode(",", array_map(fn ($column) => "$column = ?", $databaseColumns));
+        $id = $this->attributes[$this->primaryKey];
+
+        self::$driver->statement(
+            "UPDATE $this->table SET $bind WHERE $this->primaryKey = $id",
+            array_values($this->attributes)
+        );
+
+        return $this;
+    }
+
+    /**
+     * Delete model in the database.
+     *
+     * @return static
+     */
+    public function delete(): static {
+        self::$driver->statement(
+            "DELETE FROM $this->table WHERE $this->primaryKey = {$this->attributes[$this->primaryKey]}"
+        );
+
+        return $this;
+    }
+    
+    /**
+     *  First inserted model.
+     *
+     * @return static|null
+     */
+    public static function first(): ?static {
+        $model = new static();
+        $rows = self::$driver->statement("SELECT * FROM $model->table LIMIT 1");
+
+        if (count($rows) == 0) {
+            return null;
+        }
+
+        return $model->setAttributes($rows[0]);
+    }
+
+    /**
+     * Find model with given `$id`.
+     *
+     * @param integer|string $id
+     * @return static|null
+     */
+    public static function find(int|string $id): ?static {
+        $model = new static();
+        $rows = self::$driver->statement(
+            "SELECT * FROM $model->table WHERE $model->primaryKey = ?",
+            [$id]
+        );
+
+        if (count($rows) == 0) {
+            return null;
+        }
+
+        return $model->setAttributes($rows[0]);
+    }
+
+    /**
+     * Get all the models in the database.
+     *
+     * @return array
+     */
+    public static function all(): array {
+        $model = new static();
+        $rows = self::$driver->statement("SELECT * FROM $model->table");
+
+        if (count($rows) == 0) {
+            return [];
+        }
+
+        $models = [$model->setAttributes($rows[0])];
+
+        for ($i = 1; $i < count($rows); $i++) {
+            $models[] = (new static())->setAttributes($rows[$i]);
+        }
+
+        return $models;
+    }
+
+    /**
+     * Get the models where `$column = $value`
+     *
+     * @param string $column
+     * @param mixed $value
+     * @return array
+     */
+    public static function where(string $column, mixed $value): array {
+        $model = new static();
+        $rows = self::$driver->statement(
+            "SELECT * FROM $model->table WHERE $column = ?",
+            [$value]
+        );
+
+        if (count($rows) == 0) {
+            return [];
+        }
+
+        $models = [$model->setAttributes($rows[0])];
+
+        for ($i = 1; $i < count($rows); $i++) {
+            $models[] = (new static())->setAttributes($rows[$i]);
+        }
+
+        return $models;
+    }
+
+    /**
+     * Get the first model where `$column = $value`
+     *
+     * @param string $column
+     * @param mixed $value
+     * @return static|null
+     */
+    public static function firstWhere(string $column, mixed $value): ?static {
+        $model = new static();
+        $rows = self::$driver->statement(
+            "SELECT * FROM $model->table WHERE $column = ? LIMIT 1",
+            [$value]
+        );
+
+        if (count($rows) == 0) {
+            return null;
+        }
+
+        return $model->setAttributes($rows[0]);
     }
 }
