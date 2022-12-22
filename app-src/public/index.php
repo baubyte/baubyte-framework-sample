@@ -3,6 +3,7 @@ require_once "../vendor/autoload.php";
 
 use Baubyte\App;
 use Baubyte\Database\DB;
+use Baubyte\Database\Model;
 use Baubyte\Http\Middleware;
 use Baubyte\Http\Request;
 use Baubyte\Http\Response;
@@ -66,5 +67,15 @@ Route::post('/user', function (Request $request){
 });
 Route::get('/users', function(Request $request){
     return json(DB::statement("SELECT * FROM users;"));
+});
+class User extends Model {
+    protected $insertTimestamps = false;
+}
+Route::post('/user/model', function(Request $request){
+   $user = new User();
+   $user->name = $request->data('name');
+   $user->email = $request->data('email');
+   $user->save();
+   return json(["message" => "ok"]);
 });
 $app->run();

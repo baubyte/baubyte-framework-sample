@@ -5,6 +5,7 @@ namespace Baubyte;
 use Baubyte\Container\Container;
 use Baubyte\Database\Drivers\DatabaseDriver;
 use Baubyte\Database\Drivers\PdoDriver;
+use Baubyte\Database\Model;
 use Baubyte\Http\HttpMethod;
 use Baubyte\Http\HttpNotFoundException;
 use Baubyte\Http\Request;
@@ -76,6 +77,7 @@ class App {
         $app->session = new Session(new PhpNativeSessionStorage());
         $app->database = new PdoDriver();
         $app->database->connect('mysql', 'localhost', 3306, 'framework', 'root', '');
+        Model::setDatabaseDriver($app->database);
         Rule::loadDefaultRules();
         return $app;
     }
