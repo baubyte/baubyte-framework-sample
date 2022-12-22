@@ -14,6 +14,6 @@ class Required implements ValidationRule {
      * @inheritDoc
      */
     public function isValid(string $field, array $data): bool {
-        return isset($data[$field]) && $data[$field] !== "";
+        return isset($data[$field]) && trim($data[$field]) !== "";
     }
 }
