@@ -1,7 +1,9 @@
 <?php
 
 namespace Baubyte\Session;
-
+/**
+ * Session Driver interface
+ */
 interface SessionStorage {
     /**
      * Load session data.

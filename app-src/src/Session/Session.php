@@ -1,7 +1,9 @@
 <?php
 
 namespace Baubyte\Session;
-
+/**
+ * HTTP Session
+ */
 class Session {
     /**
      * Storage controller.
