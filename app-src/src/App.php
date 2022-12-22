@@ -3,6 +3,7 @@
 namespace Baubyte;
 
 use Baubyte\Container\Container;
+use Baubyte\Http\HttpMethod;
 use Baubyte\Http\HttpNotFoundException;
 use Baubyte\Http\Request;
 use Baubyte\Http\Response;
@@ -74,11 +75,11 @@ class App {
     public function run() {
         try {
             $response = $this->router->resolve($this->request);
-            $this->server->sendResponse($response);
+            $this->terminate($response);
         } catch (HttpNotFoundException $e) {
             $this->abort(Response::text("Not Found")->setStatus(404));
         } catch(ValidationException $e) {
-            $this->abort(json($e->errors())->setStatus(422));
+            $this->abort(back()->withErrors($e->errors(), 422));
         } catch(Throwable $th) {
             $response = json([
                 "error" => $th::class,
@@ -89,7 +90,33 @@ class App {
         }
     }
 
-    public function abort(Response $response) {
+    /**
+     * Set session variables or other parameters for the next request.
+     */
+    public function prepareNextRequest()
+    {
+        if ($this->request->method() == HttpMethod::GET()) {
+            $this->session->set('_previous', $this->request->uri());
+        }
+    }
+
+    /**
+     * Kill the current process. If necessary, release resources here.
+     *
+     * @param \Baubyte\Http\Response $response
+     */
+    public function terminate(Response $response)
+    {
+        $this->prepareNextRequest();
         $this->server->sendResponse($response);
+    }
+    /**
+     * Stop execution from any point.
+     *
+     * @param \Baubyte\Http\Response $response
+     * @return void
+     */
+    public function abort(Response $response) {
+        $this->terminate($response);
     }
 }

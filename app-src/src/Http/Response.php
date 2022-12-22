@@ -176,4 +176,20 @@ class Response {
         ->setContentType("text/html")
         ->setContent($content);
     }
+
+    /**
+     * Flash errors into session.
+     *
+     * @param array $errors
+     * @param integer $status
+     * @return self
+     */
+    public function withErrors(array $errors, int $status = 400): self
+    {
+        $this->setStatus($status);
+        session()
+            ->flash('_errors', $errors)
+            ->flash('_old', request()->data());
+        return $this;
+    }
 }

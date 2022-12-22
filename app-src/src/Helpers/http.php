@@ -52,4 +52,12 @@ function text(string $text): Response {
 function redirect(string $route): Response {
     return Response::redirect($route);
 }
-//TODO: back()
+/**
+ * Redirect back to previous URL.
+ *
+ * @param string $response
+ * @return \Baubyte\Http\Response
+ */
+function back(): Response {
+    return Response::redirect(session()->get('_previous', '/'));
+}
