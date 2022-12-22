@@ -93,8 +93,7 @@ class App {
     /**
      * Set session variables or other parameters for the next request.
      */
-    public function prepareNextRequest()
-    {
+    public function prepareNextRequest() {
         if ($this->request->method() == HttpMethod::GET()) {
             $this->session->set('_previous', $this->request->uri());
         }
@@ -105,8 +104,7 @@ class App {
      *
      * @param \Baubyte\Http\Response $response
      */
-    public function terminate(Response $response)
-    {
+    public function terminate(Response $response) {
         $this->prepareNextRequest();
         $this->server->sendResponse($response);
     }

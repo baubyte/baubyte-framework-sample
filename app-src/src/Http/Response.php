@@ -184,8 +184,7 @@ class Response {
      * @param integer $status
      * @return self
      */
-    public function withErrors(array $errors, int $status = 400): self
-    {
+    public function withErrors(array $errors, int $status = 400): self {
         $this->setStatus($status);
         session()
             ->flash('_errors', $errors)
