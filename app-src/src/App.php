@@ -3,6 +3,8 @@
 namespace Baubyte;
 
 use Baubyte\Container\Container;
+use Baubyte\Database\Drivers\DatabaseDriver;
+use Baubyte\Database\Drivers\PdoDriver;
 use Baubyte\Http\HttpMethod;
 use Baubyte\Http\HttpNotFoundException;
 use Baubyte\Http\Request;
@@ -53,6 +55,13 @@ class App {
      * @var \Baubyte\Session\Session
      */
     public Session $session;
+
+    /**
+     * Undocumented variable
+     *
+     * @var \Baubyte\Database\Drivers\DatabaseDriver
+     */
+    public DatabaseDriver $database;
     /**
      * Create a new app instance.
      *
@@ -65,6 +74,8 @@ class App {
         $app->request = $app->server->getRequest();
         $app->view = new BaubyteEngine(__DIR__.'/../views');
         $app->session = new Session(new PhpNativeSessionStorage());
+        $app->database = new PdoDriver();
+        $app->database->connect('mysql', 'localhost', 3306, 'framework', 'root', '');
         Rule::loadDefaultRules();
         return $app;
     }
@@ -107,6 +118,8 @@ class App {
     public function terminate(Response $response) {
         $this->prepareNextRequest();
         $this->server->sendResponse($response);
+        $this->database->close();
+        exit();
     }
     /**
      * Stop execution from any point.

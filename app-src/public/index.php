@@ -2,6 +2,7 @@
 require_once "../vendor/autoload.php";
 
 use Baubyte\App;
+use Baubyte\Database\DB;
 use Baubyte\Http\Middleware;
 use Baubyte\Http\Request;
 use Baubyte\Http\Response;
@@ -58,5 +59,12 @@ Route::get('/session', function (Request $request){
 Route::get('/form', fn(Request $request) => view('form'));
 Route::post('/form', function(Request $request){
     return json($request->validate(['email' => 'email', 'name' => 'required']));
+});
+Route::post('/user', function (Request $request){
+    DB::statement("INSERT INTO users (name, email) VALUES (?, ?)", [$request->data('name'),$request->data('email')]);
+    return json(["message" => "ok"]);
+});
+Route::get('/users', function(Request $request){
+    return json(DB::statement("SELECT * FROM users;"));
 });
 $app->run();

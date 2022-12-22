@@ -1,6 +1,7 @@
 <?php
 
 namespace Baubyte\Session;
+
 /**
  * HTTP Session
  */

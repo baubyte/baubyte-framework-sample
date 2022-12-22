@@ -1,6 +1,7 @@
 <?php
 
 namespace Baubyte\Session;
+
 /**
  * Session Driver interface
  */
