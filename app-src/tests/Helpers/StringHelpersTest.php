@@ -1,6 +1,6 @@
 <?php
 
-namespace Lune\Tests\Helpers;
+namespace Baubyte\Tests\Helpers;
 
 use PHPUnit\Framework\TestCase;
 
