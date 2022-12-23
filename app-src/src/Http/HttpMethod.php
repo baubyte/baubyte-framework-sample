@@ -19,7 +19,7 @@ final class HttpMethod extends Enum {
     /**
      * Verb PATCH.
      */
-    private const PUT = "PATCH";
+    private const PUT = "PUT";
     /**
      * Verb PATCH.
      */
