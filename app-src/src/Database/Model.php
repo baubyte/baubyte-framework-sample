@@ -100,7 +100,7 @@ abstract class Model {
     public function toArray(): array {
         return array_filter(
             $this->attributes,
-            fn ($attr) => !in_array($attr, $this->hidden)
+            fn ($attribute) => !in_array($attribute, $this->hidden)
         );
     }
     /**
