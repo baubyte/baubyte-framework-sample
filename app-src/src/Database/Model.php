@@ -201,7 +201,7 @@ abstract class Model {
 
         return $this;
     }
-    
+
     /**
      *  First inserted model.
      *

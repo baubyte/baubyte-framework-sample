@@ -90,4 +90,18 @@ Route::get('/user/query', function(Request $request){
     //return json(User::find(4)->toArray());
     return json(array_map(fn($model) => $model->toArray(), User::all()));
  });
+
+ Route::post('/user/{id}/update', function (Request $request) {
+    $user = User::find($request->routeParameters('id'));
+
+    $user->name = $request->data('name');
+    $user->email = $request->data('email');
+
+    return json($user->update()->toArray());
+});
+
+Route::delete('/user/{id}/delete', function (Request $request) {
+    $user = User::find($request->routeParameters('id'));
+    return json($user->delete()->toArray());
+});
 $app->run();
