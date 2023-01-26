@@ -27,14 +27,22 @@ class Migrator {
     private DatabaseDriver $driver;
 
     /**
+     * Show log progress
+     *
+     * @var boolean
+     */
+    private bool $logProgress;
+
+    /**
      * Build migrator.
      * @param string $migrationsDirectory
      * @return self
      */
-    public function __construct($migrationsDirectory, $templatesDirectory, DatabaseDriver $driver) {
+    public function __construct($migrationsDirectory, $templatesDirectory, DatabaseDriver $driver, $logProgress = true) {
         $this->migrationsDirectory = $migrationsDirectory;
         $this->templatesDirectory = $templatesDirectory;
         $this->driver = $driver;
+        $this->logProgress = $logProgress;
     }
 
     /**
@@ -44,7 +52,9 @@ class Migrator {
      * @return void
      */
     private function log(string $message) {
-        print($message);
+        if ($this->logProgress) {
+            print($message);
+        }
     }
 
     /**
@@ -121,7 +131,7 @@ class Migrator {
      * @param string $migrationName
      * @return string file name of the migration
      */
-    public function make(string $migrationName) {
+    public function make(string $migrationName): string {
         $migrationName = snake_case($migrationName);
         $date = date("Y_m_d");
         $id = 0;
@@ -144,6 +154,6 @@ class Migrator {
         }
         $fileName = sprintf("%s_%06d_%s", $date, $id, $migrationName);
         file_put_contents("$this->migrationsDirectory/$fileName.php", $template);
-        return $fileName;
+        return $fileName.".php";
     }
 }
