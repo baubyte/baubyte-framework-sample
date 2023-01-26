@@ -75,7 +75,7 @@ class App {
         $app->request = $app->server->getRequest();
         $app->view = new BaubyteEngine(__DIR__.'/../views');
         $app->session = new Session(new PhpNativeSessionStorage());
-        $app->database = new PdoDriver();
+        $app->database = singleton(DatabaseDriver::class, PdoDriver::class);
         $app->database->connect('mysql', 'localhost', 3306, 'framework', 'root', '');
         Model::setDatabaseDriver($app->database);
         Rule::loadDefaultRules();

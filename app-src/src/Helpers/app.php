@@ -15,7 +15,7 @@ function app(string $class = App::class) {
  * Create singleton.
  *
  * @param string $class
- * @param callable|string|callable $build
+ * @param callable|string|null $build
  */
 function singleton(string $class, callable|string|null $build = null) {
     return Container::singleton($class, $build);
