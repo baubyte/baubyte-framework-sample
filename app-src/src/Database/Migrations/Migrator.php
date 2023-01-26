@@ -74,7 +74,7 @@ class Migrator {
     public function migrate() {
         $this->createMigrationsTableIfNotExists();
         $migrated = $this->driver->statement("SELECT * FROM migrations");
-        $migrations = glob("$this->migrationsDirectory/*.php");
+        $migrations = glob("$this->migrationsDirectory".DIRECTORY_SEPARATOR."*.php");
 
         if (count($migrated) >= count($migrations)) {
             $this->log("Nada que migrar" . PHP_EOL);
@@ -111,7 +111,7 @@ class Migrator {
             $steps = $pending;
         }
 
-        $migrations = array_slice(array_reverse(glob("$this->migrationsDirectory/*.php")), -$pending);
+        $migrations = array_slice(array_reverse(glob("$this->migrationsDirectory".DIRECTORY_SEPARATOR."*.php")), -$pending);
 
         foreach ($migrations as $file) {
             $migration = require $file;
@@ -135,12 +135,12 @@ class Migrator {
         $migrationName = snake_case($migrationName);
         $date = date("Y_m_d");
         $id = 0;
-        foreach (glob("$this->migrationsDirectory/*.php") as $file) {
+        foreach (glob("$this->migrationsDirectory".DIRECTORY_SEPARATOR."*.php") as $file) {
             if (str_starts_with(basename($file), $date)) {
                 $id++;
             }
         }
-        $template = file_get_contents("$this->templatesDirectory/migration.php");
+        $template = file_get_contents("$this->templatesDirectory".DIRECTORY_SEPARATOR."migration.php");
 
         if (preg_match('/create_.*_table/', $migrationName)) {
             $table = preg_replace_callback("/create_(.*)_table/", fn ($match) => $match[1], $migrationName);
@@ -153,7 +153,7 @@ class Migrator {
             $template = preg_replace_callback('/DB::statement.*/', fn ($match) => "// {$match[0]}", $template);
         }
         $fileName = sprintf("%s_%06d_%s", $date, $id, $migrationName);
-        file_put_contents("$this->migrationsDirectory/$fileName.php", $template);
+        file_put_contents("$this->migrationsDirectory".DIRECTORY_SEPARATOR."$fileName.php", $template);
         return $fileName.".php";
     }
 }

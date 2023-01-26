@@ -11,7 +11,7 @@ use Baubyte\Routing\Route;
 use Baubyte\Validation\Rule;
 use Baubyte\Validation\Rules\Required;
 
-$app = App::bootstrap();
+$app = App::bootstrap(__DIR__ .DIRECTORY_SEPARATOR."..");
 
 $app->router->get('/test/{param}', function (Request $request) {
     return json($request->routeParameters());
@@ -104,4 +104,5 @@ Route::delete('/user/{id}/delete', function (Request $request) {
     $user = User::find($request->routeParameters('id'));
     return json($user->delete()->toArray());
 });
+Route::get("/dbhost", fn (Request $request) => Response::text(config("database.port")));
 $app->run();

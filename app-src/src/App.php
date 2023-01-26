@@ -2,6 +2,7 @@
 
 namespace Baubyte;
 
+use Baubyte\Config\Config;
 use Baubyte\Container\Container;
 use Baubyte\Database\Drivers\DatabaseDriver;
 use Baubyte\Database\Drivers\PdoDriver;
@@ -19,12 +20,20 @@ use Baubyte\Validation\Exceptions\ValidationException;
 use Baubyte\Validation\Rule;
 use Baubyte\View\BaubyteEngine;
 use Baubyte\View\View;
+use Dotenv\Dotenv;
 use Throwable;
 
 /**
  * App runtime.
  */
 class App {
+    /**
+     * Root Directory
+     *
+     * @var string
+     */
+    public static string $root;
+
     /**
      * Router instance.
      *
@@ -58,7 +67,7 @@ class App {
     public Session $session;
 
     /**
-     * Undocumented variable
+     * Database Drivers
      *
      * @var \Baubyte\Database\Drivers\DatabaseDriver
      */
@@ -68,7 +77,10 @@ class App {
      *
      * @return self
      */
-    public static function bootstrap(): self {
+    public static function bootstrap(string $root): self {
+        self::$root = $root;
+        Dotenv::createImmutable($root)->load();
+        Config::load("$root".DIRECTORY_SEPARATOR."config");
         $app = singleton(self::class);
         $app->router = new Router();
         $app->server = new PhpNativeServer();

@@ -53,7 +53,7 @@ class BaubyteEngine implements View {
      * @return string Rendered layout.
      */
     protected function renderLayout(string $layout): string {
-        return $this->phpFileOutput("{$this->viewsDirectory}/layouts/{$layout}.php");
+        return $this->phpFileOutput("{$this->viewsDirectory}".DIRECTORY_SEPARATOR."layouts".DIRECTORY_SEPARATOR."{$layout}.php");
     }
     /**
      * Process PHP file and get string output.
