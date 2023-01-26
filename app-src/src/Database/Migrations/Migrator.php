@@ -2,6 +2,8 @@
 
 namespace Baubyte\Database\Migrations;
 
+use Baubyte\Database\Drivers\DatabaseDriver;
+
 class Migrator {
     /**
      * Migration directory
@@ -16,14 +18,66 @@ class Migrator {
      * @var string
      */
     private string $templatesDirectory;
+
+    /**
+     * Driver Database
+     *
+     * @var DatabaseDriver
+     */
+    private DatabaseDriver $driver;
+
     /**
      * Build migrator.
      * @param string $migrationsDirectory
      * @return self
      */
-    public function __construct($migrationsDirectory, $templatesDirectory) {
+    public function __construct($migrationsDirectory, $templatesDirectory, DatabaseDriver $driver) {
         $this->migrationsDirectory = $migrationsDirectory;
         $this->templatesDirectory = $templatesDirectory;
+        $this->driver = $driver;
+    }
+
+    /**
+     * Logs for migrations
+     *
+     * @param string $message
+     * @return void
+     */
+    private function log(string $message) {
+        print($message);
+    }
+
+    /**
+     * Create Table for Migrations
+     *
+     * @return void
+     */
+    private function createMigrationsTableIfNotExists() {
+        $this->driver->statement("CREATE TABLE IF NOT EXISTS migrations (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(256))");
+    }
+
+    /**
+     * Run Migration
+     *
+     * @return void
+     */
+    public function migrate() {
+        $this->createMigrationsTableIfNotExists();
+        $migrated = $this->driver->statement("SELECT * FROM migrations");
+        $migrations = glob("$this->migrationsDirectory/*.php");
+
+        if (count($migrated) >= count($migrations)) {
+            $this->log("Nada que migrar" . PHP_EOL);
+            return;
+        }
+
+        foreach (array_slice($migrations, count($migrated)) as $file) {
+            $migration = require $file;
+            $migration->up();
+            $name = basename($file);
+            $this->driver->statement("INSERT INTO migrations (name) VALUES (?)", [$name]);
+            $this->log("Migrado => " . $name . PHP_EOL);
+        }
     }
 
     /**
