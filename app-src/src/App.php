@@ -18,7 +18,6 @@ use Baubyte\Session\PhpNativeSessionStorage;
 use Baubyte\Session\Session;
 use Baubyte\Validation\Exceptions\ValidationException;
 use Baubyte\Validation\Rule;
-use Baubyte\View\BaubyteEngine;
 use Baubyte\View\View;
 use Dotenv\Dotenv;
 use Throwable;
@@ -85,7 +84,6 @@ class App {
         $app->router = new Router();
         $app->server = new PhpNativeServer();
         $app->request = $app->server->getRequest();
-        $app->view = new BaubyteEngine(__DIR__.'/../views');
         $app->session = new Session(new PhpNativeSessionStorage());
         $app->database = singleton(DatabaseDriver::class, PdoDriver::class);
         $app->database->connect('mysql', 'localhost', 3306, 'framework', 'root', '');
