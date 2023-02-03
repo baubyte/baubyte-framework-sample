@@ -181,6 +181,11 @@ Search.appendIndex(
             "summary": "Create\u0020a\u0020new\u0020response\u0020pre\u002Dconfigured\u0020to\u0020return\u0020a\u0020rendered\u0020template.",
             "url": "classes/Baubyte-Http-Response.html#method_view"
         },                {
+            "fqsen": "\\Baubyte\\Http\\Response\u003A\u003AwithErrors\u0028\u0029",
+            "name": "withErrors",
+            "summary": "Flash\u0020errors\u0020into\u0020session.",
+            "url": "classes/Baubyte-Http-Response.html#method_withErrors"
+        },                {
             "fqsen": "\\Baubyte\\Routing\\Route",
             "name": "Route",
             "summary": "This\u0020class\u0020stores\u0020the\u0020URI\u0020regex\u0020and\u0020action.",
@@ -371,10 +376,25 @@ Search.appendIndex(
             "summary": "Handle\u0020request\u0020and\u0020send\u0020response.",
             "url": "classes/Baubyte-App.html#method_run"
         },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003AprepareNextRequest\u0028\u0029",
+            "name": "prepareNextRequest",
+            "summary": "Set\u0020session\u0020variables\u0020or\u0020other\u0020parameters\u0020for\u0020the\u0020next\u0020request.",
+            "url": "classes/Baubyte-App.html#method_prepareNextRequest"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003Aterminate\u0028\u0029",
+            "name": "terminate",
+            "summary": "Kill\u0020the\u0020current\u0020process.\u0020If\u0020necessary,\u0020release\u0020resources\u0020here.",
+            "url": "classes/Baubyte-App.html#method_terminate"
+        },                {
             "fqsen": "\\Baubyte\\App\u003A\u003Aabort\u0028\u0029",
             "name": "abort",
-            "summary": "",
+            "summary": "Stop\u0020execution\u0020from\u0020any\u0020point.",
             "url": "classes/Baubyte-App.html#method_abort"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003A\u0024root",
+            "name": "root",
+            "summary": "Root\u0020Directory",
+            "url": "classes/Baubyte-App.html#property_root"
         },                {
             "fqsen": "\\Baubyte\\App\u003A\u003A\u0024router",
             "name": "router",
@@ -393,8 +413,18 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Baubyte\\App\u003A\u003A\u0024view",
             "name": "view",
-            "summary": "Undocumented\u0020variable",
+            "summary": "View\u0020Instance",
             "url": "classes/Baubyte-App.html#property_view"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003A\u0024session",
+            "name": "session",
+            "summary": "Session\u0020Instance",
+            "url": "classes/Baubyte-App.html#property_session"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003A\u0024database",
+            "name": "database",
+            "summary": "Database\u0020Drivers",
+            "url": "classes/Baubyte-App.html#property_database"
         },                {
             "fqsen": "\\Baubyte\\Container\\Container",
             "name": "Container",
@@ -606,6 +636,21 @@ Search.appendIndex(
             "summary": "Create\u0020singleton.",
             "url": "namespaces/default.html#function_singleton"
         },                {
+            "fqsen": "\\resourcesDirectory\u0028\u0029",
+            "name": "resourcesDirectory",
+            "summary": "Resources\u0020directory\u0020containing\nviews,\u0020css,\u0020and\u0020other\u0020static\u0020files.",
+            "url": "namespaces/default.html#function_resourcesDirectory"
+        },                {
+            "fqsen": "\\env\u0028\u0029",
+            "name": "env",
+            "summary": "Get\u0020environment\u0020variable\u0020value.",
+            "url": "namespaces/default.html#function_env"
+        },                {
+            "fqsen": "\\config\u0028\u0029",
+            "name": "config",
+            "summary": "Get\u0020configuration\u0020value.",
+            "url": "namespaces/default.html#function_config"
+        },                {
             "fqsen": "\\isAssociative\u0028\u0029",
             "name": "isAssociative",
             "summary": "Check\u0020if\u0020an\u0020array\u0020is\u0020associative",
@@ -651,6 +696,11 @@ Search.appendIndex(
             "summary": "Create\u0020a\u0020new\u0020redirect\u0020response.",
             "url": "namespaces/default.html#function_redirect"
         },                {
+            "fqsen": "\\back\u0028\u0029",
+            "name": "back",
+            "summary": "Redirect\u0020back\u0020to\u0020previous\u0020URL.",
+            "url": "namespaces/default.html#function_back"
+        },                {
             "fqsen": "\\snake_case\u0028\u0029",
             "name": "snake_case",
             "summary": "Convert\u0020string\u0020into\u0020snake_case.",
@@ -695,6 +745,11 @@ Search.appendIndex(
             "name": "from",
             "summary": "Create\u0020a\u0020new\u0020rule\u0020object\u0020from\u0020string\u0020format\u0020\u0028example\u003A\u0020\u0022requiredWith\u003Aname\u0022\u0029.",
             "url": "classes/Baubyte-Validation-Rule.html#method_from"
+        },                {
+            "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003AsplitRules\u0028\u0029",
+            "name": "splitRules",
+            "summary": "Split\u0020rules\u0020string\u0020by\u0020pipe\u0020operator.",
+            "url": "classes/Baubyte-Validation-Rule.html#method_splitRules"
         },                {
             "fqsen": "\\Baubyte\\Validation\\Rule\u003A\u003Aemail\u0028\u0029",
             "name": "email",
@@ -946,6 +1001,471 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Baubyte-Validation-Exceptions-UnknownRuleException.html"
         },                {
+            "fqsen": "\\Baubyte\\Config\\Config",
+            "name": "Config",
+            "summary": "Application\u0020runtime\u0020configuration.",
+            "url": "classes/Baubyte-Config-Config.html"
+        },                {
+            "fqsen": "\\Baubyte\\Config\\Config\u003A\u003Aload\u0028\u0029",
+            "name": "load",
+            "summary": "Load\u0020configurations\u0020from\u0020a\u0020directory\u0020containing\u0020Lune\u0020config\u0020files.",
+            "url": "classes/Baubyte-Config-Config.html#method_load"
+        },                {
+            "fqsen": "\\Baubyte\\Config\\Config\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "Get\u0020configuration\u0020key.",
+            "url": "classes/Baubyte-Config-Config.html#method_get"
+        },                {
+            "fqsen": "\\Baubyte\\Config\\Config\u003A\u003A\u0024config",
+            "name": "config",
+            "summary": "Configurations\u0020container.",
+            "url": "classes/Baubyte-Config-Config.html#property_config"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\DB",
+            "name": "DB",
+            "summary": "Database\u0020connection.",
+            "url": "classes/Baubyte-Database-DB.html"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\DB\u003A\u003Aconnect\u0028\u0029",
+            "name": "connect",
+            "summary": "Initialize\u0020database\u0020connection.",
+            "url": "classes/Baubyte-Database-DB.html#method_connect"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\DB\u003A\u003Astatement\u0028\u0029",
+            "name": "statement",
+            "summary": "Run\u0020statement\u0020and\u0020get\u0020response.",
+            "url": "classes/Baubyte-Database-DB.html#method_statement"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\DB\u003A\u003Aclose\u0028\u0029",
+            "name": "close",
+            "summary": "Close\u0020database\u0020connection.",
+            "url": "classes/Baubyte-Database-DB.html#method_close"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Drivers\\DatabaseDriver",
+            "name": "DatabaseDriver",
+            "summary": "Drivers\u0020Interface",
+            "url": "classes/Baubyte-Database-Drivers-DatabaseDriver.html"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Drivers\\DatabaseDriver\u003A\u003Aconnect\u0028\u0029",
+            "name": "connect",
+            "summary": "Create\u0020a\u0020connection\u0020to\u0020the\u0020database.",
+            "url": "classes/Baubyte-Database-Drivers-DatabaseDriver.html#method_connect"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Drivers\\DatabaseDriver\u003A\u003AlastInsertId\u0028\u0029",
+            "name": "lastInsertId",
+            "summary": "Last\u0020id\u0020insert",
+            "url": "classes/Baubyte-Database-Drivers-DatabaseDriver.html#method_lastInsertId"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Drivers\\DatabaseDriver\u003A\u003Aclose\u0028\u0029",
+            "name": "close",
+            "summary": "Close\u0020connection.",
+            "url": "classes/Baubyte-Database-Drivers-DatabaseDriver.html#method_close"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Drivers\\DatabaseDriver\u003A\u003Astatement\u0028\u0029",
+            "name": "statement",
+            "summary": "Execute\u0020a\u0020statement\u0020and\u0020return\u0020the\u0020response.",
+            "url": "classes/Baubyte-Database-Drivers-DatabaseDriver.html#method_statement"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Drivers\\PdoDriver",
+            "name": "PdoDriver",
+            "summary": "PHP\u0020PDO\u0020wrapper.",
+            "url": "classes/Baubyte-Database-Drivers-PdoDriver.html"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Drivers\\PdoDriver\u003A\u003Aconnect\u0028\u0029",
+            "name": "connect",
+            "summary": "Create\u0020a\u0020connection\u0020to\u0020the\u0020database.",
+            "url": "classes/Baubyte-Database-Drivers-PdoDriver.html#method_connect"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Drivers\\PdoDriver\u003A\u003Aclose\u0028\u0029",
+            "name": "close",
+            "summary": "Close\u0020connection.",
+            "url": "classes/Baubyte-Database-Drivers-PdoDriver.html#method_close"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Drivers\\PdoDriver\u003A\u003AlastInsertId\u0028\u0029",
+            "name": "lastInsertId",
+            "summary": "Last\u0020id\u0020insert",
+            "url": "classes/Baubyte-Database-Drivers-PdoDriver.html#method_lastInsertId"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Drivers\\PdoDriver\u003A\u003Astatement\u0028\u0029",
+            "name": "statement",
+            "summary": "Execute\u0020a\u0020statement\u0020and\u0020return\u0020the\u0020response.",
+            "url": "classes/Baubyte-Database-Drivers-PdoDriver.html#method_statement"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Drivers\\PdoDriver\u003A\u003A\u0024pdo",
+            "name": "pdo",
+            "summary": "PDO\u0020Instance",
+            "url": "classes/Baubyte-Database-Drivers-PdoDriver.html#property_pdo"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migration",
+            "name": "Migration",
+            "summary": "",
+            "url": "classes/Baubyte-Database-Migrations-Migration.html"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migration\u003A\u003Aup\u0028\u0029",
+            "name": "up",
+            "summary": "Run\u0020migration",
+            "url": "classes/Baubyte-Database-Migrations-Migration.html#method_up"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migration\u003A\u003Adown\u0028\u0029",
+            "name": "down",
+            "summary": "Reverse\u0020migration",
+            "url": "classes/Baubyte-Database-Migrations-Migration.html#method_down"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migrator",
+            "name": "Migrator",
+            "summary": "",
+            "url": "classes/Baubyte-Database-Migrations-Migrator.html"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migrator\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Build\u0020migrator.",
+            "url": "classes/Baubyte-Database-Migrations-Migrator.html#method___construct"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migrator\u003A\u003Alog\u0028\u0029",
+            "name": "log",
+            "summary": "Logs\u0020for\u0020migrations",
+            "url": "classes/Baubyte-Database-Migrations-Migrator.html#method_log"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migrator\u003A\u003AcreateMigrationsTableIfNotExists\u0028\u0029",
+            "name": "createMigrationsTableIfNotExists",
+            "summary": "Create\u0020Table\u0020for\u0020Migrations",
+            "url": "classes/Baubyte-Database-Migrations-Migrator.html#method_createMigrationsTableIfNotExists"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migrator\u003A\u003Amigrate\u0028\u0029",
+            "name": "migrate",
+            "summary": "Run\u0020Migration",
+            "url": "classes/Baubyte-Database-Migrations-Migrator.html#method_migrate"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migrator\u003A\u003Arollback\u0028\u0029",
+            "name": "rollback",
+            "summary": "Reverse\u0020migrations.",
+            "url": "classes/Baubyte-Database-Migrations-Migrator.html#method_rollback"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migrator\u003A\u003Amake\u0028\u0029",
+            "name": "make",
+            "summary": "Create\u0020new\u0020migration.",
+            "url": "classes/Baubyte-Database-Migrations-Migrator.html#method_make"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migrator\u003A\u003A\u0024migrationsDirectory",
+            "name": "migrationsDirectory",
+            "summary": "Migration\u0020directory",
+            "url": "classes/Baubyte-Database-Migrations-Migrator.html#property_migrationsDirectory"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migrator\u003A\u003A\u0024templatesDirectory",
+            "name": "templatesDirectory",
+            "summary": "Templates\u0020Migration\u0020directory",
+            "url": "classes/Baubyte-Database-Migrations-Migrator.html#property_templatesDirectory"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migrator\u003A\u003A\u0024driver",
+            "name": "driver",
+            "summary": "Driver\u0020Database",
+            "url": "classes/Baubyte-Database-Migrations-Migrator.html#property_driver"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migrator\u003A\u003A\u0024logProgress",
+            "name": "logProgress",
+            "summary": "Show\u0020log\u0020progress",
+            "url": "classes/Baubyte-Database-Migrations-Migrator.html#property_logProgress"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model",
+            "name": "Model",
+            "summary": "",
+            "url": "classes/Baubyte-Database-Model.html"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003AsetDatabaseDriver\u0028\u0029",
+            "name": "setDatabaseDriver",
+            "summary": "Set\u0020Database\u0020Drivers",
+            "url": "classes/Baubyte-Database-Model.html#method_setDatabaseDriver"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Initialize\u0020model.",
+            "url": "classes/Baubyte-Database-Model.html#method___construct"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003A__set\u0028\u0029",
+            "name": "__set",
+            "summary": "Mark\u0020any\u0020property\u0020that\u0020is\u0020being\u0020set\u0020on\u0020this\u0020object\u0020as\u0020a\u0020column.",
+            "url": "classes/Baubyte-Database-Model.html#method___set"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003A__get\u0028\u0029",
+            "name": "__get",
+            "summary": "Get\u0020previously\u0020set\u0020property.",
+            "url": "classes/Baubyte-Database-Model.html#method___get"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003AtoArray\u0028\u0029",
+            "name": "toArray",
+            "summary": "Return\u0020attributes\u0020to\u0020array",
+            "url": "classes/Baubyte-Database-Model.html#method_toArray"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003Asave\u0028\u0029",
+            "name": "save",
+            "summary": "Save\u0020the\u0020current\u0020model\u0020in\u0020the\u0020database.",
+            "url": "classes/Baubyte-Database-Model.html#method_save"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003AmassAssign\u0028\u0029",
+            "name": "massAssign",
+            "summary": "Assign\u0020all\u0020assignable\u0020attributes\u0020at\u0020once.",
+            "url": "classes/Baubyte-Database-Model.html#method_massAssign"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003AsetAttributes\u0028\u0029",
+            "name": "setAttributes",
+            "summary": "Assign\u0020all\u0020assignable\u0020attributes\u0020at\u0020once.",
+            "url": "classes/Baubyte-Database-Model.html#method_setAttributes"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003Acreate\u0028\u0029",
+            "name": "create",
+            "summary": "Store\u0020model\u0020in\u0020the\u0020database.",
+            "url": "classes/Baubyte-Database-Model.html#method_create"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003Aupdate\u0028\u0029",
+            "name": "update",
+            "summary": "Update\u0020model\u0020in\u0020the\u0020database.",
+            "url": "classes/Baubyte-Database-Model.html#method_update"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003Adelete\u0028\u0029",
+            "name": "delete",
+            "summary": "Delete\u0020model\u0020in\u0020the\u0020database.",
+            "url": "classes/Baubyte-Database-Model.html#method_delete"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003Afirst\u0028\u0029",
+            "name": "first",
+            "summary": "First\u0020inserted\u0020model.",
+            "url": "classes/Baubyte-Database-Model.html#method_first"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003Afind\u0028\u0029",
+            "name": "find",
+            "summary": "Find\u0020model\u0020with\u0020given\u0020\u0060\u0024id\u0060.",
+            "url": "classes/Baubyte-Database-Model.html#method_find"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003Aall\u0028\u0029",
+            "name": "all",
+            "summary": "Get\u0020all\u0020the\u0020models\u0020in\u0020the\u0020database.",
+            "url": "classes/Baubyte-Database-Model.html#method_all"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003Awhere\u0028\u0029",
+            "name": "where",
+            "summary": "Get\u0020the\u0020models\u0020where\u0020\u0060\u0024column\u0020\u003D\u0020\u0024value\u0060",
+            "url": "classes/Baubyte-Database-Model.html#method_where"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003AfirstWhere\u0028\u0029",
+            "name": "firstWhere",
+            "summary": "Get\u0020the\u0020first\u0020model\u0020where\u0020\u0060\u0024column\u0020\u003D\u0020\u0024value\u0060",
+            "url": "classes/Baubyte-Database-Model.html#method_firstWhere"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003A\u0024table",
+            "name": "table",
+            "summary": "Database\u0020table.",
+            "url": "classes/Baubyte-Database-Model.html#property_table"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003A\u0024primaryKey",
+            "name": "primaryKey",
+            "summary": "Id\u0020and\u0020primary\u0020key\u0020column.",
+            "url": "classes/Baubyte-Database-Model.html#property_primaryKey"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003A\u0024hidden",
+            "name": "hidden",
+            "summary": "Hidden\u0020properties.",
+            "url": "classes/Baubyte-Database-Model.html#property_hidden"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003A\u0024fillable",
+            "name": "fillable",
+            "summary": "Mass\u0020assignable\u0020attributes.",
+            "url": "classes/Baubyte-Database-Model.html#property_fillable"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003A\u0024attributes",
+            "name": "attributes",
+            "summary": "attributes",
+            "url": "classes/Baubyte-Database-Model.html#property_attributes"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003A\u0024insertTimestamps",
+            "name": "insertTimestamps",
+            "summary": "Automatically\u0020insert\u0020\u0060created_at\u0060\u0020and\u0020\u0060updated_at\u0060\u0020columns.",
+            "url": "classes/Baubyte-Database-Model.html#property_insertTimestamps"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003A\u0024driver",
+            "name": "driver",
+            "summary": "Undocumented\u0020variable",
+            "url": "classes/Baubyte-Database-Model.html#property_driver"
+        },                {
+            "fqsen": "\\session\u0028\u0029",
+            "name": "session",
+            "summary": "Get\u0020session\u0020instance.",
+            "url": "namespaces/default.html#function_session"
+        },                {
+            "fqsen": "\\error\u0028\u0029",
+            "name": "error",
+            "summary": "Get\u0020flashed\u0020error.",
+            "url": "namespaces/default.html#function_error"
+        },                {
+            "fqsen": "\\old\u0028\u0029",
+            "name": "old",
+            "summary": "Old\u0020submitted\u0020data.",
+            "url": "namespaces/default.html#function_old"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\ServiceProvider",
+            "name": "ServiceProvider",
+            "summary": "Service\u0020provider\u0020interface.",
+            "url": "classes/Baubyte-Providers-ServiceProvider.html"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\ServiceProvider\u003A\u003AregisterServices\u0028\u0029",
+            "name": "registerServices",
+            "summary": "Register\u0020services.",
+            "url": "classes/Baubyte-Providers-ServiceProvider.html#method_registerServices"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\PhpNativeSessionStorage",
+            "name": "PhpNativeSessionStorage",
+            "summary": "PHP\u0020native\u0020session\u0020implementation.",
+            "url": "classes/Baubyte-Session-PhpNativeSessionStorage.html"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\PhpNativeSessionStorage\u003A\u003Astart\u0028\u0029",
+            "name": "start",
+            "summary": "Load\u0020session\u0020data.",
+            "url": "classes/Baubyte-Session-PhpNativeSessionStorage.html#method_start"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\PhpNativeSessionStorage\u003A\u003Aid\u0028\u0029",
+            "name": "id",
+            "summary": "Get\u0020the\u0020ID\u0020of\u0020the\u0020current\u0020session.",
+            "url": "classes/Baubyte-Session-PhpNativeSessionStorage.html#method_id"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\PhpNativeSessionStorage\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "Get\u0020a\u0020specific\u0020key\u0020from\u0020session\u0020storage.",
+            "url": "classes/Baubyte-Session-PhpNativeSessionStorage.html#method_get"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\PhpNativeSessionStorage\u003A\u003Aset\u0028\u0029",
+            "name": "set",
+            "summary": "Set\u0020new\u0020key\u0020\u002D\u0020value\u0020pair.",
+            "url": "classes/Baubyte-Session-PhpNativeSessionStorage.html#method_set"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\PhpNativeSessionStorage\u003A\u003Ahas\u0028\u0029",
+            "name": "has",
+            "summary": "Check\u0020if\u0020a\u0020specific\u0020key\u0020exists\u0020in\u0020the\u0020session.",
+            "url": "classes/Baubyte-Session-PhpNativeSessionStorage.html#method_has"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\PhpNativeSessionStorage\u003A\u003Asave\u0028\u0029",
+            "name": "save",
+            "summary": "Write\u0020the\u0020session\u0020data\u0020to\u0020make\u0020it\u0020persistent.",
+            "url": "classes/Baubyte-Session-PhpNativeSessionStorage.html#method_save"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\PhpNativeSessionStorage\u003A\u003Aremove\u0028\u0029",
+            "name": "remove",
+            "summary": "Remove\u0020specific\u0020key\u0020exists\u0020in\u0020the\u0020session.",
+            "url": "classes/Baubyte-Session-PhpNativeSessionStorage.html#method_remove"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\PhpNativeSessionStorage\u003A\u003Adestroy\u0028\u0029",
+            "name": "destroy",
+            "summary": "Destroy\u0020session.",
+            "url": "classes/Baubyte-Session-PhpNativeSessionStorage.html#method_destroy"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\Session",
+            "name": "Session",
+            "summary": "HTTP\u0020Session",
+            "url": "classes/Baubyte-Session-Session.html"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\Session\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor",
+            "url": "classes/Baubyte-Session-Session.html#method___construct"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\Session\u003A\u003A__destruct\u0028\u0029",
+            "name": "__destruct",
+            "summary": "Handle\u0020flash\u0020data\u0020before\u0020destroying\u0020session.",
+            "url": "classes/Baubyte-Session-Session.html#method___destruct"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\Session\u003A\u003AageFlashData\u0028\u0029",
+            "name": "ageFlashData",
+            "summary": "Prepare\u0020session\u0020data\u0020to\u0020be\u0020removed\u0020for\u0020the\u0020next\u0020request.",
+            "url": "classes/Baubyte-Session-Session.html#method_ageFlashData"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\Session\u003A\u003Aflash\u0028\u0029",
+            "name": "flash",
+            "summary": "Flash\u0020key\u0020\u002D\u0020value\u0020to\u0020current\u0020session.",
+            "url": "classes/Baubyte-Session-Session.html#method_flash"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\Session\u003A\u003Aid\u0028\u0029",
+            "name": "id",
+            "summary": "Get\u0020the\u0020ID\u0020of\u0020the\u0020current\u0020session.",
+            "url": "classes/Baubyte-Session-Session.html#method_id"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\Session\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "Get\u0020a\u0020specific\u0020key\u0020from\u0020session\u0020storage.",
+            "url": "classes/Baubyte-Session-Session.html#method_get"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\Session\u003A\u003Aset\u0028\u0029",
+            "name": "set",
+            "summary": "Set\u0020new\u0020key\u0020\u002D\u0020value\u0020pair.",
+            "url": "classes/Baubyte-Session-Session.html#method_set"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\Session\u003A\u003Ahas\u0028\u0029",
+            "name": "has",
+            "summary": "Check\u0020if\u0020a\u0020specific\u0020key\u0020exists\u0020in\u0020the\u0020session.",
+            "url": "classes/Baubyte-Session-Session.html#method_has"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\Session\u003A\u003Aremove\u0028\u0029",
+            "name": "remove",
+            "summary": "Remove\u0020specific\u0020key\u0020exists\u0020in\u0020the\u0020session.",
+            "url": "classes/Baubyte-Session-Session.html#method_remove"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\Session\u003A\u003Adestroy\u0028\u0029",
+            "name": "destroy",
+            "summary": "Destroy\u0020session.",
+            "url": "classes/Baubyte-Session-Session.html#method_destroy"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\Session\u003A\u003AFLASH_KEY",
+            "name": "FLASH_KEY",
+            "summary": "Flash\u0020Key",
+            "url": "classes/Baubyte-Session-Session.html#constant_FLASH_KEY"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\Session\u003A\u003A\u0024storage",
+            "name": "storage",
+            "summary": "Storage\u0020controller.",
+            "url": "classes/Baubyte-Session-Session.html#property_storage"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\SessionStorage",
+            "name": "SessionStorage",
+            "summary": "Session\u0020Driver\u0020interface",
+            "url": "classes/Baubyte-Session-SessionStorage.html"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\SessionStorage\u003A\u003Astart\u0028\u0029",
+            "name": "start",
+            "summary": "Load\u0020session\u0020data.",
+            "url": "classes/Baubyte-Session-SessionStorage.html#method_start"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\SessionStorage\u003A\u003Aid\u0028\u0029",
+            "name": "id",
+            "summary": "Get\u0020the\u0020ID\u0020of\u0020the\u0020current\u0020session.",
+            "url": "classes/Baubyte-Session-SessionStorage.html#method_id"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\SessionStorage\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "Get\u0020a\u0020specific\u0020key\u0020from\u0020session\u0020storage.",
+            "url": "classes/Baubyte-Session-SessionStorage.html#method_get"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\SessionStorage\u003A\u003Aset\u0028\u0029",
+            "name": "set",
+            "summary": "Set\u0020new\u0020key\u0020\u002D\u0020value\u0020pair.",
+            "url": "classes/Baubyte-Session-SessionStorage.html#method_set"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\SessionStorage\u003A\u003Ahas\u0028\u0029",
+            "name": "has",
+            "summary": "Check\u0020if\u0020a\u0020specific\u0020key\u0020exists\u0020in\u0020the\u0020session.",
+            "url": "classes/Baubyte-Session-SessionStorage.html#method_has"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\SessionStorage\u003A\u003Aremove\u0028\u0029",
+            "name": "remove",
+            "summary": "Remove\u0020specific\u0020key\u0020exists\u0020in\u0020the\u0020session.",
+            "url": "classes/Baubyte-Session-SessionStorage.html#method_remove"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\SessionStorage\u003A\u003Adestroy\u0028\u0029",
+            "name": "destroy",
+            "summary": "Destroy\u0020session.",
+            "url": "classes/Baubyte-Session-SessionStorage.html#method_destroy"
+        },                {
+            "fqsen": "\\Baubyte\\Session\\SessionStorage\u003A\u003Asave\u0028\u0029",
+            "name": "save",
+            "summary": "Write\u0020the\u0020session\u0020data\u0020to\u0020make\u0020it\u0020persistent.",
+            "url": "classes/Baubyte-Session-SessionStorage.html#method_save"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -955,6 +1475,11 @@ Search.appendIndex(
             "name": "Baubyte",
             "summary": "",
             "url": "namespaces/baubyte.html"
+        },                {
+            "fqsen": "\\Baubyte\\Config",
+            "name": "Config",
+            "summary": "",
+            "url": "namespaces/baubyte-config.html"
         },                {
             "fqsen": "\\Baubyte\\Container",
             "name": "Container",
@@ -966,6 +1491,21 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/baubyte-contracts.html"
         },                {
+            "fqsen": "\\Baubyte\\Database",
+            "name": "Database",
+            "summary": "",
+            "url": "namespaces/baubyte-database.html"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Drivers",
+            "name": "Drivers",
+            "summary": "",
+            "url": "namespaces/baubyte-database-drivers.html"
+        },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations",
+            "name": "Migrations",
+            "summary": "",
+            "url": "namespaces/baubyte-database-migrations.html"
+        },                {
             "fqsen": "\\Baubyte\\Exceptions",
             "name": "Exceptions",
             "summary": "",
@@ -976,6 +1516,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/baubyte-http.html"
         },                {
+            "fqsen": "\\Baubyte\\Providers",
+            "name": "Providers",
+            "summary": "",
+            "url": "namespaces/baubyte-providers.html"
+        },                {
             "fqsen": "\\Baubyte\\Routing",
             "name": "Routing",
             "summary": "",
@@ -985,6 +1530,11 @@ Search.appendIndex(
             "name": "Server",
             "summary": "",
             "url": "namespaces/baubyte-server.html"
+        },                {
+            "fqsen": "\\Baubyte\\Session",
+            "name": "Session",
+            "summary": "",
+            "url": "namespaces/baubyte-session.html"
         },                {
             "fqsen": "\\Baubyte\\Validation\\Exceptions",
             "name": "Exceptions",

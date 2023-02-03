@@ -16,6 +16,7 @@ use Baubyte\Server\PhpNativeServer;
 use Baubyte\Server\Server;
 use Baubyte\Session\PhpNativeSessionStorage;
 use Baubyte\Session\Session;
+use Baubyte\Session\SessionStorage;
 use Baubyte\Validation\Exceptions\ValidationException;
 use Baubyte\Validation\Rule;
 use Baubyte\View\View;
@@ -78,18 +79,14 @@ class App {
      */
     public static function bootstrap(string $root): self {
         self::$root = $root;
-        Dotenv::createImmutable($root)->load();
-        Config::load("$root".DIRECTORY_SEPARATOR."config");
         $app = singleton(self::class);
-        $app->router = new Router();
-        $app->server = new PhpNativeServer();
-        $app->request = $app->server->getRequest();
-        $app->session = new Session(new PhpNativeSessionStorage());
-        $app->database = singleton(DatabaseDriver::class, PdoDriver::class);
-        $app->database->connect('mysql', 'localhost', 3306, 'framework', 'root', '');
-        Model::setDatabaseDriver($app->database);
-        Rule::loadDefaultRules();
-        return $app;
+
+        return $app
+                ->loadConfig()
+                ->runServiceProviders('boot')
+                ->setHttpHandlers()
+                ->setUpDatabaseConnections()
+                ->runServiceProviders('runtime');
     }
     /**
      * Handle request and send response.
@@ -113,6 +110,58 @@ class App {
         }
     }
 
+    /**
+     * Load Baubyte configuration.
+     *
+     * @return self
+     */
+    protected function loadConfig():self{
+        Dotenv::createImmutable(self::$root )->load();
+        Config::load(self::$root .DIRECTORY_SEPARATOR."config");
+        return $this;
+    }
+
+    /**
+     * Register container instances.
+     *
+     * @param string $type
+     * @return self
+     */
+    protected function runServiceProviders(string $type):self {
+        foreach (config("providers.{$type}", []) as $provider) {
+            $provider = new $provider();
+            $provider->registerServices();
+        }
+        return $this;
+    }
+
+    protected function setHttpHandlers():self{
+        $this->router = singleton(Router::class);
+        $this->server = app(Server::class);
+        $this->request = $this->server->getRequest();
+        $this->session = singleton(Session::class, fn () => new Session(app(SessionStorage::class)));
+        return $this;
+    }
+
+    /**
+     * Open database connections or other connections.
+     *
+     * @return self
+     */
+    protected function setUpDatabaseConnections():self {
+        $this->database = app(DatabaseDriver::class);
+        $this->database->connect(
+            config("database.connection"),
+            config("database.host"),
+            config("database.port"),
+            config("database.database"),
+            config("database.user"),
+            config("database.password")
+        );
+        Model::setDatabaseDriver($this->database);
+
+        return $this;
+    }
     /**
      * Set session variables or other parameters for the next request.
      */

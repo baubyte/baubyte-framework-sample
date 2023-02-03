@@ -5,7 +5,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Baubyte\\": "src/"
+            "Baubyte\\": "src/",
+            "App\\": "app/"
         },
         "files": [
             "src/Helpers/app.php",
