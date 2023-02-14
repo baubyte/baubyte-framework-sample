@@ -110,8 +110,8 @@ class App {
      *
      * @return self
      */
-    protected function loadConfig():self{
-        Dotenv::createImmutable(self::$root )->load();
+    protected function loadConfig(): self {
+        Dotenv::createImmutable(self::$root)->load();
         Config::load(self::$root .DIRECTORY_SEPARATOR."config");
         return $this;
     }
@@ -122,7 +122,7 @@ class App {
      * @param string $type
      * @return self
      */
-    protected function runServiceProviders(string $type):self {
+    protected function runServiceProviders(string $type): self {
         foreach (config("providers.{$type}", []) as $provider) {
             $provider = new $provider();
             $provider->registerServices();
@@ -130,7 +130,7 @@ class App {
         return $this;
     }
 
-    protected function setHttpHandlers():self{
+    protected function setHttpHandlers(): self {
         $this->router = singleton(Router::class);
         $this->server = app(Server::class);
         $this->request = $this->server->getRequest();
@@ -143,7 +143,7 @@ class App {
      *
      * @return self
      */
-    protected function setUpDatabaseConnections():self {
+    protected function setUpDatabaseConnections(): self {
         $this->database = app(DatabaseDriver::class);
         $this->database->connect(
             config("database.connection"),
