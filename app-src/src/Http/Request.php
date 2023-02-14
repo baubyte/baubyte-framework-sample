@@ -3,6 +3,7 @@
 namespace Baubyte\Http;
 
 use Baubyte\Routing\Route;
+use Baubyte\Storage\File;
 use Baubyte\Validation\Validator;
 
 /**
@@ -46,6 +47,14 @@ class Request {
      * @var array
      */
     protected array $headers = [];
+
+    /**
+     * Uploaded files.
+     *
+     * @var array<string, \Baubyte\Storage\File>
+     */
+    protected array $files = [];
+
 
     /**
      * Get the request URI.
@@ -126,6 +135,28 @@ class Request {
         }
         return $this;
     }
+
+    /**
+     * Get file from request.
+     *
+     * @param string $name
+     * @return File|null
+     */
+    public function file(string $name): ?File {
+        return $this->files[$name] ?? null;
+    }
+
+    /**
+     * Set uploaded files.
+     *
+     * @param array<string, \Baubyte\Storage\File> $files
+     * @return self
+     */
+    public function setFiles(array $files): self {
+        $this->files = $files;
+        return $this;
+    }
+
      /**
      * Get all POST data as key-value or get only specific value by providing
      * a `$key`.
