@@ -100,7 +100,7 @@ abstract class Model {
      */
     public function __sleep() {
         foreach ($this->hidden as $hide) {
-            unset($this->columns[$hide]);
+            unset($this->attributes[$hide]);
         }
         return array_keys(get_object_vars($this));
     }

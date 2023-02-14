@@ -2,8 +2,8 @@
 
 namespace Baubyte\Auth;
 
-use App\Controllers\Auth\LoginController;
-use App\Controllers\Auth\RegisterController;
+/* use App\Controllers\Auth\LoginController;
+use App\Controllers\Auth\RegisterController; */
 use Baubyte\Auth\Authenticatable;
 use Baubyte\Auth\Authenticators\Authenticator;
 use Baubyte\Routing\Route;

@@ -44,7 +44,7 @@ class BaubyteEngine implements View {
      * @return string Rendered view.
      */
     protected function renderView(string $view, array $params = []): string {
-        return $this->phpFileOutput("{$this->viewsDirectory}/{$view}.php", $params);
+        return $this->phpFileOutput("{$this->viewsDirectory}".DIRECTORY_SEPARATOR."{$view}.php", $params);
     }
     /**
      * Render layout only, without replacing annotations.

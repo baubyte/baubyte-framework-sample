@@ -2,5 +2,5 @@
 
 return [
     'engine' => 'baubyte',
-    'path' => resourcesDirectory() .DIRECTORY_SEPARATOR."views"
+    'path' => resourcesDirectory().DIRECTORY_SEPARATOR."views"
 ];

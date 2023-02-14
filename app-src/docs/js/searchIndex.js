@@ -1556,31 +1556,6 @@ Search.appendIndex(
             "summary": "Make\u0020this\u0020instance\u0020unauthenticated.",
             "url": "classes/Baubyte-Auth-Authenticatable.html#method_logout"
         },                {
-            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator",
-            "name": "SessionAuthenticator",
-            "summary": "Authentication\u0020method.",
-            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html"
-        },                {
-            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator\u003A\u003Aresolve\u0028\u0029",
-            "name": "resolve",
-            "summary": "Get\u0020authenticatable\u0020from\u0020current\u0020request.",
-            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html#method_resolve"
-        },                {
-            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator\u003A\u003AisAuthenticated\u0028\u0029",
-            "name": "isAuthenticated",
-            "summary": "Determines\u0020if\u0020the\u0020\u0060\u0024authenticatable\u0060\u0020is\u0020authenticated.",
-            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html#method_isAuthenticated"
-        },                {
-            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator\u003A\u003Alogin\u0028\u0029",
-            "name": "login",
-            "summary": "Log\u0020authenticatable\u0020model\u0020in.",
-            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html#method_login"
-        },                {
-            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator\u003A\u003Alogout\u0028\u0029",
-            "name": "logout",
-            "summary": "Log\u0020authenticatable\u0020model\u0020out.",
-            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html#method_logout"
-        },                {
             "fqsen": "\\Baubyte\\Auth\\Authenticators\\Authenticator",
             "name": "Authenticator",
             "summary": "",
@@ -1766,6 +1741,71 @@ Search.appendIndex(
             "summary": "Put\u0020file\u0020in\u0020the\u0020storage\u0020directory.",
             "url": "classes/Baubyte-Storage-Storage.html#method_put"
         },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator",
+            "name": "SessionAuthenticator",
+            "summary": "Authentication\u0020method.",
+            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator\u003A\u003Aresolve\u0028\u0029",
+            "name": "resolve",
+            "summary": "Get\u0020authenticatable\u0020from\u0020current\u0020request.",
+            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html#method_resolve"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator\u003A\u003AisAuthenticated\u0028\u0029",
+            "name": "isAuthenticated",
+            "summary": "Determines\u0020if\u0020the\u0020\u0060\u0024authenticatable\u0060\u0020is\u0020authenticated.",
+            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html#method_isAuthenticated"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator\u003A\u003Alogin\u0028\u0029",
+            "name": "login",
+            "summary": "Log\u0020authenticatable\u0020model\u0020in.",
+            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html#method_login"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator\u003A\u003Alogout\u0028\u0029",
+            "name": "logout",
+            "summary": "Log\u0020authenticatable\u0020model\u0020out.",
+            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html#method_logout"
+        },                {
+            "fqsen": "\\Baubyte\\Crypto\\Bcrypt",
+            "name": "Bcrypt",
+            "summary": "Native\u0020Bcrypt\u0020hash.",
+            "url": "classes/Baubyte-Crypto-Bcrypt.html"
+        },                {
+            "fqsen": "\\Baubyte\\Crypto\\Bcrypt\u003A\u003Ahash\u0028\u0029",
+            "name": "hash",
+            "summary": "Hash\u0020\u0060\u0024input\u0060.",
+            "url": "classes/Baubyte-Crypto-Bcrypt.html#method_hash"
+        },                {
+            "fqsen": "\\Baubyte\\Crypto\\Bcrypt\u003A\u003Averify\u0028\u0029",
+            "name": "verify",
+            "summary": "Check\u0020if\u0020\u0060hash\u0028\u0024input\u0029\u0020\u003D\u003D\u0020\u0024hash\u0060.",
+            "url": "classes/Baubyte-Crypto-Bcrypt.html#method_verify"
+        },                {
+            "fqsen": "\\Baubyte\\Crypto\\Hasher",
+            "name": "Hasher",
+            "summary": "Cryptographic\u0020hash.",
+            "url": "classes/Baubyte-Crypto-Hasher.html"
+        },                {
+            "fqsen": "\\Baubyte\\Crypto\\Hasher\u003A\u003Ahash\u0028\u0029",
+            "name": "hash",
+            "summary": "Hash\u0020\u0060\u0024input\u0060.",
+            "url": "classes/Baubyte-Crypto-Hasher.html#method_hash"
+        },                {
+            "fqsen": "\\Baubyte\\Crypto\\Hasher\u003A\u003Averify\u0028\u0029",
+            "name": "verify",
+            "summary": "Check\u0020if\u0020\u0060hash\u0028\u0024input\u0029\u0020\u003D\u003D\u0020\u0024hash\u0060.",
+            "url": "classes/Baubyte-Crypto-Hasher.html#method_verify"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\HasherServiceProvider",
+            "name": "HasherServiceProvider",
+            "summary": "",
+            "url": "classes/Baubyte-Providers-HasherServiceProvider.html"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\HasherServiceProvider\u003A\u003AregisterServices\u0028\u0029",
+            "name": "registerServices",
+            "summary": "Register\u0020services.",
+            "url": "classes/Baubyte-Providers-HasherServiceProvider.html#method_registerServices"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -1800,6 +1840,11 @@ Search.appendIndex(
             "name": "Contracts",
             "summary": "",
             "url": "namespaces/baubyte-contracts.html"
+        },                {
+            "fqsen": "\\Baubyte\\Crypto",
+            "name": "Crypto",
+            "summary": "",
+            "url": "namespaces/baubyte-crypto.html"
         },                {
             "fqsen": "\\Baubyte\\Database",
             "name": "Database",

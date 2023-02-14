@@ -13,7 +13,8 @@
             "src/Helpers/http.php",
             "src/Helpers/array.php",
             "src/Helpers/string.php",
-            "src/Helpers/session.php"
+            "src/Helpers/session.php",
+            "src/Helpers/auth.php"
         ],
         "classmap": [
             "src/Contracts/Stubs/Stringable.php"
