@@ -2,6 +2,8 @@
 
 namespace Baubyte\View;
 
+use Baubyte\View\Exceptions\ViewNotFoundException;
+
 /**
  *  Baubyte template engine.
  */
@@ -65,6 +67,9 @@ class BaubyteEngine implements View {
     protected function phpFileOutput(string $phpFile, array $params = []): string {
         foreach ($params as $param => $value) {
             $$param = $value;
+        }
+        if (!is_file($phpFile)) {
+            throw new ViewNotFoundException("La vista {$phpFile} no se encuentra.");
         }
         ob_start();
         include_once $phpFile;

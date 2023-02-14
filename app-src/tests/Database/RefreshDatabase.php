@@ -13,7 +13,7 @@ trait RefreshDatabase {
             $this->driver = singleton(DatabaseDriver::class, PdoDriver::class);
             Model::setDatabaseDriver($this->driver);
             try {
-                $this->driver->connect('mysql', 'localhost', 3306, 'framework_test', 'root', '');
+                $this->driver->connect('mysql', 'framework-db', 3306, 'framework_test', 'root', 'admin.root');
             } catch (PDOException $error) {
                 $this->markTestSkipped("Can´t connect to test database. {$error}");
             }
