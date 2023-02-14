@@ -70,7 +70,7 @@ Route::get('/users', function(Request $request){
 });
 class User extends Model {
     protected array $fillable = ["name", "email"];
-    protected $insertTimestamps = false;
+    protected $insertTimestamps = true;
 }
 Route::post('/user/model', function(Request $request){
    /* $user = new User();

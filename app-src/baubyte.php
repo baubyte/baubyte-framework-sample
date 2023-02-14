@@ -7,7 +7,7 @@ use Baubyte\Database\Migrations\Migrator;
 
 $driver = singleton(DatabaseDriver::class, PdoDriver::class);
 
-$driver->connect('mysql', 'localhost', 3306, 'framework', 'root', '');
+$driver->connect('mysql', 'framework-db', 3306, 'framework', 'root', 'admin.root');
 
 $migrator = new Migrator(
     __DIR__."/database/migrations",

@@ -150,7 +150,7 @@ class App {
             config("database.host"),
             config("database.port"),
             config("database.database"),
-            config("database.user"),
+            config("database.username"),
             config("database.password")
         );
         Model::setDatabaseDriver($this->database);
