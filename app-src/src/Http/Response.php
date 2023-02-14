@@ -2,6 +2,8 @@
 
 namespace Baubyte\Http;
 
+use Baubyte\View\View;
+
 /**
  * HTTP response that will be sent to the client.
  */

@@ -8,6 +8,7 @@ return [
         Baubyte\Providers\ViewServiceProvider::class,
     ],
     'runtime' => [
-        
+        App\Providers\RuleServiceProvider::class,
+        App\Providers\RouteServiceProvider::class
     ]
 ];

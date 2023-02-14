@@ -129,6 +129,19 @@ class Route {
         return array_combine($this->parameters, array_slice($arguments, 1));
     }
 
+
+    /**
+     * Execute route files.
+     *
+     * @param string $routesDirectory
+     * @return void
+     */
+    public static function load(string $routesDirectory) {
+        foreach (glob("{$routesDirectory}".DIRECTORY_SEPARATOR."*.php") as $routes) {
+            require_once $routes;
+        }
+    }
+
     /**
      * Register action for HTTP GET method.
      *
