@@ -92,6 +92,19 @@ abstract class Model {
     public function __get($name) {
         return $this->attributes[$name] ?? null;
     }
+
+    /**
+     * Hide properties that shouldn't be serialized.
+     *
+     * @return array
+     */
+    public function __sleep() {
+        foreach ($this->hidden as $hide) {
+            unset($this->columns[$hide]);
+        }
+        return array_keys(get_object_vars($this));
+    }
+
     /**
      * Return attributes to array
      *

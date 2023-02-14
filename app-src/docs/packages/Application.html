@@ -60,6 +60,10 @@
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
+                <a href="namespaces/baubyte-auth.html" class="">Auth</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/baubyte-config.html" class="">Config</a>
                 
             </li>
@@ -97,6 +101,10 @@
             </li>
                     <li>
                 <a href="namespaces/baubyte-session.html" class="">Session</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/baubyte-storage.html" class="">Storage</a>
                 
             </li>
                     <li>
@@ -165,6 +173,10 @@ global variables, useful for testing.</dd>
         <dd>Service provider interface.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/Baubyte-Session-SessionStorage.html"><abbr title="\Baubyte\Session\SessionStorage">SessionStorage</abbr></a></dt>
         <dd>Session Driver interface</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/Baubyte-Auth-Authenticators-Authenticator.html"><abbr title="\Baubyte\Auth\Authenticators\Authenticator">Authenticator</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/Baubyte-Storage-Drivers-FileStorageDriver.html"><abbr title="\Baubyte\Storage\Drivers\FileStorageDriver">FileStorageDriver</abbr></a></dt>
+        <dd>File storage driver.</dd>
     
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Http-HttpMethod.html"><abbr title="\Baubyte\Http\HttpMethod">HttpMethod</abbr></a></dt>
         <dd>HTTP verb.</dd>
@@ -228,6 +240,30 @@ global variables, useful for testing.</dd>
         <dd>PHP native session implementation.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Session-Session.html"><abbr title="\Baubyte\Session\Session">Session</abbr></a></dt>
         <dd>HTTP Session</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Auth-Auth.html"><abbr title="\Baubyte\Auth\Auth">Auth</abbr></a></dt>
+        <dd>Authentication facade.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Auth-Authenticatable.html"><abbr title="\Baubyte\Auth\Authenticatable">Authenticatable</abbr></a></dt>
+        <dd>Authenticatable model.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html"><abbr title="\Baubyte\Auth\Authenticators\SessionAuthenticator">SessionAuthenticator</abbr></a></dt>
+        <dd>Authentication method.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Providers-AuthenticatorServiceProvider.html"><abbr title="\Baubyte\Providers\AuthenticatorServiceProvider">AuthenticatorServiceProvider</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Providers-DatabaseDriverServiceProvider.html"><abbr title="\Baubyte\Providers\DatabaseDriverServiceProvider">DatabaseDriverServiceProvider</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Providers-FileStorageDriverServiceProvider.html"><abbr title="\Baubyte\Providers\FileStorageDriverServiceProvider">FileStorageDriverServiceProvider</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Providers-ServerServiceProvider.html"><abbr title="\Baubyte\Providers\ServerServiceProvider">ServerServiceProvider</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Providers-SessionStorageServiceProvider.html"><abbr title="\Baubyte\Providers\SessionStorageServiceProvider">SessionStorageServiceProvider</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Providers-ViewServiceProvider.html"><abbr title="\Baubyte\Providers\ViewServiceProvider">ViewServiceProvider</abbr></a></dt>
+        <dd></dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Storage-Drivers-DiskFileStorage.html"><abbr title="\Baubyte\Storage\Drivers\DiskFileStorage">DiskFileStorage</abbr></a></dt>
+        <dd>Server disk storage.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Storage-File.html"><abbr title="\Baubyte\Storage\File">File</abbr></a></dt>
+        <dd>File helper.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Baubyte-Storage-Storage.html"><abbr title="\Baubyte\Storage\Storage">Storage</abbr></a></dt>
+        <dd>File storage utilities.</dd>
     
     
     </dl>
@@ -379,6 +415,20 @@ views, css, and other static files.</dd>
                                 &nbsp;: string|null    </span>
 </dt>
 <dd>Old submitted data.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/default.html#function_auth">auth()</a>
+    <span>
+                                &nbsp;: <abbr title="\Authenticatable">Authenticatable</abbr>    </span>
+</dt>
+<dd>Resolve authenticatable instance.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/default.html#function_isGuest">isGuest()</a>
+    <span>
+                                &nbsp;: bool    </span>
+</dt>
+<dd>Check if the request was performed by unauthenticated user.</dd>
 
     </dl>
 
@@ -1159,6 +1209,62 @@ views, css, and other static files.</p>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">string|null</span>
+            &mdash;
+        
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_auth">
+        auth()
+        <a href="namespaces/default.html#function_auth" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/auth.php"><a href="files/src-helpers-auth.html"><abbr title="src/Helpers/auth.php">auth.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">12</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Resolve authenticatable instance.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                    <span class="phpdocumentor-signature__name">auth</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Authenticatable">Authenticatable</abbr></span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Authenticatable">Authenticatable</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_isGuest">
+        isGuest()
+        <a href="namespaces/default.html#function_isGuest" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/auth.php"><a href="files/src-helpers-auth.html"><abbr title="src/Helpers/auth.php">auth.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">21</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Check if the request was performed by unauthenticated user.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                    <span class="phpdocumentor-signature__name">isGuest</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
         
     

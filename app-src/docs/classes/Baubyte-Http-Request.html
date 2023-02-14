@@ -60,6 +60,10 @@
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
+                <a href="namespaces/baubyte-auth.html" class="">Auth</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/baubyte-config.html" class="">Config</a>
                 
             </li>
@@ -97,6 +101,10 @@
             </li>
                     <li>
                 <a href="namespaces/baubyte-session.html" class="">Session</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/baubyte-storage.html" class="">Storage</a>
                 
             </li>
                     <li>
@@ -155,7 +163,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
@@ -181,6 +189,13 @@
                         &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 <dd>POST data.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Baubyte-Http-Request.html#property_files">$files</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd>Uploaded files.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
     <a href="classes/Baubyte-Http-Request.html#property_headers">$headers</a>
@@ -226,6 +241,13 @@
 a `$key`.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Baubyte-Http-Request.html#method_file">file()</a>
+    <span>
+                                &nbsp;: <a href="classes/Baubyte-Storage-File.html"><abbr title="\Baubyte\Storage\File">File</abbr></a>|null    </span>
+</dt>
+<dd>Get file from request.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Baubyte-Http-Request.html#method_headers">headers()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;|string|null    </span>
@@ -262,6 +284,13 @@ a `$key`.</dd>
 </dt>
 <dd>Get all route params as key-value or get only specific value by providing
 a `$key`.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Baubyte-Http-Request.html#method_setFiles">setFiles()</a>
+    <span>
+                                &nbsp;: self    </span>
+</dt>
+<dd>Set uploaded files.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Baubyte-Http-Request.html#method_setHeaders">setHeaders()</a>
@@ -347,7 +376,7 @@ a `$key`.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">36</span>
 
     </aside>
 
@@ -371,6 +400,39 @@ a `$key`.</dd>
             -protected
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="property_files">
+        $files
+        <a href="classes/Baubyte-Http-Request.html#property_files" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">56</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Uploaded files.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$files</span>
+     = <span class="phpdocumentor-signature__default-value">[]</span></code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="property_headers">
         $headers
         <a href="classes/Baubyte-Http-Request.html#property_headers" class="headerlink"><i class="fas fa-link"></i></a>
@@ -380,7 +442,7 @@ a `$key`.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">49</span>
 
     </aside>
 
@@ -413,7 +475,7 @@ a `$key`.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">29</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
@@ -446,7 +508,7 @@ a `$key`.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">41</span>
+    <span class="phpdocumentor-element-found-in__line">42</span>
 
     </aside>
 
@@ -479,7 +541,7 @@ a `$key`.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
     </aside>
 
@@ -512,7 +574,7 @@ a `$key`.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
@@ -549,7 +611,7 @@ a `$key`.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">136</span>
+    <span class="phpdocumentor-element-found-in__line">167</span>
 
     </aside>
 
@@ -590,6 +652,49 @@ the key if it is present or all the data if no key was provided.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_file">
+        file()
+        <a href="classes/Baubyte-Http-Request.html#method_file" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">145</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Get file from request.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">file</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Storage-File.html"><abbr title="\Baubyte\Storage\File">File</abbr></a>|null</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Baubyte-Storage-File.html"><abbr title="\Baubyte\Storage\File">File</abbr></a>|null</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_headers">
         headers()
         <a href="classes/Baubyte-Http-Request.html#method_headers" class="headerlink"><i class="fas fa-link"></i></a>
@@ -597,7 +702,7 @@ the key if it is present or all the data if no key was provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">116</span>
+    <span class="phpdocumentor-element-found-in__line">125</span>
 
     </aside>
 
@@ -644,7 +749,7 @@ the key if it is present or all the data if no key was provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">94</span>
+    <span class="phpdocumentor-element-found-in__line">103</span>
 
     </aside>
 
@@ -677,7 +782,7 @@ the key if it is present or all the data if no key was provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">161</span>
+    <span class="phpdocumentor-element-found-in__line">192</span>
 
     </aside>
 
@@ -725,7 +830,7 @@ the key if it is present or all the query params if no key was provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">75</span>
+    <span class="phpdocumentor-element-found-in__line">84</span>
 
     </aside>
 
@@ -758,7 +863,7 @@ the key if it is present or all the query params if no key was provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">186</span>
+    <span class="phpdocumentor-element-found-in__line">217</span>
 
     </aside>
 
@@ -799,6 +904,49 @@ the key if it is present or all the route params if no key was provided.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setFiles">
+        setFiles()
+        <a href="classes/Baubyte-Http-Request.html#method_setFiles" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">155</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Set uploaded files.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">setFiles</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string, <a href="classes/Baubyte-Storage-File.html"><abbr title="\Baubyte\Storage\File">File</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$files</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$files</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string, <a href="classes/Baubyte-Storage-File.html"><abbr title="\Baubyte\Storage\File">File</abbr></a>&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">self</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setHeaders">
         setHeaders()
         <a href="classes/Baubyte-Http-Request.html#method_setHeaders" class="headerlink"><i class="fas fa-link"></i></a>
@@ -806,7 +954,7 @@ the key if it is present or all the route params if no key was provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">123</span>
+    <span class="phpdocumentor-element-found-in__line">132</span>
 
     </aside>
 
@@ -850,7 +998,7 @@ the key if it is present or all the route params if no key was provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">103</span>
+    <span class="phpdocumentor-element-found-in__line">112</span>
 
     </aside>
 
@@ -893,7 +1041,7 @@ the key if it is present or all the route params if no key was provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">149</span>
+    <span class="phpdocumentor-element-found-in__line">180</span>
 
     </aside>
 
@@ -936,7 +1084,7 @@ the key if it is present or all the route params if no key was provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">174</span>
+    <span class="phpdocumentor-element-found-in__line">205</span>
 
     </aside>
 
@@ -979,7 +1127,7 @@ the key if it is present or all the route params if no key was provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">85</span>
+    <span class="phpdocumentor-element-found-in__line">94</span>
 
     </aside>
 
@@ -1022,7 +1170,7 @@ the key if it is present or all the route params if no key was provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">65</span>
+    <span class="phpdocumentor-element-found-in__line">74</span>
 
     </aside>
 
@@ -1065,7 +1213,7 @@ the key if it is present or all the route params if no key was provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">55</span>
+    <span class="phpdocumentor-element-found-in__line">64</span>
 
     </aside>
 
@@ -1098,7 +1246,7 @@ the key if it is present or all the route params if no key was provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Http/Request.php"><a href="files/src-http-request.html"><abbr title="src/Http/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">201</span>
+    <span class="phpdocumentor-element-found-in__line">232</span>
 
     </aside>
 

@@ -81,6 +81,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Baubyte-Http-Request.html#method_setHeaders"
         },                {
+            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003Afile\u0028\u0029",
+            "name": "file",
+            "summary": "Get\u0020file\u0020from\u0020request.",
+            "url": "classes/Baubyte-Http-Request.html#method_file"
+        },                {
+            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003AsetFiles\u0028\u0029",
+            "name": "setFiles",
+            "summary": "Set\u0020uploaded\u0020files.",
+            "url": "classes/Baubyte-Http-Request.html#method_setFiles"
+        },                {
             "fqsen": "\\Baubyte\\Http\\Request\u003A\u003A\u0024data",
             "name": "data",
             "summary": "POST\u0020data.",
@@ -110,6 +120,11 @@ Search.appendIndex(
             "name": "validate",
             "summary": "Get\u0020validated\u0020data\u0020from\u0020the\u0020request\u0020or\u0020return\u0020back\u0020with\u0020errors\u0020if\u0020not\u0020valid.",
             "url": "classes/Baubyte-Http-Request.html#method_validate"
+        },                {
+            "fqsen": "\\Baubyte\\Http\\Request\u003A\u003A\u0024files",
+            "name": "files",
+            "summary": "Uploaded\u0020files.",
+            "url": "classes/Baubyte-Http-Request.html#property_files"
         },                {
             "fqsen": "\\Baubyte\\Http\\Response",
             "name": "Response",
@@ -235,6 +250,11 @@ Search.appendIndex(
             "name": "parseParameters",
             "summary": "Get\u0020the\u0020key\u002Dvalue\u0020pairs\u0020from\u0020the\u0020\u0060\u0024uri\u0060\u0020as\u0020defined\u0020by\u0020this\u0020route.",
             "url": "classes/Baubyte-Routing-Route.html#method_parseParameters"
+        },                {
+            "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003Aload\u0028\u0029",
+            "name": "load",
+            "summary": "Execute\u0020route\u0020files.",
+            "url": "classes/Baubyte-Routing-Route.html#method_load"
         },                {
             "fqsen": "\\Baubyte\\Routing\\Route\u003A\u003Aget\u0028\u0029",
             "name": "get",
@@ -375,6 +395,26 @@ Search.appendIndex(
             "name": "run",
             "summary": "Handle\u0020request\u0020and\u0020send\u0020response.",
             "url": "classes/Baubyte-App.html#method_run"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003AloadConfig\u0028\u0029",
+            "name": "loadConfig",
+            "summary": "Load\u0020Baubyte\u0020configuration.",
+            "url": "classes/Baubyte-App.html#method_loadConfig"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003ArunServiceProviders\u0028\u0029",
+            "name": "runServiceProviders",
+            "summary": "Register\u0020container\u0020instances.",
+            "url": "classes/Baubyte-App.html#method_runServiceProviders"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003AsetHttpHandlers\u0028\u0029",
+            "name": "setHttpHandlers",
+            "summary": "",
+            "url": "classes/Baubyte-App.html#method_setHttpHandlers"
+        },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003AsetUpDatabaseConnections\u0028\u0029",
+            "name": "setUpDatabaseConnections",
+            "summary": "Open\u0020database\u0020connections\u0020or\u0020other\u0020connections.",
+            "url": "classes/Baubyte-App.html#method_setUpDatabaseConnections"
         },                {
             "fqsen": "\\Baubyte\\App\u003A\u003AprepareNextRequest\u0028\u0029",
             "name": "prepareNextRequest",
@@ -1191,6 +1231,11 @@ Search.appendIndex(
             "summary": "Get\u0020previously\u0020set\u0020property.",
             "url": "classes/Baubyte-Database-Model.html#method___get"
         },                {
+            "fqsen": "\\Baubyte\\Database\\Model\u003A\u003A__sleep\u0028\u0029",
+            "name": "__sleep",
+            "summary": "Hide\u0020properties\u0020that\u0020shouldn\u0027t\u0020be\u0020serialized.",
+            "url": "classes/Baubyte-Database-Model.html#method___sleep"
+        },                {
             "fqsen": "\\Baubyte\\Database\\Model\u003A\u003AtoArray\u0028\u0029",
             "name": "toArray",
             "summary": "Return\u0020attributes\u0020to\u0020array",
@@ -1466,6 +1511,261 @@ Search.appendIndex(
             "summary": "Write\u0020the\u0020session\u0020data\u0020to\u0020make\u0020it\u0020persistent.",
             "url": "classes/Baubyte-Session-SessionStorage.html#method_save"
         },                {
+            "fqsen": "\\Baubyte\\Auth\\Auth",
+            "name": "Auth",
+            "summary": "Authentication\u0020facade.",
+            "url": "classes/Baubyte-Auth-Auth.html"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Auth\u003A\u003Aroutes\u0028\u0029",
+            "name": "routes",
+            "summary": "Authentication\u0020routes.",
+            "url": "classes/Baubyte-Auth-Auth.html#method_routes"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Auth\u003A\u003Auser\u0028\u0029",
+            "name": "user",
+            "summary": "Current\u0020logged\u0020in\u0020user.",
+            "url": "classes/Baubyte-Auth-Auth.html#method_user"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Auth\u003A\u003AisGuest\u0028\u0029",
+            "name": "isGuest",
+            "summary": "Check\u0020if\u0020current\u0020request\u0020is\u0020performed\u0020by\u0020guest.",
+            "url": "classes/Baubyte-Auth-Auth.html#method_isGuest"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticatable",
+            "name": "Authenticatable",
+            "summary": "Authenticatable\u0020model.",
+            "url": "classes/Baubyte-Auth-Authenticatable.html"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticatable\u003A\u003AisAuthenticated\u0028\u0029",
+            "name": "isAuthenticated",
+            "summary": "Check\u0020if\u0020this\u0020instance\u0020is\u0020authenticated.",
+            "url": "classes/Baubyte-Auth-Authenticatable.html#method_isAuthenticated"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticatable\u003A\u003Aid\u0028\u0029",
+            "name": "id",
+            "summary": "Authenticatable\u0020ID.",
+            "url": "classes/Baubyte-Auth-Authenticatable.html#method_id"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticatable\u003A\u003Alogin\u0028\u0029",
+            "name": "login",
+            "summary": "Authenitcate.",
+            "url": "classes/Baubyte-Auth-Authenticatable.html#method_login"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticatable\u003A\u003Alogout\u0028\u0029",
+            "name": "logout",
+            "summary": "Make\u0020this\u0020instance\u0020unauthenticated.",
+            "url": "classes/Baubyte-Auth-Authenticatable.html#method_logout"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator",
+            "name": "SessionAuthenticator",
+            "summary": "Authentication\u0020method.",
+            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator\u003A\u003Aresolve\u0028\u0029",
+            "name": "resolve",
+            "summary": "Get\u0020authenticatable\u0020from\u0020current\u0020request.",
+            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html#method_resolve"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator\u003A\u003AisAuthenticated\u0028\u0029",
+            "name": "isAuthenticated",
+            "summary": "Determines\u0020if\u0020the\u0020\u0060\u0024authenticatable\u0060\u0020is\u0020authenticated.",
+            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html#method_isAuthenticated"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator\u003A\u003Alogin\u0028\u0029",
+            "name": "login",
+            "summary": "Log\u0020authenticatable\u0020model\u0020in.",
+            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html#method_login"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\SessionAuthenticator\u003A\u003Alogout\u0028\u0029",
+            "name": "logout",
+            "summary": "Log\u0020authenticatable\u0020model\u0020out.",
+            "url": "classes/Baubyte-Auth-Authenticators-SessionAuthenticator.html#method_logout"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\Authenticator",
+            "name": "Authenticator",
+            "summary": "",
+            "url": "classes/Baubyte-Auth-Authenticators-Authenticator.html"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\Authenticator\u003A\u003Alogin\u0028\u0029",
+            "name": "login",
+            "summary": "Log\u0020authenticatable\u0020model\u0020in.",
+            "url": "classes/Baubyte-Auth-Authenticators-Authenticator.html#method_login"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\Authenticator\u003A\u003Alogout\u0028\u0029",
+            "name": "logout",
+            "summary": "Log\u0020authenticatable\u0020model\u0020out.",
+            "url": "classes/Baubyte-Auth-Authenticators-Authenticator.html#method_logout"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\Authenticator\u003A\u003AisAuthenticated\u0028\u0029",
+            "name": "isAuthenticated",
+            "summary": "Determines\u0020if\u0020the\u0020\u0060\u0024authenticatable\u0060\u0020is\u0020authenticated.",
+            "url": "classes/Baubyte-Auth-Authenticators-Authenticator.html#method_isAuthenticated"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators\\Authenticator\u003A\u003Aresolve\u0028\u0029",
+            "name": "resolve",
+            "summary": "Get\u0020authenticatable\u0020from\u0020current\u0020request.",
+            "url": "classes/Baubyte-Auth-Authenticators-Authenticator.html#method_resolve"
+        },                {
+            "fqsen": "\\auth\u0028\u0029",
+            "name": "auth",
+            "summary": "Resolve\u0020authenticatable\u0020instance.",
+            "url": "namespaces/default.html#function_auth"
+        },                {
+            "fqsen": "\\isGuest\u0028\u0029",
+            "name": "isGuest",
+            "summary": "Check\u0020if\u0020the\u0020request\u0020was\u0020performed\u0020by\u0020unauthenticated\u0020user.",
+            "url": "namespaces/default.html#function_isGuest"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\AuthenticatorServiceProvider",
+            "name": "AuthenticatorServiceProvider",
+            "summary": "",
+            "url": "classes/Baubyte-Providers-AuthenticatorServiceProvider.html"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\AuthenticatorServiceProvider\u003A\u003AregisterServices\u0028\u0029",
+            "name": "registerServices",
+            "summary": "",
+            "url": "classes/Baubyte-Providers-AuthenticatorServiceProvider.html#method_registerServices"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\DatabaseDriverServiceProvider",
+            "name": "DatabaseDriverServiceProvider",
+            "summary": "",
+            "url": "classes/Baubyte-Providers-DatabaseDriverServiceProvider.html"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\DatabaseDriverServiceProvider\u003A\u003AregisterServices\u0028\u0029",
+            "name": "registerServices",
+            "summary": "Register\u0020services.",
+            "url": "classes/Baubyte-Providers-DatabaseDriverServiceProvider.html#method_registerServices"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\FileStorageDriverServiceProvider",
+            "name": "FileStorageDriverServiceProvider",
+            "summary": "",
+            "url": "classes/Baubyte-Providers-FileStorageDriverServiceProvider.html"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\FileStorageDriverServiceProvider\u003A\u003AregisterServices\u0028\u0029",
+            "name": "registerServices",
+            "summary": "",
+            "url": "classes/Baubyte-Providers-FileStorageDriverServiceProvider.html#method_registerServices"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\ServerServiceProvider",
+            "name": "ServerServiceProvider",
+            "summary": "",
+            "url": "classes/Baubyte-Providers-ServerServiceProvider.html"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\ServerServiceProvider\u003A\u003AregisterServices\u0028\u0029",
+            "name": "registerServices",
+            "summary": "Register\u0020services.",
+            "url": "classes/Baubyte-Providers-ServerServiceProvider.html#method_registerServices"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\SessionStorageServiceProvider",
+            "name": "SessionStorageServiceProvider",
+            "summary": "",
+            "url": "classes/Baubyte-Providers-SessionStorageServiceProvider.html"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\SessionStorageServiceProvider\u003A\u003AregisterServices\u0028\u0029",
+            "name": "registerServices",
+            "summary": "Register\u0020services.",
+            "url": "classes/Baubyte-Providers-SessionStorageServiceProvider.html#method_registerServices"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\ViewServiceProvider",
+            "name": "ViewServiceProvider",
+            "summary": "",
+            "url": "classes/Baubyte-Providers-ViewServiceProvider.html"
+        },                {
+            "fqsen": "\\Baubyte\\Providers\\ViewServiceProvider\u003A\u003AregisterServices\u0028\u0029",
+            "name": "registerServices",
+            "summary": "Register\u0020services.",
+            "url": "classes/Baubyte-Providers-ViewServiceProvider.html#method_registerServices"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\Drivers\\DiskFileStorage",
+            "name": "DiskFileStorage",
+            "summary": "Server\u0020disk\u0020storage.",
+            "url": "classes/Baubyte-Storage-Drivers-DiskFileStorage.html"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\Drivers\\DiskFileStorage\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiate\u0020disk\u0020file\u0020storage.",
+            "url": "classes/Baubyte-Storage-Drivers-DiskFileStorage.html#method___construct"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\Drivers\\DiskFileStorage\u003A\u003Aput\u0028\u0029",
+            "name": "put",
+            "summary": "Store\u0020file.",
+            "url": "classes/Baubyte-Storage-Drivers-DiskFileStorage.html#method_put"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\Drivers\\DiskFileStorage\u003A\u003A\u0024storageDirectory",
+            "name": "storageDirectory",
+            "summary": "Directory\u0020where\u0020files\u0020should\u0020be\u0020stored.",
+            "url": "classes/Baubyte-Storage-Drivers-DiskFileStorage.html#property_storageDirectory"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\Drivers\\DiskFileStorage\u003A\u003A\u0024appUrl",
+            "name": "appUrl",
+            "summary": "URL\u0020of\u0020the\u0020application.",
+            "url": "classes/Baubyte-Storage-Drivers-DiskFileStorage.html#property_appUrl"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\Drivers\\DiskFileStorage\u003A\u003A\u0024storageUri",
+            "name": "storageUri",
+            "summary": "URI\u0020of\u0020the\u0020public\u0020storage\u0020directory",
+            "url": "classes/Baubyte-Storage-Drivers-DiskFileStorage.html#property_storageUri"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\Drivers\\FileStorageDriver",
+            "name": "FileStorageDriver",
+            "summary": "File\u0020storage\u0020driver.",
+            "url": "classes/Baubyte-Storage-Drivers-FileStorageDriver.html"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\Drivers\\FileStorageDriver\u003A\u003Aput\u0028\u0029",
+            "name": "put",
+            "summary": "Store\u0020file.",
+            "url": "classes/Baubyte-Storage-Drivers-FileStorageDriver.html#method_put"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\File",
+            "name": "File",
+            "summary": "File\u0020helper.",
+            "url": "classes/Baubyte-Storage-File.html"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\File\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiate\u0020new\u0020file.",
+            "url": "classes/Baubyte-Storage-File.html#method___construct"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\File\u003A\u003AisImage\u0028\u0029",
+            "name": "isImage",
+            "summary": "Check\u0020if\u0020the\u0020current\u0020file\u0020is\u0020an\u0020image.",
+            "url": "classes/Baubyte-Storage-File.html#method_isImage"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\File\u003A\u003Aextension\u0028\u0029",
+            "name": "extension",
+            "summary": "Type\u0020of\u0020the\u0020image.",
+            "url": "classes/Baubyte-Storage-File.html#method_extension"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\File\u003A\u003Astore\u0028\u0029",
+            "name": "store",
+            "summary": "Store\u0020the\u0020file.",
+            "url": "classes/Baubyte-Storage-File.html#method_store"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\File\u003A\u003A\u0024content",
+            "name": "content",
+            "summary": "",
+            "url": "classes/Baubyte-Storage-File.html#property_content"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\File\u003A\u003A\u0024type",
+            "name": "type",
+            "summary": "",
+            "url": "classes/Baubyte-Storage-File.html#property_type"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\File\u003A\u003A\u0024originalName",
+            "name": "originalName",
+            "summary": "",
+            "url": "classes/Baubyte-Storage-File.html#property_originalName"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\Storage",
+            "name": "Storage",
+            "summary": "File\u0020storage\u0020utilities.",
+            "url": "classes/Baubyte-Storage-Storage.html"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\Storage\u003A\u003Aput\u0028\u0029",
+            "name": "put",
+            "summary": "Put\u0020file\u0020in\u0020the\u0020storage\u0020directory.",
+            "url": "classes/Baubyte-Storage-Storage.html#method_put"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -1475,6 +1775,16 @@ Search.appendIndex(
             "name": "Baubyte",
             "summary": "",
             "url": "namespaces/baubyte.html"
+        },                {
+            "fqsen": "\\Baubyte\\Auth",
+            "name": "Auth",
+            "summary": "",
+            "url": "namespaces/baubyte-auth.html"
+        },                {
+            "fqsen": "\\Baubyte\\Auth\\Authenticators",
+            "name": "Authenticators",
+            "summary": "",
+            "url": "namespaces/baubyte-auth-authenticators.html"
         },                {
             "fqsen": "\\Baubyte\\Config",
             "name": "Config",
@@ -1535,6 +1845,16 @@ Search.appendIndex(
             "name": "Session",
             "summary": "",
             "url": "namespaces/baubyte-session.html"
+        },                {
+            "fqsen": "\\Baubyte\\Storage\\Drivers",
+            "name": "Drivers",
+            "summary": "",
+            "url": "namespaces/baubyte-storage-drivers.html"
+        },                {
+            "fqsen": "\\Baubyte\\Storage",
+            "name": "Storage",
+            "summary": "",
+            "url": "namespaces/baubyte-storage.html"
         },                {
             "fqsen": "\\Baubyte\\Validation\\Exceptions",
             "name": "Exceptions",

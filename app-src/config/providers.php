@@ -7,6 +7,7 @@ return [
         Baubyte\Providers\SessionStorageServiceProvider::class,
         Baubyte\Providers\ViewServiceProvider::class,
         Baubyte\Providers\FileStorageDriverServiceProvider::class,
+        Baubyte\Providers\AuthenticatorServiceProvider::class,
     ],
     'runtime' => [
         App\Providers\RuleServiceProvider::class,
