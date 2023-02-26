@@ -69,7 +69,7 @@ class BaubyteEngine implements View {
             $$param = $value;
         }
         if (!is_file($phpFile)) {
-            throw new ViewNotFoundException("La vista {$phpFile} no se encuentra.");
+            throw new ViewNotFoundException("El layout o vista {$phpFile} no se encuentra.");
         }
         ob_start();
         include_once $phpFile;

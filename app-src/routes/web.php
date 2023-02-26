@@ -1,68 +1,29 @@
 <?php
 
+use App\Controllers\Auth\LoginController;
+use App\Controllers\Auth\RegisterController;
 use App\Models\User;
-use Baubyte\Crypto\Hasher;
-use Baubyte\Http\Request;
 use Baubyte\Http\Response;
 use Baubyte\Routing\Route;
 
-Route::get('/', function ($request) {
+Route::get('/', function () {
     if (isGuest()) {
         return Response::text('Guest');
     }
     return Response::text(auth()->name);
 });
 
+Route::get('/form', fn () => view('form'));
+Route::get('/user/{user}', fn (User $user) => json($user->toArray()));
 
-Route::get('/form', fn($request)=> view("form"));
+Route::get('/route/{param}', fn (string $param) => json(["param" => $param]));
 
-Route::get('/register', fn($request)=> view("auth/register"));
+Route::get('/register', [RegisterController::class, 'create']);
 
-Route::post('/register', function($request){
-    $data = $request->validate([
-        "email" => "required|email",
-        "name" => "required",
-        "password" => "required",
-        "confirm_password" => "required",
-    ]);
+Route::post('/register', [RegisterController::class, 'store']);
 
-    if ($data["password"] !== $data["confirm_password"]) {
-        return back()->withErrors([
-            "confirm_password" => ["confirm_password" => "Las Contraseñas no Coinciden"]
-        ]);
-    }
 
-    $data["password"] = app(Hasher::class)->hash($data["password"]);
-    
-    User::create($data);
+Route::get('/login', [LoginController::class, 'create']);
 
-    $user = User::firstWhere('email', $data['email']);
-
-    $user->login();
-
-    return redirect('/');
-});
-Route::get('/logout', function($request){
-    auth()->logout();
-    return redirect('/');
-});
-Route::get('/login', fn ($request) => view('auth/login'));
-
-Route::post('/login', function (Request $request) {
-    $data = $request->validate([
-        "email" => "required|email",
-        "password" => "required",
-    ]);
-
-    $user = User::firstWhere('email', $data['email']);
-
-    if (is_null($user) || !app(Hasher::class)->verify($data["password"], $user->password)) {
-        return back()->withErrors([
-            'email' => ['email' => 'Las Credenciales no son correctas.']
-        ]);
-    }
-
-    $user->login();
-
-    return redirect('/');
-});
+Route::post('/login', [LoginController::class, 'store']);
+Route::get('/logout', [LoginController::class, 'destroy']);
