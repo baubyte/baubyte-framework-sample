@@ -39,9 +39,21 @@ class File {
      */
     public function extension(): ?string {
         return match ($this->type) {
-            "image/jpeg" => "jpeg",
-            "image/png" => "png",
-            "application/pdf" => "pdf",
+            "image/jpeg"                => ".jpeg",
+            "image/jpg"                 => ".jpg",
+            "image/png"                 => ".png",
+            "image/gif"                 => ".gif",
+            "image/tiff"                => ".tiff",
+            "image/bmp"                 => ".tiff",
+            "application/pdf"           => ".pdf",
+            "text/vnd.ms-word"          => ".docx",
+            "application/vnd.ms-excel"  => ".xlsx",
+            "text/html"                 => ".html",
+            "text/plain"                => ".txt", 
+            "audio/wav"                 => ".wav",
+            "video/mpeg"                => ".mpeg",
+            "video/mpg"                 => ".mpg",
+            "font/ttf"                  => ".ttf",
             default => null,
         };
     }
@@ -52,7 +64,7 @@ class File {
      * @return string URL.
      */
     public function store(?string $directory = null): string {
-        $file = uniqid() . $this->extension();
+        $file = uniqid().$this->extension();
         $path = is_null($directory) ? $file : "{$directory}".DIRECTORY_SEPARATOR."{$file}";
         return Storage::put($path, $this->content);
     }
