@@ -12,7 +12,6 @@ use Baubyte\Routing\Route;
  * Authentication facade.
  */
 class Auth {
-
     /**
      * Authentication routes.
      *
@@ -23,7 +22,7 @@ class Auth {
         Route::post('/login', [LoginController::class, 'store']);
         Route::get('/logout', [LoginController::class, 'destroy']);
         Route::get('/register', [RegisterController::class, 'create']);
-        Route::post('/register', [RegisterController::class, 'store']); 
+        Route::post('/register', [RegisterController::class, 'store']);
     }
 
     /**

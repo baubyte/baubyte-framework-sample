@@ -3,8 +3,15 @@
 namespace Baubyte\Database\Migrations;
 
 use Baubyte\Database\Drivers\DatabaseDriver;
+use Symfony\Component\Console\Output\ConsoleOutput;
 
 class Migrator {
+    /**
+     * ConsoleOutput
+     *
+     * @var ConsoleOutput
+     */
+    private ConsoleOutput $output;
     /**
      * Migration directory
      *
@@ -43,6 +50,7 @@ class Migrator {
         $this->templatesDirectory = $templatesDirectory;
         $this->driver = $driver;
         $this->logProgress = $logProgress;
+        $this->output = new ConsoleOutput();
     }
 
     /**
@@ -53,7 +61,7 @@ class Migrator {
      */
     private function log(string $message) {
         if ($this->logProgress) {
-            print($message);
+            $this->output->writeln("<info>{$message}</info>");
         }
     }
 
@@ -77,7 +85,7 @@ class Migrator {
         $migrations = glob("$this->migrationsDirectory".DIRECTORY_SEPARATOR."*.php");
 
         if (count($migrated) >= count($migrations)) {
-            $this->log("Nada que migrar" . PHP_EOL);
+            $this->log("<comment>Nada que migrar</comment>");
             return;
         }
 
@@ -86,7 +94,7 @@ class Migrator {
             $migration->up();
             $name = basename($file);
             $this->driver->statement("INSERT INTO migrations (name) VALUES (?)", [$name]);
-            $this->log("Migrado => " . $name . PHP_EOL);
+            $this->log("<info>Migrado => {$name} </info>");
         }
     }
 
@@ -154,6 +162,9 @@ class Migrator {
         }
         $fileName = sprintf("%s_%06d_%s", $date, $id, $migrationName);
         file_put_contents("$this->migrationsDirectory".DIRECTORY_SEPARATOR."$fileName.php", $template);
+
+        $this->log("Migración Creada => {$fileName}");
+
         return $fileName.".php";
     }
 }

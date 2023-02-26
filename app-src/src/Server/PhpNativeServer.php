@@ -11,7 +11,6 @@ use Baubyte\Storage\File;
  * PHP native server that uses `$_SERVER` global.
  */
 class PhpNativeServer implements Server {
-    
     /**
      * @inheritDoc
      * @return Request

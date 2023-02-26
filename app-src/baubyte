@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php
+
+use Baubyte\Cli\Cli;
+
+require_once "./vendor/autoload.php";
+
+Cli::bootstrap(__DIR__)->run();

@@ -49,7 +49,7 @@ class File {
             "text/vnd.ms-word"          => ".docx",
             "application/vnd.ms-excel"  => ".xlsx",
             "text/html"                 => ".html",
-            "text/plain"                => ".txt", 
+            "text/plain"                => ".txt",
             "audio/wav"                 => ".wav",
             "video/mpeg"                => ".mpeg",
             "video/mpg"                 => ".mpg",

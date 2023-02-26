@@ -361,6 +361,11 @@ Search.appendIndex(
             "summary": "Get\u0020request\u0020sent\u0020by\u0020the\u0020client.",
             "url": "classes/Baubyte-Server-PhpNativeServer.html#method_getRequest"
         },                {
+            "fqsen": "\\Baubyte\\Server\\PhpNativeServer\u003A\u003AuploadedFiles\u0028\u0029",
+            "name": "uploadedFiles",
+            "summary": "Get\u0020files\u0020from\u0020\u0060\u0024_FILES\u0060\u0020global.",
+            "url": "classes/Baubyte-Server-PhpNativeServer.html#method_uploadedFiles"
+        },                {
             "fqsen": "\\Baubyte\\Server\\PhpNativeServer\u003A\u003AsendResponse\u0028\u0029",
             "name": "sendResponse",
             "summary": "Send\u0020the\u0020response\u0020to\u0020the\u0020client.",
@@ -1186,6 +1191,11 @@ Search.appendIndex(
             "summary": "Create\u0020new\u0020migration.",
             "url": "classes/Baubyte-Database-Migrations-Migrator.html#method_make"
         },                {
+            "fqsen": "\\Baubyte\\Database\\Migrations\\Migrator\u003A\u003A\u0024output",
+            "name": "output",
+            "summary": "ConsoleOutput",
+            "url": "classes/Baubyte-Database-Migrations-Migrator.html#property_output"
+        },                {
             "fqsen": "\\Baubyte\\Database\\Migrations\\Migrator\u003A\u003A\u0024migrationsDirectory",
             "name": "migrationsDirectory",
             "summary": "Migration\u0020directory",
@@ -1836,6 +1846,121 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Baubyte-View-Exceptions-ViewNotFoundException.html"
         },                {
+            "fqsen": "\\Baubyte\\Cli\\Cli",
+            "name": "Cli",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Cli.html"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Cli\u003A\u003Abootstrap\u0028\u0029",
+            "name": "bootstrap",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Cli.html#method_bootstrap"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Cli\u003A\u003AsetUpDatabaseConnections\u0028\u0029",
+            "name": "setUpDatabaseConnections",
+            "summary": "Open\u0020database\u0020connections\u0020or\u0020other\u0020connections.",
+            "url": "classes/Baubyte-Cli-Cli.html#method_setUpDatabaseConnections"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Cli\u003A\u003AsetUpMigrator\u0028\u0029",
+            "name": "setUpMigrator",
+            "summary": "Set\u0020up\u0020Migrator.",
+            "url": "classes/Baubyte-Cli-Cli.html#method_setUpMigrator"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Cli\u003A\u003Arun\u0028\u0029",
+            "name": "run",
+            "summary": "Run\u0020CLI\u0020app.",
+            "url": "classes/Baubyte-Cli-Cli.html#method_run"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Cli\u003A\u003A\u0024database",
+            "name": "database",
+            "summary": "Database\u0020Drivers",
+            "url": "classes/Baubyte-Cli-Cli.html#property_database"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeController",
+            "name": "MakeController",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeController.html"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeMigration",
+            "name": "MakeMigration",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeMigration.html"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeMigration\u003A\u003Aconfigure\u0028\u0029",
+            "name": "configure",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeMigration.html#method_configure"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeMigration\u003A\u003Aexecute\u0028\u0029",
+            "name": "execute",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeMigration.html#method_execute"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeMigration\u003A\u003A\u0024defaultName",
+            "name": "defaultName",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeMigration.html#property_defaultName"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeMigration\u003A\u003A\u0024defaultDescription",
+            "name": "defaultDescription",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeMigration.html#property_defaultDescription"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeModel",
+            "name": "MakeModel",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeModel.html"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\Migrate",
+            "name": "Migrate",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-Migrate.html"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\Migrate\u003A\u003Aexecute\u0028\u0029",
+            "name": "execute",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-Migrate.html#method_execute"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\Migrate\u003A\u003A\u0024defaultName",
+            "name": "defaultName",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-Migrate.html#property_defaultName"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\Migrate\u003A\u003A\u0024defaultDescription",
+            "name": "defaultDescription",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-Migrate.html#property_defaultDescription"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MigrateRollback",
+            "name": "MigrateRollback",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MigrateRollback.html"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MigrateRollback\u003A\u003Aconfigure\u0028\u0029",
+            "name": "configure",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MigrateRollback.html#method_configure"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MigrateRollback\u003A\u003Aexecute\u0028\u0029",
+            "name": "execute",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MigrateRollback.html#method_execute"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MigrateRollback\u003A\u003A\u0024defaultName",
+            "name": "defaultName",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MigrateRollback.html#property_defaultName"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MigrateRollback\u003A\u003A\u0024defaultDescription",
+            "name": "defaultDescription",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MigrateRollback.html#property_defaultDescription"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\Serve",
+            "name": "Serve",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-Serve.html"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -1855,6 +1980,16 @@ Search.appendIndex(
             "name": "Authenticators",
             "summary": "",
             "url": "namespaces/baubyte-auth-authenticators.html"
+        },                {
+            "fqsen": "\\Baubyte\\Cli",
+            "name": "Cli",
+            "summary": "",
+            "url": "namespaces/baubyte-cli.html"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands",
+            "name": "Commands",
+            "summary": "",
+            "url": "namespaces/baubyte-cli-commands.html"
         },                {
             "fqsen": "\\Baubyte\\Config",
             "name": "Config",

@@ -13,5 +13,8 @@ return [
     'runtime' => [
         App\Providers\RuleServiceProvider::class,
         App\Providers\RouteServiceProvider::class
+    ],
+    'cli' => [
+        Baubyte\Providers\DatabaseDriverServiceProvider::class,
     ]
 ];
