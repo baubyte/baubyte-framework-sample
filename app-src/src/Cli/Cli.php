@@ -79,12 +79,12 @@ class Cli {
         $cli = new Application("Baubyte");
 
         $cli->addCommands([
-            //new MakeController(),
+            new MakeController(),
             new MakeMigration(),
-            //new MakeModel(),
+            new MakeModel(),
             new Migrate(),
             new MigrateRollback(),
-            //new Serve(),
+            new Serve(),
         ]);
         $cli->run();
     }

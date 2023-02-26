@@ -181,7 +181,7 @@ class App {
      * Stop execution from any point.
      *
      * @param \Baubyte\Http\Response $response
-     * @return void
+     * @return \Baubyte\Http\Response $response
      */
     public function abort(Response $response) {
         $this->terminate($response);

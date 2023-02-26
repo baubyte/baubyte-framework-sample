@@ -52,4 +52,32 @@ function env(string $variable, $default = null) {
 function config(string $configuration, $default = null) {
     return Config::get($configuration, $default);
 }
-//TODO: env() debug() template()
+
+/**
+ * Get template as string from /resources/templates.
+ *
+ * @param string $name
+ * @param string|null $directory
+ * @return string
+ */
+function template(string $name, ?string $directory = null): string {
+    $directory ??= resourcesDirectory().DIRECTORY_SEPARATOR."/templates";
+
+    $file = "{$directory}".DIRECTORY_SEPARATOR."{$name}.php";
+
+    if (!file_exists($file)) {
+        return null;
+    }
+
+    return file_get_contents($file);
+}
+
+/**
+ * Dump variables and exit.
+ *
+ * @param array ...$args
+ * @return \Baubyte\Http\Response $response
+ */
+function debug(...$args) {
+    app()->abort(view("baubyte/debug", compact('args'), "error"));
+}
