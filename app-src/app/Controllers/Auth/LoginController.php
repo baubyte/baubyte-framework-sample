@@ -11,6 +11,7 @@ use Baubyte\Http\Request;
  * Login controller.
  */
 class LoginController extends Controller{
+    
     /**
      * View Login
      *
