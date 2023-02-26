@@ -696,6 +696,16 @@ Search.appendIndex(
             "summary": "Get\u0020configuration\u0020value.",
             "url": "namespaces/default.html#function_config"
         },                {
+            "fqsen": "\\template\u0028\u0029",
+            "name": "template",
+            "summary": "Get\u0020template\u0020as\u0020string\u0020from\u0020\/resources\/templates.",
+            "url": "namespaces/default.html#function_template"
+        },                {
+            "fqsen": "\\debug\u0028\u0029",
+            "name": "debug",
+            "summary": "Dump\u0020variables\u0020and\u0020exit.",
+            "url": "namespaces/default.html#function_debug"
+        },                {
             "fqsen": "\\isAssociative\u0028\u0029",
             "name": "isAssociative",
             "summary": "Check\u0020if\u0020an\u0020array\u0020is\u0020associative",
@@ -1881,6 +1891,26 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Baubyte-Cli-Commands-MakeController.html"
         },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeController\u003A\u003Aconfigure\u0028\u0029",
+            "name": "configure",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeController.html#method_configure"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeController\u003A\u003Aexecute\u0028\u0029",
+            "name": "execute",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeController.html#method_execute"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeController\u003A\u003A\u0024defaultName",
+            "name": "defaultName",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeController.html#property_defaultName"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeController\u003A\u003A\u0024defaultDescription",
+            "name": "defaultDescription",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeController.html#property_defaultDescription"
+        },                {
             "fqsen": "\\Baubyte\\Cli\\Commands\\MakeMigration",
             "name": "MakeMigration",
             "summary": "",
@@ -1910,6 +1940,26 @@ Search.appendIndex(
             "name": "MakeModel",
             "summary": "",
             "url": "classes/Baubyte-Cli-Commands-MakeModel.html"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeModel\u003A\u003Aconfigure\u0028\u0029",
+            "name": "configure",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeModel.html#method_configure"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeModel\u003A\u003Aexecute\u0028\u0029",
+            "name": "execute",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeModel.html#method_execute"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeModel\u003A\u003A\u0024defaultName",
+            "name": "defaultName",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeModel.html#property_defaultName"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeModel\u003A\u003A\u0024defaultDescription",
+            "name": "defaultDescription",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeModel.html#property_defaultDescription"
         },                {
             "fqsen": "\\Baubyte\\Cli\\Commands\\Migrate",
             "name": "Migrate",
@@ -1960,6 +2010,26 @@ Search.appendIndex(
             "name": "Serve",
             "summary": "",
             "url": "classes/Baubyte-Cli-Commands-Serve.html"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\Serve\u003A\u003Aconfigure\u0028\u0029",
+            "name": "configure",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-Serve.html#method_configure"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\Serve\u003A\u003Aexecute\u0028\u0029",
+            "name": "execute",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-Serve.html#method_execute"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\Serve\u003A\u003A\u0024defaultName",
+            "name": "defaultName",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-Serve.html#property_defaultName"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\Serve\u003A\u003A\u0024defaultDescription",
+            "name": "defaultDescription",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-Serve.html#property_defaultDescription"
         },                {
             "fqsen": "\\",
             "name": "\\",
