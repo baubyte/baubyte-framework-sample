@@ -311,10 +311,10 @@ Search.appendIndex(
             "summary": "Resolves\u0020the\u0020requested\u0020route.",
             "url": "classes/Baubyte-Routing-Router.html#method_resolve"
         },                {
-            "fqsen": "\\Baubyte\\Routing\\Router\u003A\u003ArunMiddlewars\u0028\u0029",
-            "name": "runMiddlewars",
+            "fqsen": "\\Baubyte\\Routing\\Router\u003A\u003ArunMiddlewares\u0028\u0029",
+            "name": "runMiddlewares",
             "summary": "Run\u0020middleware\u0020stack\u0020and\u0020return\u0020final\u0020response.",
-            "url": "classes/Baubyte-Routing-Router.html#method_runMiddlewars"
+            "url": "classes/Baubyte-Routing-Router.html#method_runMiddlewares"
         },                {
             "fqsen": "\\Baubyte\\Routing\\Router\u003A\u003AregisterRoute\u0028\u0029",
             "name": "registerRoute",
@@ -1806,6 +1806,36 @@ Search.appendIndex(
             "summary": "Register\u0020services.",
             "url": "classes/Baubyte-Providers-HasherServiceProvider.html#method_registerServices"
         },                {
+            "fqsen": "\\Baubyte\\Container\\DependencyInjection",
+            "name": "DependencyInjection",
+            "summary": "Dependency\u0020injector\u0020for\u0020controller\u0020methods\u0020or\u0020normal\u0020functions.",
+            "url": "classes/Baubyte-Container-DependencyInjection.html"
+        },                {
+            "fqsen": "\\Baubyte\\Container\\DependencyInjection\u003A\u003AresolveParameters\u0028\u0029",
+            "name": "resolveParameters",
+            "summary": "Resolve\u0020parameter\u0020values.",
+            "url": "classes/Baubyte-Container-DependencyInjection.html#method_resolveParameters"
+        },                {
+            "fqsen": "\\Baubyte\\Http\\Controller",
+            "name": "Controller",
+            "summary": "",
+            "url": "classes/Baubyte-Http-Controller.html"
+        },                {
+            "fqsen": "\\Baubyte\\Http\\Controller\u003A\u003A\u0024middlewares",
+            "name": "middlewares",
+            "summary": "Middleware\u0020behind\u0020this\u0020controller.",
+            "url": "classes/Baubyte-Http-Controller.html#property_middlewares"
+        },                {
+            "fqsen": "\\Baubyte\\Http\\Controller\u003A\u003A\u0024layout",
+            "name": "layout",
+            "summary": "View\u0020layout.",
+            "url": "classes/Baubyte-Http-Controller.html#property_layout"
+        },                {
+            "fqsen": "\\Baubyte\\View\\Exceptions\\ViewNotFoundException",
+            "name": "ViewNotFoundException",
+            "summary": "",
+            "url": "classes/Baubyte-View-Exceptions-ViewNotFoundException.html"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -1920,5 +1950,10 @@ Search.appendIndex(
             "name": "View",
             "summary": "",
             "url": "namespaces/baubyte-view.html"
+        },                {
+            "fqsen": "\\Baubyte\\View\\Exceptions",
+            "name": "Exceptions",
+            "summary": "",
+            "url": "namespaces/baubyte-view-exceptions.html"
         }            ]
 );

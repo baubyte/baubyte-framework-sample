@@ -61,7 +61,7 @@ class Router {
         }
 
         $params = DependencyInjection::resolveParameters($action, $request->routeParameters());
-        
+
         return $this->runMiddlewares(
             $request,
             $route->middlewares(),

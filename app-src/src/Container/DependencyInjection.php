@@ -12,8 +12,7 @@ use ReflectionMethod;
 /**
  * Dependency injector for controller methods or normal functions.
  */
-class DependencyInjection{
-
+class DependencyInjection {
     /**
      * Resolve parameter values.
      *
@@ -22,7 +21,7 @@ class DependencyInjection{
      * @throws \RuntimeException if parameters can't be resolved.
      * @return array|null
      */
-    public static function resolveParameters(Closure|array $callback, $routeParameters = []){
+    public static function resolveParameters(Closure|array $callback, $routeParameters = []) {
         $methodOrFunction = is_array($callback)
             ? new ReflectionMethod($callback[0], $callback[1])
             : new ReflectionFunction($callback);
