@@ -33,7 +33,7 @@ class MakeController extends Command {
      * @inheritDoc
      */
     protected function execute(InputInterface $input, OutputInterface $output) {
-        $name = ucwords(strtolower($input->getArgument("name")));
+        $name = $input->getArgument("name");
         $suffix = $input->getOption("suffix");
         $dir = "";
         $appControllers = "app".DIRECTORY_SEPARATOR."Controllers".DIRECTORY_SEPARATOR;
@@ -41,7 +41,7 @@ class MakeController extends Command {
 
         $directories = explode("/", $name);
         if (count($directories) > 1) {
-            $name = ucwords(strtolower(array_pop($directories)));
+            $name = array_pop($directories);
             $nameSpace = $nameSpace."\\".ucwords(strtolower(implode("\\",$directories)), "\\");
             $dir = ucwords(strtolower(implode("/",$directories)), "/");
             $dir = str_replace("/", DIRECTORY_SEPARATOR, $dir).DIRECTORY_SEPARATOR;

@@ -11,7 +11,7 @@ class ModelName extends Model {
      *
      * @var string|null
      */
-    protected ?string $table = null;
+    protected ?string $table = "table_name";
 
     /**
      * Id and primary key column.

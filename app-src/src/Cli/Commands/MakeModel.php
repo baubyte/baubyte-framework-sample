@@ -34,7 +34,7 @@ class MakeModel extends Command {
      * @inheritDoc
      */
     protected function execute(InputInterface $input, OutputInterface $output) {
-        $name = ucwords(strtolower($input->getArgument("name")));
+        $name = $input->getArgument("name");
         $migration = $input->getOption("migration");
         $suffix = $input->getOption("suffix");
         $dir = "";
@@ -43,7 +43,7 @@ class MakeModel extends Command {
 
         $directories = explode("/", $name);
         if (count($directories) > 1) {
-            $name = ucwords(strtolower(array_pop($directories)));
+            $name = array_pop($directories);
             $nameSpace = $nameSpace."\\".ucwords(strtolower(implode("\\",$directories)), "\\");
             $dir = ucwords(strtolower(implode("/",$directories)), "/");
             $dir = str_replace("/", DIRECTORY_SEPARATOR, $dir).DIRECTORY_SEPARATOR;
@@ -52,6 +52,7 @@ class MakeModel extends Command {
 
         $template = str_replace("ModelName", $name.$suffix, template("model"));
         $template = str_replace("App\Models", $nameSpace, $template);
+        $template = str_replace("table_name", snake_case("{$name}")."s", $template);
 
         file_put_contents(App::$root.DIRECTORY_SEPARATOR."{$appModels}{$dir}{$name}{$suffix}.php", $template);
 
