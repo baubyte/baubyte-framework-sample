@@ -18,11 +18,20 @@ class Controller {
     /**
      * Register middlewares.
      *
-     * @param string[]
+     * @return \Baubyte\Http\Middleware[]
      */
-    protected function middlewares(array $middlewares) {
-        foreach ($middlewares as $class) {
-            $this->middlewares[] = new $class();
-        }
+    public function middlewares(): array {
+        return $this->middlewares;
+    }
+
+    /**
+     * Run Middlewares.
+     *
+     * @param array $middlewares
+     * @return self
+     */
+    public function setMiddlewares(array $middlewares): self {
+        $this->middlewares = array_map(fn ($middleware) => new $middleware(), $middlewares);
+        return $this;
     }
 }

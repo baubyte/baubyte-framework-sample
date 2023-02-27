@@ -44,8 +44,8 @@ class MakeModel extends Command {
         $directories = explode("/", $name);
         if (count($directories) > 1) {
             $name = array_pop($directories);
-            $nameSpace = $nameSpace."\\".ucwords(strtolower(implode("\\",$directories)), "\\");
-            $dir = ucwords(strtolower(implode("/",$directories)), "/");
+            $nameSpace = $nameSpace."\\".ucwords(strtolower(implode("\\", $directories)), "\\");
+            $dir = ucwords(strtolower(implode("/", $directories)), "/");
             $dir = str_replace("/", DIRECTORY_SEPARATOR, $dir).DIRECTORY_SEPARATOR;
             @mkdir(App::$root.DIRECTORY_SEPARATOR.$appModels.$dir, recursive: true);
         }

@@ -1,4 +1,4 @@
-<?php if (app()->env("dev")): ?>
+<?php if (env("APP_ENV") == "dev"): ?>
 <pre>
 <?= $e->getMessage() ?>
 <br>
@@ -6,4 +6,4 @@
 </pre>
 <?php else: ?>
 HTTP 500 INTERNAL SERVER ERROR
-<?php endif ?>
+<?php endif; ?>
