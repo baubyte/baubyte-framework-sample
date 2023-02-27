@@ -161,10 +161,11 @@ class App {
 
         return $this;
     }
+
     /**
      * Set session variables or other parameters for the next request.
      */
-    public function prepareNextRequest() {
+    protected function prepareNextRequest() {
         if ($this->request->method() == HttpMethod::GET()) {
             $this->session->set('_previous', $this->request->uri());
         }
@@ -175,7 +176,7 @@ class App {
      *
      * @param \Baubyte\Http\Response $response
      */
-    public function terminate(Response $response) {
+    protected function terminate(Response $response) {
         $this->prepareNextRequest();
         $this->server->sendResponse($response);
         $this->database->close();
