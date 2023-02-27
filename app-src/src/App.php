@@ -91,18 +91,22 @@ class App {
         try {
             $response = $this->router->resolve($this->request);
             $this->terminate($response);
-        } catch (HttpNotFoundException $e) {
-            $this->abort(Response::text("Not Found")->setStatus(404));
-        } catch(ValidationException $e) {
-            $this->abort(back()->withErrors($e->errors(), 422));
-        } catch(Throwable $th) {
-            $response = json([
-                "error" => $th::class,
-                "message" => $th->getMessage(),
-                "trace" => $th->getTrace()
-            ]);
-            $this->abort($response->setStatus(500));
+        } catch (Throwable $e) {
+            $this->handleError($e);
         }
+    }
+
+    /**
+     * Respond with error.
+     *
+     * @param Throwable $e
+     */
+    private function handleError(Throwable $e) {
+        match (get_class($e)) {
+            ValidationException::class => $this->abort(back()->withErrors($e->errors())),
+            HttpNotFoundException::class => $this->abort(view("errors/404")->setStatus(404)),
+            default => $this->abort(view("errors/500", compact('e'), "error")->setStatus(500)),
+        };
     }
 
     /**
