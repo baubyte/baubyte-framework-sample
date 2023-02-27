@@ -151,12 +151,16 @@
                     <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/baubyte.html">Baubyte</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/baubyte-cli.html">Cli</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/baubyte-cli-commands.html">Commands</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    Cli
+    MigrateRefresh
 
+        <span class="phpdocumentor-element__extends">
+        extends <abbr title="\Symfony\Component\Console\Command\Command">Command</abbr>
+    </span>
     
             <div class="phpdocumentor-element__package">
             in package
@@ -169,9 +173,9 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Cli/Cli.php"><a href="files/src-cli-cli.html"><abbr title="src/Cli/Cli.php">Cli.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Cli/Commands/MigrateRefresh.php"><a href="files/src-cli-commands-migraterefresh.html"><abbr title="src/Cli/Commands/MigrateRefresh.php">MigrateRefresh.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
@@ -191,40 +195,26 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -property -public">
-    <a href="classes/Baubyte-Cli-Cli.html#property_database">$database</a>
+                    <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Baubyte-Cli-Commands-MigrateRefresh.html#property_defaultDescription">$defaultDescription</a>
     <span>
-                        &nbsp;: <a href="classes/Baubyte-Database-Drivers-DatabaseDriver.html"><abbr title="\Baubyte\Database\Drivers\DatabaseDriver">DatabaseDriver</abbr></a>            </span>
-</dt>
-<dd>Database Drivers</dd>
-
-                <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-Cli-Cli.html#method_bootstrap">bootstrap()</a>
-    <span>
-                                &nbsp;: self    </span>
+                        &nbsp;: mixed            </span>
 </dt>
 <dd></dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-Cli-Cli.html#method_run">run()</a>
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Baubyte-Cli-Commands-MigrateRefresh.html#property_defaultName">$defaultName</a>
     <span>
-                                &nbsp;: void    </span>
+                        &nbsp;: mixed            </span>
 </dt>
-<dd>Run CLI app.</dd>
+<dd></dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/Baubyte-Cli-Cli.html#method_setUpDatabaseConnections">setUpDatabaseConnections()</a>
+                <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/Baubyte-Cli-Commands-MigrateRefresh.html#method_execute">execute()</a>
     <span>
-                                &nbsp;: self    </span>
+                                &nbsp;: mixed    </span>
 </dt>
-<dd>Open database connections or other connections.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/Baubyte-Cli-Cli.html#method_setUpMigrator">setUpMigrator()</a>
-    <span>
-                                &nbsp;: self    </span>
-</dt>
-<dd>Set up Migrator.</dd>
+<dd></dd>
 
         </dl>
 
@@ -236,39 +226,98 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Baubyte-Cli-Cli.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Baubyte-Cli-Commands-MigrateRefresh.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="
             phpdocumentor-element
             -property
-            -public
-                                                        "
+            -protected
+            -static                                            "
 >
-    <h4 class="phpdocumentor-element__name" id="property_database">
-        $database
-        <a href="classes/Baubyte-Cli-Cli.html#property_database" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_defaultDescription">
+        $defaultDescription
+        <a href="classes/Baubyte-Cli-Commands-MigrateRefresh.html#property_defaultDescription" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Cli/Cli.php"><a href="files/src-cli-cli.html"><abbr title="src/Cli/Cli.php">Cli.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Cli/Commands/MigrateRefresh.php"><a href="files/src-cli-commands-migraterefresh.html"><abbr title="src/Cli/Commands/MigrateRefresh.php">MigrateRefresh.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">26</span>
+    <span class="phpdocumentor-element-found-in__line">21</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Database Drivers</p>
-
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type"><a href="classes/Baubyte-Database-Drivers-DatabaseDriver.html"><abbr title="\Baubyte\Database\Drivers\DatabaseDriver">DatabaseDriver</abbr></a></span>
-    <span class="phpdocumentor-signature__name">$database</span>
-    </code>
+    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$defaultDescription</span>
+     = <span class="phpdocumentor-signature__default-value">&quot;Revertir las Migraciones y volver a ejecutarlas&quot;</span></code>
 
     
+        <section class="phpdocumentor-description"></section>
+
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">inheritDoc</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                             
+                                    </dd>
+                        </dl>
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_defaultName">
+        $defaultName
+        <a href="classes/Baubyte-Cli-Commands-MigrateRefresh.html#property_defaultName" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Cli/Commands/MigrateRefresh.php"><a href="files/src-cli-commands-migraterefresh.html"><abbr title="src/Cli/Commands/MigrateRefresh.php">MigrateRefresh.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">16</span>
+
+    </aside>
+
     
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$defaultName</span>
+     = <span class="phpdocumentor-signature__default-value">&quot;migrate:refresh&quot;</span></code>
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">inheritDoc</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                             
+                                    </dd>
+                        </dl>
 
 </article>
             </section>
@@ -276,37 +325,44 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Baubyte-Cli-Cli.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Baubyte-Cli-Commands-MigrateRefresh.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
             -method
-            -public
-                                    -static                    "
+            -protected
+                                                        "
 >
-    <h4 class="phpdocumentor-element__name" id="method_bootstrap">
-        bootstrap()
-        <a href="classes/Baubyte-Cli-Cli.html#method_bootstrap" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_execute">
+        execute()
+        <a href="classes/Baubyte-Cli-Commands-MigrateRefresh.html#method_execute" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Cli/Cli.php"><a href="files/src-cli-cli.html"><abbr title="src/Cli/Cli.php">Cli.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Cli/Commands/MigrateRefresh.php"><a href="files/src-cli-commands-migraterefresh.html"><abbr title="src/Cli/Commands/MigrateRefresh.php">MigrateRefresh.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">bootstrap</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$root</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                    <span class="phpdocumentor-signature__name">execute</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\Console\Input\InputInterface">InputInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$input</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\Console\Output\OutputInterface">OutputInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$output</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$root</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                <span class="phpdocumentor-signature__argument__name">$input</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\Console\Input\InputInterface">InputInterface</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$output</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\Console\Output\OutputInterface">OutputInterface</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"></section>
@@ -315,108 +371,22 @@
             </dl>
 
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">inheritDoc</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                             
+                                    </dd>
+                        </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">self</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_run">
-        run()
-        <a href="classes/Baubyte-Cli-Cli.html#method_run" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Cli/Cli.php"><a href="files/src-cli-cli.html"><abbr title="src/Cli/Cli.php">Cli.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">80</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Run CLI app.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">run</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -protected
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_setUpDatabaseConnections">
-        setUpDatabaseConnections()
-        <a href="classes/Baubyte-Cli-Cli.html#method_setUpDatabaseConnections" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Cli/Cli.php"><a href="files/src-cli-cli.html"><abbr title="src/Cli/Cli.php">Cli.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">45</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Open database connections or other connections.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
-                    <span class="phpdocumentor-signature__name">setUpDatabaseConnections</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">self</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -protected
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_setUpMigrator">
-        setUpMigrator()
-        <a href="classes/Baubyte-Cli-Cli.html#method_setUpMigrator" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Cli/Cli.php"><a href="files/src-cli-cli.html"><abbr title="src/Cli/Cli.php">Cli.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">63</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Set up Migrator.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
-                    <span class="phpdocumentor-signature__name">setUpMigrator</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">self</span>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
         
     
@@ -499,7 +469,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/Baubyte-Cli-Cli.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Baubyte-Cli-Commands-MigrateRefresh.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

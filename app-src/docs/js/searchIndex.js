@@ -401,6 +401,11 @@ Search.appendIndex(
             "summary": "Handle\u0020request\u0020and\u0020send\u0020response.",
             "url": "classes/Baubyte-App.html#method_run"
         },                {
+            "fqsen": "\\Baubyte\\App\u003A\u003AhandleError\u0028\u0029",
+            "name": "handleError",
+            "summary": "Respond\u0020with\u0020error.",
+            "url": "classes/Baubyte-App.html#method_handleError"
+        },                {
             "fqsen": "\\Baubyte\\App\u003A\u003AloadConfig\u0028\u0029",
             "name": "loadConfig",
             "summary": "Load\u0020Baubyte\u0020configuration.",
@@ -1846,6 +1851,11 @@ Search.appendIndex(
             "summary": "Middleware\u0020behind\u0020this\u0020controller.",
             "url": "classes/Baubyte-Http-Controller.html#property_middlewares"
         },                {
+            "fqsen": "\\Baubyte\\Http\\Controller\u003A\u003AsetMiddlewares\u0028\u0029",
+            "name": "setMiddlewares",
+            "summary": "Run\u0020Middlewares.",
+            "url": "classes/Baubyte-Http-Controller.html#method_setMiddlewares"
+        },                {
             "fqsen": "\\Baubyte\\Http\\Controller\u003A\u003A\u0024layout",
             "name": "layout",
             "summary": "View\u0020layout.",
@@ -2030,6 +2040,51 @@ Search.appendIndex(
             "name": "defaultDescription",
             "summary": "",
             "url": "classes/Baubyte-Cli-Commands-Serve.html#property_defaultDescription"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeMiddleware",
+            "name": "MakeMiddleware",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeMiddleware.html"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeMiddleware\u003A\u003Aconfigure\u0028\u0029",
+            "name": "configure",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeMiddleware.html#method_configure"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeMiddleware\u003A\u003Aexecute\u0028\u0029",
+            "name": "execute",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeMiddleware.html#method_execute"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeMiddleware\u003A\u003A\u0024defaultName",
+            "name": "defaultName",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeMiddleware.html#property_defaultName"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MakeMiddleware\u003A\u003A\u0024defaultDescription",
+            "name": "defaultDescription",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MakeMiddleware.html#property_defaultDescription"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MigrateRefresh",
+            "name": "MigrateRefresh",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MigrateRefresh.html"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MigrateRefresh\u003A\u003Aexecute\u0028\u0029",
+            "name": "execute",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MigrateRefresh.html#method_execute"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MigrateRefresh\u003A\u003A\u0024defaultName",
+            "name": "defaultName",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MigrateRefresh.html#property_defaultName"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\MigrateRefresh\u003A\u003A\u0024defaultDescription",
+            "name": "defaultDescription",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-MigrateRefresh.html#property_defaultDescription"
         },                {
             "fqsen": "\\",
             "name": "\\",
