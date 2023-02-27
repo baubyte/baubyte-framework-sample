@@ -59,9 +59,10 @@ class Migrator {
      * @param string $message
      * @return void
      */
-    private function log(string $message) {
+    private function log(string $message, $adicionalComment = null) {
         if ($this->logProgress) {
-            $this->output->writeln("<info>{$message}</info>");
+            $adicionalComment = (is_null($adicionalComment)) ? "" : "<comment>{$adicionalComment}</comment>";
+            $this->output->writeln("<info>{$message}</info> {$adicionalComment}");
         }
     }
 
@@ -163,7 +164,7 @@ class Migrator {
         $fileName = sprintf("%s_%06d_%s", $date, $id, $migrationName);
         file_put_contents("$this->migrationsDirectory".DIRECTORY_SEPARATOR."$fileName.php", $template);
 
-        $this->log("Migración Creada => {$fileName}");
+        $this->log("Migración Creada => {$fileName}", "[{$this->migrationsDirectory}".DIRECTORY_SEPARATOR."{$fileName}.php]",);
 
         return $fileName.".php";
     }
