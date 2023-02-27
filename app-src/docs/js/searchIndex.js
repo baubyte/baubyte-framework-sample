@@ -366,6 +366,11 @@ Search.appendIndex(
             "summary": "Get\u0020files\u0020from\u0020\u0060\u0024_FILES\u0060\u0020global.",
             "url": "classes/Baubyte-Server-PhpNativeServer.html#method_uploadedFiles"
         },                {
+            "fqsen": "\\Baubyte\\Server\\PhpNativeServer\u003A\u003ArequestData\u0028\u0029",
+            "name": "requestData",
+            "summary": "Get\u0020POST\u0020data\u0020from\u0020\u0060php\u003A\/\/input\u0060\u0020stream.",
+            "url": "classes/Baubyte-Server-PhpNativeServer.html#method_requestData"
+        },                {
             "fqsen": "\\Baubyte\\Server\\PhpNativeServer\u003A\u003AsendResponse\u0028\u0029",
             "name": "sendResponse",
             "summary": "Send\u0020the\u0020response\u0020to\u0020the\u0020client.",

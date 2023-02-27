@@ -254,25 +254,11 @@
 <dd>Create a new app instance.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-App.html#method_prepareNextRequest">prepareNextRequest()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Set session variables or other parameters for the next request.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Baubyte-App.html#method_run">run()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Handle request and send response.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Baubyte-App.html#method_terminate">terminate()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Kill the current process. If necessary, release resources here.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Baubyte-App.html#method_loadConfig">loadConfig()</a>
@@ -280,6 +266,13 @@
                                 &nbsp;: self    </span>
 </dt>
 <dd>Load Baubyte configuration.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/Baubyte-App.html#method_prepareNextRequest">prepareNextRequest()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Set session variables or other parameters for the next request.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Baubyte-App.html#method_runServiceProviders">runServiceProviders()</a>
@@ -301,6 +294,13 @@
                                 &nbsp;: self    </span>
 </dt>
 <dd>Open database connections or other connections.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/Baubyte-App.html#method_terminate">terminate()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Kill the current process. If necessary, release resources here.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Baubyte-App.html#method_handleError">handleError()</a>
@@ -572,7 +572,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/App.php"><a href="files/src-app.html"><abbr title="src/App.php">App.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">190</span>
+    <span class="phpdocumentor-element-found-in__line">191</span>
 
     </aside>
 
@@ -654,39 +654,6 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_prepareNextRequest">
-        prepareNextRequest()
-        <a href="classes/Baubyte-App.html#method_prepareNextRequest" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/App.php"><a href="files/src-app.html"><abbr title="src/App.php">App.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">167</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Set session variables or other parameters for the next request.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">prepareNextRequest</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_run">
         run()
         <a href="classes/Baubyte-App.html#method_run" class="headerlink"><i class="fas fa-link"></i></a>
@@ -706,49 +673,6 @@
 
     
     
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_terminate">
-        terminate()
-        <a href="classes/Baubyte-App.html#method_terminate" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/App.php"><a href="files/src-app.html"><abbr title="src/App.php">App.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">178</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Kill the current process. If necessary, release resources here.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">terminate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Baubyte-Http-Response.html"><abbr title="\Baubyte\Http\Response">Response</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$response</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$response</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Baubyte-Http-Response.html"><abbr title="\Baubyte\Http\Response">Response</abbr></a></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
@@ -786,6 +710,39 @@
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">self</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_prepareNextRequest">
+        prepareNextRequest()
+        <a href="classes/Baubyte-App.html#method_prepareNextRequest" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/App.php"><a href="files/src-app.html"><abbr title="src/App.php">App.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">168</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Set session variables or other parameters for the next request.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                    <span class="phpdocumentor-signature__name">prepareNextRequest</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
         
     
@@ -895,6 +852,49 @@
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">self</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_terminate">
+        terminate()
+        <a href="classes/Baubyte-App.html#method_terminate" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/App.php"><a href="files/src-app.html"><abbr title="src/App.php">App.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">179</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Kill the current process. If necessary, release resources here.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                    <span class="phpdocumentor-signature__name">terminate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Baubyte-Http-Response.html"><abbr title="\Baubyte\Http\Response">Response</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$response</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$response</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Baubyte-Http-Response.html"><abbr title="\Baubyte\Http\Response">Response</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
         
     
