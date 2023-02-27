@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Middlewares\AuthMiddleware;
-use App\Models\ContactModel;
+use App\Models\Contact;
 use Baubyte\Http\Controller;
 use Baubyte\Http\Request;
 
@@ -21,7 +21,7 @@ class ContactController extends Controller {
      * @return \Baubyte\Http\Response
      */
     public function index(){
-        return view('contacts/index', ['contacts' => ContactModel::all()]);
+        return view('contacts/index', ['contacts' => Contact::all()]);
     }
 
     /**
@@ -44,7 +44,7 @@ class ContactController extends Controller {
             'name' => 'required',
             'phone_number' => 'required',
         ]);
-        ContactModel::create([...$data, 'user_id' => auth()->id()]);
+        Contact::create([...$data, 'user_id' => auth()->id()]);
         return redirect('/contacts');
     }
 
@@ -61,31 +61,44 @@ class ContactController extends Controller {
     /**
      * Muestra el formulario para editar el recurso especificado.
      *
-     * @param  int  $id
+     * @param  Contact $contact
+     * @param  \Baubyte\Http\Request  $request
      * @return \Baubyte\Http\Response
      */
-    public function edit($id){
-        //
+    public function edit(Contact $contact, Request $request){
+        return view('contacts/edit', ['contact' => $contact]);
     }
 
     /**
      * Actualice el recurso especificado.
      *
+     * @param  Contact $contact
      * @param  \Baubyte\Http\Request  $request
-     * @param  int  $id
      * @return \Baubyte\Http\Response
      */
-    public function update(Request $request, $id){
-        //
+    public function update(Contact $contact, Request $request){
+        $data = $request->validate([
+            'name' => 'required',
+            'phone_number' => 'required'
+        ]);
+
+        $contact->name = $data['name'];
+        $contact->phone_number = $data['phone_number'];
+        $contact->update();
+
+        return redirect('/contacts');
     }
 
     /**
      * Elimina el recurso especificado.
      *
-     * @param  int  $id
+     * @param  Contact  $contact
      * @return \Baubyte\Http\Response
      */
-    public function destroy($id){
-        //
+    public function destroy(Contact $contact){
+        $contact->delete();
+        session()->flash('alert', "Contacto $contact->name eliminado correctamente.");
+
+        return redirect('/contacts');
     }
 }

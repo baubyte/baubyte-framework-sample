@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Baubyte\Database\Model;
 
-class ContactModel extends Model {
+class Contact extends Model {
 
     /**
      * Database table.
