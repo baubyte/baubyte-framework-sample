@@ -164,7 +164,7 @@ class Migrator {
         $fileName = sprintf("%s_%06d_%s", $date, $id, $migrationName);
         file_put_contents("$this->migrationsDirectory".DIRECTORY_SEPARATOR."$fileName.php", $template);
 
-        $this->log("Migración Creada => {$fileName}", "[{$this->migrationsDirectory}".DIRECTORY_SEPARATOR."{$fileName}.php]",);
+        $this->log("Migración Creada => {$fileName}", "[database".DIRECTORY_SEPARATOR."migrations".DIRECTORY_SEPARATOR."{$fileName}.php]");
 
         return $fileName.".php";
     }
