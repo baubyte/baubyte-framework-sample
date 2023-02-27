@@ -4,9 +4,11 @@ namespace Baubyte\Cli;
 
 use Baubyte\App;
 use Baubyte\Cli\Commands\MakeController;
+use Baubyte\Cli\Commands\MakeMiddleware;
 use Baubyte\Cli\Commands\MakeMigration;
 use Baubyte\Cli\Commands\MakeModel;
 use Baubyte\Cli\Commands\Migrate;
+use Baubyte\Cli\Commands\MigrateRefresh;
 use Baubyte\Cli\Commands\MigrateRollback;
 use Baubyte\Cli\Commands\Serve;
 use Baubyte\Config\Config;
@@ -82,8 +84,10 @@ class Cli {
             new MakeController(),
             new MakeMigration(),
             new MakeModel(),
+            new MakeMiddleware(),
             new Migrate(),
             new MigrateRollback(),
+            new MigrateRefresh(),
             new Serve(),
         ]);
         $cli->run();

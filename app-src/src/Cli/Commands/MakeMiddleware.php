@@ -10,23 +10,23 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class MakeController extends Command {
+class MakeMiddleware extends Command {
     /**
      * @inheritDoc
      */
-    protected static $defaultName = "make:controller";
+    protected static $defaultName = "make:middleware";
     /**
      * @inheritDoc
      */
-    protected static $defaultDescription = "Crear un nuevo Controlador.";
+    protected static $defaultDescription = "Crear un nuevo Middleware.";
 
     /**
      * @inheritDoc
     */
     protected function configure() {
         $this
-            ->addArgument("name", InputArgument::REQUIRED, "Nombre del Controlador")
-            ->addOption("suffix", "s", InputOption::VALUE_OPTIONAL, "Agregar el sufijo Controller", "Controller");
+            ->addArgument("name", InputArgument::REQUIRED, "Nombre del Middleware")
+            ->addOption("suffix", "s", InputOption::VALUE_OPTIONAL, "Agregar el sufijo Middleware", "Middleware");
     }
 
     /**
@@ -36,8 +36,8 @@ class MakeController extends Command {
         $name = ucwords(strtolower($input->getArgument("name")));
         $suffix = $input->getOption("suffix");
         $dir = "";
-        $appControllers = "app".DIRECTORY_SEPARATOR."Controllers".DIRECTORY_SEPARATOR;
-        $nameSpace = "App\Controllers";
+        $appMiddleware = "app".DIRECTORY_SEPARATOR."Middlewares".DIRECTORY_SEPARATOR;
+        $nameSpace = "App\Middlewares";
 
         $directories = explode("/", $name);
         if (count($directories) > 1) {
@@ -45,15 +45,15 @@ class MakeController extends Command {
             $nameSpace = $nameSpace."\\".ucwords(strtolower(implode("\\",$directories)), "\\");
             $dir = ucwords(strtolower(implode("/",$directories)), "/");
             $dir = str_replace("/", DIRECTORY_SEPARATOR, $dir).DIRECTORY_SEPARATOR;
-            @mkdir(App::$root.DIRECTORY_SEPARATOR.$appControllers.$dir, recursive: true);
+            @mkdir(App::$root.DIRECTORY_SEPARATOR.$appMiddleware.$dir, recursive: true);
         }
         
-        $template = str_replace("ControllerName", $name.$suffix, template("controller"));
+        $template = str_replace("MiddlewareName", $name.$suffix, template("middleware"));
 
-        $template = str_replace("App\Controllers", $nameSpace, $template);
+        $template = str_replace("App\Middlewares", $nameSpace, $template);
 
-        file_put_contents(App::$root.DIRECTORY_SEPARATOR."{$appControllers}{$dir}{$name}{$suffix}.php", $template);
-        $output->writeln("<info>Controlador Creado => {$name}{$suffix}</info> <comment>[{$appControllers}{$dir}{$name}{$suffix}.php]</comment>");
+        file_put_contents(App::$root.DIRECTORY_SEPARATOR."{$appMiddleware}{$dir}{$name}{$suffix}.php", $template);
+        $output->writeln("<info>Middleware Creado => {$name}{$suffix}</info> <comment>[{$appMiddleware}{$dir}{$name}{$suffix}.php]</comment>");
 
         return Command::SUCCESS;
     }

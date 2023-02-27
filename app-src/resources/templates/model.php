@@ -7,21 +7,37 @@ use Baubyte\Database\Model;
 class ModelName extends Model {
 
     /**
-     * @inheritDoc
+     * Database table.
+     *
+     * @var string|null
+     */
+    protected ?string $table = null;
+
+    /**
+     * Id and primary key column.
+     *
+     * @var string
      */
     protected string $primaryKey = "id";
 
     /**
-     * @inheritDoc
+     * Hidden properties.
+     *
+     * @var array
      */
     protected array $hidden = [];
 
     /**
-     * @inheritDoc
+     * Mass assignable attributes.
+     *
+     * @var array
      */
     protected array $fillable = [];
+    
     /**
-     * @inheritDoc
+     * Automatically insert `created_at` and `updated_at` columns.
+     *
+     * @var boolean
      */
     protected $insertTimestamps = true;
 }

@@ -9,34 +9,27 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class MigrateRollback extends Command {
+class MigrateRefresh extends Command {
     /**
      * @inheritDoc
      */
-    protected static $defaultName = "migrate:rollback";
+    protected static $defaultName = "migrate:refresh";
 
     /**
      * @inheritDoc
      */
-    protected static $defaultDescription = "Revertir las Migraciones";
-
-    /**
-     * @inheritDoc
-     */
-    protected function configure() {
-        $this->addArgument("steps", InputArgument::OPTIONAL, "Cantidad de Migraciones a revertir. Todo por defecto.");
-    }
+    protected static $defaultDescription = "Revertir las Migraciones y volver a ejecutarlas";
 
     /**
      * @inheritDoc
      */
     protected function execute(InputInterface $input, OutputInterface $output) {
         try {
-            $steps = $input->getArgument("steps") ?? null;
-            app(Migrator::class)->rollback($steps);
+            app(Migrator::class)->rollback();
+            app(Migrator::class)->migrate();
             return Command::SUCCESS;
         } catch (PDOException $ex) {
-            $output->writeln("<error>No se pudo revertir las Migraciones: {$ex->getMessage()} </error>");
+            $output->writeln("<error>No se pudo refrescar las Migraciones: {$ex->getMessage()} </error>");
             $output->writeln("<error>{$ex->getTraceAsString()}</error>");
             return Command::FAILURE;
         }

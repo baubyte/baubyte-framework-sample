@@ -26,24 +26,39 @@ class MakeModel extends Command {
     protected function configure() {
         $this
             ->addArgument("name", InputArgument::REQUIRED, "Nombre del Modelo")
-            ->addOption("migration", "m", InputOption::VALUE_OPTIONAL, "Crear también un archivo de migración", false);
+            ->addOption("migration", "m", InputOption::VALUE_OPTIONAL, "Crear también un archivo de migración", false)
+            ->addOption("suffix", "s", InputOption::VALUE_OPTIONAL, "Agregar el sufijo Model", "Model");
     }
 
     /**
      * @inheritDoc
      */
     protected function execute(InputInterface $input, OutputInterface $output) {
-        $name = $input->getArgument("name");
+        $name = ucwords(strtolower($input->getArgument("name")));
         $migration = $input->getOption("migration");
+        $suffix = $input->getOption("suffix");
+        $dir = "";
+        $appModels= "app".DIRECTORY_SEPARATOR."Models".DIRECTORY_SEPARATOR;
+        $nameSpace = "App\Models";
 
-        $template = str_replace("ModelName", $name, template("model"));
+        $directories = explode("/", $name);
+        if (count($directories) > 1) {
+            $name = ucwords(strtolower(array_pop($directories)));
+            $nameSpace = $nameSpace."\\".ucwords(strtolower(implode("\\",$directories)), "\\");
+            $dir = ucwords(strtolower(implode("/",$directories)), "/");
+            $dir = str_replace("/", DIRECTORY_SEPARATOR, $dir).DIRECTORY_SEPARATOR;
+            @mkdir(App::$root.DIRECTORY_SEPARATOR.$appModels.$dir, recursive: true);
+        }
 
-        file_put_contents(App::$root.DIRECTORY_SEPARATOR."app".DIRECTORY_SEPARATOR."Models".DIRECTORY_SEPARATOR."{$name}.php", $template);
-        $output->writeln("<info>Modelo Creado => {$name}</info>");
+        $template = str_replace("ModelName", $name.$suffix, template("model"));
+        $template = str_replace("App\Models", $nameSpace, $template);
+
+        file_put_contents(App::$root.DIRECTORY_SEPARATOR."{$appModels}{$dir}{$name}{$suffix}.php", $template);
+
+        $output->writeln("<info>Modelo Creado => {$name}{$suffix}</info> <comment>[{$appModels}{$dir}{$name}{$suffix}.php]</comment>");
 
         if ($migration !== false) {
-            $nameMigration = str_replace("Model", "", $name);
-            app(Migrator::class)->make("create_{$nameMigration}s_table");
+            app(Migrator::class)->make("create_{$name}s_table");
         }
 
         return Command::SUCCESS;
