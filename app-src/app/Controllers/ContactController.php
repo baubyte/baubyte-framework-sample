@@ -44,6 +44,9 @@ class ContactController extends Controller {
             'name' => 'required',
             'phone_number' => 'required',
         ]);
+        if (!is_null($file = $request->file("profile"))) {
+            $data['profile'] = $file->store('profiles');
+        }
         Contact::create([...$data, 'user_id' => auth()->id()]);
         return redirect('/contacts');
     }
@@ -81,9 +84,12 @@ class ContactController extends Controller {
             'name' => 'required',
             'phone_number' => 'required'
         ]);
-
+        if (!is_null($file = $request->file("profile"))) {
+            $data['profile'] = $file->store('profiles');
+        }
         $contact->name = $data['name'];
         $contact->phone_number = $data['phone_number'];
+        $contact->profile = $data['profile'];
         $contact->update();
 
         return redirect('/contacts');
