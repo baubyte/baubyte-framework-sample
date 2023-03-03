@@ -11,6 +11,7 @@ use Baubyte\Cli\Commands\Migrate;
 use Baubyte\Cli\Commands\MigrateRefresh;
 use Baubyte\Cli\Commands\MigrateRollback;
 use Baubyte\Cli\Commands\Serve;
+use Baubyte\Cli\Commands\StorageLink;
 use Baubyte\Config\Config;
 use Baubyte\Database\Drivers\DatabaseDriver;
 use Baubyte\Database\Migrations\Migrator;
@@ -89,6 +90,7 @@ class Cli {
             new MigrateRollback(),
             new MigrateRefresh(),
             new Serve(),
+            new StorageLink(),
         ]);
         $cli->run();
     }

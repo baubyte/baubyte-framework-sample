@@ -5,3 +5,4 @@ mysql-data
 composer.lock
 .php-cs-fixer.cache
 
+app-src/public/storage
