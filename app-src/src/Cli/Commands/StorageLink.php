@@ -23,9 +23,9 @@ class StorageLink extends Command {
      */
     protected function execute(InputInterface $input, OutputInterface $output) {
         $targetFolder = App::$root.DIRECTORY_SEPARATOR."storage";
-		$linkFolder =  App::$root.DIRECTORY_SEPARATOR."public".DIRECTORY_SEPARATOR."storage";
+        $linkFolder =  App::$root.DIRECTORY_SEPARATOR."public".DIRECTORY_SEPARATOR."storage";
         try {
-            @symlink($targetFolder,$linkFolder);
+            @symlink($targetFolder, $linkFolder);
             $output->writeln("<info>Enlace Simbólico Creado</info> <comment>[storage => public/storage]</comment>");
             return Command::SUCCESS;
         } catch (BaubyteException $ex) {

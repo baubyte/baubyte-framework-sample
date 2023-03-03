@@ -633,7 +633,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "BaubyteEngine\u0020constructor.",
             "url": "classes/Baubyte-View-BaubyteEngine.html#method___construct"
         },                {
             "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003Arender\u0028\u0029",
@@ -670,6 +670,26 @@ Search.appendIndex(
             "name": "contentAnnotation",
             "summary": "Annotation\u0020used\u0020in\u0020layouts\u0020to\u0020mark\u0020where\u0020to\u0020put\u0020the\u0020view\u0020content.",
             "url": "classes/Baubyte-View-BaubyteEngine.html#property_contentAnnotation"
+        },                {
+            "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003A\u0024putAnnotation",
+            "name": "putAnnotation",
+            "summary": "Annotation\u0020used\u0020in\u0020layouts\u0020to\u0020mark\u0020where\u0020to\u0020put\u0020input\u0020fields\u0020PUT.",
+            "url": "classes/Baubyte-View-BaubyteEngine.html#property_putAnnotation"
+        },                {
+            "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003A\u0024deleteAnnotation",
+            "name": "deleteAnnotation",
+            "summary": "Annotation\u0020used\u0020in\u0020layouts\u0020to\u0020mark\u0020where\u0020to\u0020put\u0020input\u0020fields\u0020DELETE.",
+            "url": "classes/Baubyte-View-BaubyteEngine.html#property_deleteAnnotation"
+        },                {
+            "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003A\u0024inputMethodPut",
+            "name": "inputMethodPut",
+            "summary": "input\u0020field\u0020for\u0020PUT\u0020method.",
+            "url": "classes/Baubyte-View-BaubyteEngine.html#property_inputMethodPut"
+        },                {
+            "fqsen": "\\Baubyte\\View\\BaubyteEngine\u003A\u003A\u0024inputMethodDelete",
+            "name": "inputMethodDelete",
+            "summary": "input\u0020field\u0020for\u0020DELETE\u0020method.",
+            "url": "classes/Baubyte-View-BaubyteEngine.html#property_inputMethodDelete"
         },                {
             "fqsen": "\\Baubyte\\View\\View",
             "name": "View",
@@ -2090,6 +2110,26 @@ Search.appendIndex(
             "name": "defaultDescription",
             "summary": "",
             "url": "classes/Baubyte-Cli-Commands-MigrateRefresh.html#property_defaultDescription"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\StorageLink",
+            "name": "StorageLink",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-StorageLink.html"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\StorageLink\u003A\u003Aexecute\u0028\u0029",
+            "name": "execute",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-StorageLink.html#method_execute"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\StorageLink\u003A\u003A\u0024defaultName",
+            "name": "defaultName",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-StorageLink.html#property_defaultName"
+        },                {
+            "fqsen": "\\Baubyte\\Cli\\Commands\\StorageLink\u003A\u003A\u0024defaultDescription",
+            "name": "defaultDescription",
+            "summary": "",
+            "url": "classes/Baubyte-Cli-Commands-StorageLink.html#property_defaultDescription"
         },                {
             "fqsen": "\\",
             "name": "\\",

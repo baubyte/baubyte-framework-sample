@@ -38,7 +38,7 @@ class BaubyteEngine implements View {
      * @var string
      */
     protected $deleteAnnotation = "@DELETE";
-    
+
     /**
      * input field for PUT method.
      *
