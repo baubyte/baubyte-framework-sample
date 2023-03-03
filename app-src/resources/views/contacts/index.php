@@ -4,6 +4,9 @@
     <div>
         <?= $contact->name ?> <?= $contact->phone_number ?>
         <a href="/contacts/edit/<?= $contact->id ?>">Edit</a>
-        <a href="/contacts/delete/<?= $contact->id ?>">Delete</a>
+        <form method="POST" action="/contacts/delete/<?= $contact->id ?>">
+            @DELETE
+            <button type="submit" class="btn btn-primary">Eliminar</button>
+        </form>
     </div>
 <?php endforeach ?>

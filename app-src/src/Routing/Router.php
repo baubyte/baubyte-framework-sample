@@ -37,7 +37,8 @@ class Router {
      * @throws HttpNotFoundException when route is not found
      */
     public function resolveRoute(Request $request): Route {
-        foreach ($this->routes[$request->method()->value()] as $route) {
+        $method = $request->data("_method") ?? $request->method()->value();
+        foreach ($this->routes[$method] as $route) {
             if ($route->matches($request->uri())) {
                 return $route;
             }

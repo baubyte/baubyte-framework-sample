@@ -1,5 +1,6 @@
 <h1>Editar Contacto</h1>
 <form method="POST" action="/contacts/edit/<?= $contact->id ?>">
+  @PUT
   <div class="mb-3">
     <label class="form-label">Nombre</label>
     <input value="<?= old('name') ?? $contact->name ?>" name="name" type="text" class="form-control">

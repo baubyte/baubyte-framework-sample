@@ -5,5 +5,5 @@ set +a
 
 args="$@"
 command="php baubyte $args"
-echo "$command"
+
 docker exec -it ${APP_NAME}-web bash -c "sudo -u devbaubyte /bin/bash -c \"$command\""

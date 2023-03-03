@@ -26,7 +26,38 @@ class BaubyteEngine implements View {
      * @var string
      */
     protected $contentAnnotation = "@content";
+    /**
+     * Annotation used in layouts to mark where to put input fields PUT.
+     *
+     * @var string
+     */
+    protected $putAnnotation = "@PUT";
+    /**
+     * Annotation used in layouts to mark where to put input fields DELETE.
+     *
+     * @var string
+     */
+    protected $deleteAnnotation = "@DELETE";
+    
+    /**
+     * input field for PUT method.
+     *
+     * @var string
+     */
+    protected $inputMethodPut = "<input type='hidden' name='_method' value='PUT'>";
 
+    /**
+     * input field for DELETE method.
+     *
+     * @var string
+     */
+    protected $inputMethodDelete = "<input type='hidden' name='_method' value='DELETE'>";
+
+    /**
+     * BaubyteEngine constructor.
+     *
+     * @param string $viewsDirectory Directory where the views are located.
+     */
     public function __construct(string $viewsDirectory) {
         $this->viewsDirectory = $viewsDirectory;
     }
@@ -36,7 +67,15 @@ class BaubyteEngine implements View {
     public function render(string $view, array $params = [], string $layout = null): string {
         $layoutContent = $this->renderLayout($layout ?? $this->defaultLayout);
         $viewContent = $this->renderView($view, $params);
-        return str_replace($this->contentAnnotation, $viewContent, $layoutContent);
+        return str_replace([
+            $this->contentAnnotation,
+            $this->putAnnotation,
+            $this->deleteAnnotation
+        ], [
+            $viewContent,
+            $this->inputMethodPut,
+            $this->inputMethodDelete
+        ], $layoutContent);
     }
     /**
      * Render view only, without replacing annotations.
